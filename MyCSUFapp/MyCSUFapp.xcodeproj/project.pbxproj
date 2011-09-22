@@ -14,8 +14,6 @@
 		4C41FD6414284745000C4FA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C41FD6314284745000C4FA7 /* main.m */; };
 		4C41FD6814284745000C4FA7 /* MyCSUFappAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C41FD6714284745000C4FA7 /* MyCSUFappAppDelegate.m */; };
 		4C41FD6B14284745000C4FA7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C41FD6914284745000C4FA7 /* MainWindow.xib */; };
-		4C41FD6E14284745000C4FA7 /* MyCSUFappViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C41FD6D14284745000C4FA7 /* MyCSUFappViewController.m */; };
-		4C41FD7114284745000C4FA7 /* MyCSUFappViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C41FD6F14284745000C4FA7 /* MyCSUFappViewController.xib */; };
 		4C41FD7914284745000C4FA7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41FD7814284745000C4FA7 /* SenTestingKit.framework */; };
 		4C41FD7A14284745000C4FA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41FD5714284745000C4FA7 /* UIKit.framework */; };
 		4C41FD7B14284745000C4FA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41FD5914284745000C4FA7 /* Foundation.framework */; };
@@ -47,9 +45,6 @@
 		4C41FD6614284745000C4FA7 /* MyCSUFappAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCSUFappAppDelegate.h; sourceTree = "<group>"; };
 		4C41FD6714284745000C4FA7 /* MyCSUFappAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCSUFappAppDelegate.m; sourceTree = "<group>"; };
 		4C41FD6A14284745000C4FA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		4C41FD6C14284745000C4FA7 /* MyCSUFappViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCSUFappViewController.h; sourceTree = "<group>"; };
-		4C41FD6D14284745000C4FA7 /* MyCSUFappViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCSUFappViewController.m; sourceTree = "<group>"; };
-		4C41FD7014284745000C4FA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MyCSUFappViewController.xib; sourceTree = "<group>"; };
 		4C41FD7714284745000C4FA7 /* MyCSUFappTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCSUFappTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C41FD7814284745000C4FA7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4C41FD8114284745000C4FA7 /* MyCSUFappTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyCSUFappTests-Info.plist"; sourceTree = "<group>"; };
@@ -119,9 +114,6 @@
 				4C41FD6614284745000C4FA7 /* MyCSUFappAppDelegate.h */,
 				4C41FD6714284745000C4FA7 /* MyCSUFappAppDelegate.m */,
 				4C41FD6914284745000C4FA7 /* MainWindow.xib */,
-				4C41FD6C14284745000C4FA7 /* MyCSUFappViewController.h */,
-				4C41FD6D14284745000C4FA7 /* MyCSUFappViewController.m */,
-				4C41FD6F14284745000C4FA7 /* MyCSUFappViewController.xib */,
 				4C41FD5E14284745000C4FA7 /* Supporting Files */,
 			);
 			path = MyCSUFapp;
@@ -229,7 +221,6 @@
 			files = (
 				4C41FD6214284745000C4FA7 /* InfoPlist.strings in Resources */,
 				4C41FD6B14284745000C4FA7 /* MainWindow.xib in Resources */,
-				4C41FD7114284745000C4FA7 /* MyCSUFappViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +258,6 @@
 			files = (
 				4C41FD6414284745000C4FA7 /* main.m in Sources */,
 				4C41FD6814284745000C4FA7 /* MyCSUFappAppDelegate.m in Sources */,
-				4C41FD6E14284745000C4FA7 /* MyCSUFappViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,14 +294,6 @@
 				4C41FD6A14284745000C4FA7 /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		4C41FD6F14284745000C4FA7 /* MyCSUFappViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C41FD7014284745000C4FA7 /* en */,
-			);
-			name = MyCSUFappViewController.xib;
 			sourceTree = "<group>";
 		};
 		4C41FD8214284745000C4FA7 /* InfoPlist.strings */ = {
@@ -443,6 +425,7 @@
 				4C41FD8D14284745000C4FA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C41FD8E14284745000C4FA7 /* Build configuration list for PBXNativeTarget "MyCSUFappTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +434,7 @@
 				4C41FD9014284745000C4FA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
