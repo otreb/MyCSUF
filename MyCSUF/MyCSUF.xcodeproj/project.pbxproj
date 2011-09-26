@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		565B003714313EAE005FAEB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003614313EAE005FAEB7 /* UIKit.framework */; };
+		565B003914313EAE005FAEB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003814313EAE005FAEB7 /* Foundation.framework */; };
+		565B003B14313EAE005FAEB7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003A14313EAE005FAEB7 /* CoreGraphics.framework */; };
+		565B003D14313EAE005FAEB7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003C14313EAE005FAEB7 /* CoreData.framework */; };
+		565B004314313EAE005FAEB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 565B004114313EAE005FAEB7 /* InfoPlist.strings */; };
+		565B004514313EAE005FAEB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B004414313EAE005FAEB7 /* main.m */; };
+		565B004914313EAE005FAEB7 /* MyCSUFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B004814313EAE005FAEB7 /* MyCSUFAppDelegate.m */; };
+		565B004C14313EAE005FAEB7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565B004A14313EAE005FAEB7 /* MainWindow.xib */; };
+		565B004F14313EAE005FAEB7 /* MyCSUF.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 565B004D14313EAE005FAEB7 /* MyCSUF.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		565B003214313EAE005FAEB7 /* MyCSUF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCSUF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		565B003614313EAE005FAEB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		565B003814313EAE005FAEB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		565B003A14313EAE005FAEB7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		565B003C14313EAE005FAEB7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		565B004014313EAE005FAEB7 /* MyCSUF-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyCSUF-Info.plist"; sourceTree = "<group>"; };
+		565B004214313EAE005FAEB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		565B004414313EAE005FAEB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		565B004614313EAE005FAEB7 /* MyCSUF-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyCSUF-Prefix.pch"; sourceTree = "<group>"; };
+		565B004714313EAE005FAEB7 /* MyCSUFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCSUFAppDelegate.h; sourceTree = "<group>"; };
+		565B004814313EAE005FAEB7 /* MyCSUFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCSUFAppDelegate.m; sourceTree = "<group>"; };
+		565B004B14313EAE005FAEB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		565B004E14313EAE005FAEB7 /* MyCSUF.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCSUF.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		565B002F14313EAE005FAEB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				565B003714313EAE005FAEB7 /* UIKit.framework in Frameworks */,
+				565B003914313EAE005FAEB7 /* Foundation.framework in Frameworks */,
+				565B003B14313EAE005FAEB7 /* CoreGraphics.framework in Frameworks */,
+				565B003D14313EAE005FAEB7 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		565B002714313EAE005FAEB7 = {
+			isa = PBXGroup;
+			children = (
+				565B003E14313EAE005FAEB7 /* MyCSUF */,
+				565B003514313EAE005FAEB7 /* Frameworks */,
+				565B003314313EAE005FAEB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		565B003314313EAE005FAEB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				565B003214313EAE005FAEB7 /* MyCSUF.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		565B003514313EAE005FAEB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				565B003614313EAE005FAEB7 /* UIKit.framework */,
+				565B003814313EAE005FAEB7 /* Foundation.framework */,
+				565B003A14313EAE005FAEB7 /* CoreGraphics.framework */,
+				565B003C14313EAE005FAEB7 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		565B003E14313EAE005FAEB7 /* MyCSUF */ = {
+			isa = PBXGroup;
+			children = (
+				565B004714313EAE005FAEB7 /* MyCSUFAppDelegate.h */,
+				565B004814313EAE005FAEB7 /* MyCSUFAppDelegate.m */,
+				565B004A14313EAE005FAEB7 /* MainWindow.xib */,
+				565B004D14313EAE005FAEB7 /* MyCSUF.xcdatamodeld */,
+				565B003F14313EAE005FAEB7 /* Supporting Files */,
+			);
+			path = MyCSUF;
+			sourceTree = "<group>";
+		};
+		565B003F14313EAE005FAEB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				565B004014313EAE005FAEB7 /* MyCSUF-Info.plist */,
+				565B004114313EAE005FAEB7 /* InfoPlist.strings */,
+				565B004414313EAE005FAEB7 /* main.m */,
+				565B004614313EAE005FAEB7 /* MyCSUF-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		565B003114313EAE005FAEB7 /* MyCSUF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 565B005214313EAE005FAEB7 /* Build configuration list for PBXNativeTarget "MyCSUF" */;
+			buildPhases = (
+				565B002E14313EAE005FAEB7 /* Sources */,
+				565B002F14313EAE005FAEB7 /* Frameworks */,
+				565B003014313EAE005FAEB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyCSUF;
+			productName = MyCSUF;
+			productReference = 565B003214313EAE005FAEB7 /* MyCSUF.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		565B002914313EAE005FAEB7 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 565B002C14313EAE005FAEB7 /* Build configuration list for PBXProject "MyCSUF" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 565B002714313EAE005FAEB7;
+			productRefGroup = 565B003314313EAE005FAEB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				565B003114313EAE005FAEB7 /* MyCSUF */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		565B003014313EAE005FAEB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				565B004314313EAE005FAEB7 /* InfoPlist.strings in Resources */,
+				565B004C14313EAE005FAEB7 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		565B002E14313EAE005FAEB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				565B004514313EAE005FAEB7 /* main.m in Sources */,
+				565B004914313EAE005FAEB7 /* MyCSUFAppDelegate.m in Sources */,
+				565B004F14313EAE005FAEB7 /* MyCSUF.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		565B004114313EAE005FAEB7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				565B004214313EAE005FAEB7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		565B004A14313EAE005FAEB7 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				565B004B14313EAE005FAEB7 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		565B005014313EAE005FAEB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		565B005114313EAE005FAEB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		565B005314313EAE005FAEB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyCSUF/MyCSUF-Prefix.pch";
+				INFOPLIST_FILE = "MyCSUF/MyCSUF-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		565B005414313EAE005FAEB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyCSUF/MyCSUF-Prefix.pch";
+				INFOPLIST_FILE = "MyCSUF/MyCSUF-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		565B002C14313EAE005FAEB7 /* Build configuration list for PBXProject "MyCSUF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				565B005014313EAE005FAEB7 /* Debug */,
+				565B005114313EAE005FAEB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		565B005214313EAE005FAEB7 /* Build configuration list for PBXNativeTarget "MyCSUF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				565B005314313EAE005FAEB7 /* Debug */,
+				565B005414313EAE005FAEB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		565B004D14313EAE005FAEB7 /* MyCSUF.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				565B004E14313EAE005FAEB7 /* MyCSUF.xcdatamodel */,
+			);
+			currentVersion = 565B004E14313EAE005FAEB7 /* MyCSUF.xcdatamodel */;
+			path = MyCSUF.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 565B002914313EAE005FAEB7 /* Project object */;
+}
