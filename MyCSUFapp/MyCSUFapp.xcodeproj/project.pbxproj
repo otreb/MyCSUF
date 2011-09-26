@@ -7,144 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C41FD5814284745000C4FA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41FD5714284745000C4FA7 /* UIKit.framework */; };
-		4C41FD5A14284745000C4FA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41FD5914284745000C4FA7 /* Foundation.framework */; };
-		4C41FD5C14284745000C4FA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41FD5B14284745000C4FA7 /* CoreGraphics.framework */; };
-		4C41FD6214284745000C4FA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C41FD6014284745000C4FA7 /* InfoPlist.strings */; };
-		4C41FD6414284745000C4FA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C41FD6314284745000C4FA7 /* main.m */; };
-		4C41FD6814284745000C4FA7 /* MyCSUFappAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C41FD6714284745000C4FA7 /* MyCSUFappAppDelegate.m */; };
-		4C41FD6B14284745000C4FA7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C41FD6914284745000C4FA7 /* MainWindow.xib */; };
-		4C41FD7914284745000C4FA7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41FD7814284745000C4FA7 /* SenTestingKit.framework */; };
-		4C41FD7A14284745000C4FA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41FD5714284745000C4FA7 /* UIKit.framework */; };
-		4C41FD7B14284745000C4FA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41FD5914284745000C4FA7 /* Foundation.framework */; };
-		4C41FD7C14284745000C4FA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41FD5B14284745000C4FA7 /* CoreGraphics.framework */; };
-		4C41FD8414284745000C4FA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C41FD8214284745000C4FA7 /* InfoPlist.strings */; };
-		4C41FD8614284745000C4FA7 /* MyCSUFappTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 4C41FD8514284745000C4FA7 /* MyCSUFappTests.h */; };
-		4C41FD8814284745000C4FA7 /* MyCSUFappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C41FD8714284745000C4FA7 /* MyCSUFappTests.m */; };
+		56E9F0F414312693006DC402 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E9F0F314312692006DC402 /* UIKit.framework */; };
+		56E9F0F614312693006DC402 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E9F0F514312693006DC402 /* Foundation.framework */; };
+		56E9F0F814312693006DC402 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E9F0F714312693006DC402 /* CoreGraphics.framework */; };
+		56E9F0FA14312693006DC402 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E9F0F914312693006DC402 /* CoreData.framework */; };
+		56E9F10014312693006DC402 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56E9F0FE14312693006DC402 /* InfoPlist.strings */; };
+		56E9F10214312693006DC402 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E9F10114312693006DC402 /* main.m */; };
+		56E9F10614312693006DC402 /* MyCSUFappAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E9F10514312693006DC402 /* MyCSUFappAppDelegate.m */; };
+		56E9F10914312693006DC402 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E9F10714312693006DC402 /* MainWindow.xib */; };
+		56E9F10C14312693006DC402 /* MyCSUFapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56E9F10A14312693006DC402 /* MyCSUFapp.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4C41FD7D14284745000C4FA7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4C41FD4A14284745000C4FA7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4C41FD5214284745000C4FA7;
-			remoteInfo = MyCSUFapp;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		4C41FD5314284745000C4FA7 /* MyCSUFapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCSUFapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C41FD5714284745000C4FA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		4C41FD5914284745000C4FA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4C41FD5B14284745000C4FA7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4C41FD5F14284745000C4FA7 /* MyCSUFapp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyCSUFapp-Info.plist"; sourceTree = "<group>"; };
-		4C41FD6114284745000C4FA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4C41FD6314284745000C4FA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4C41FD6514284745000C4FA7 /* MyCSUFapp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyCSUFapp-Prefix.pch"; sourceTree = "<group>"; };
-		4C41FD6614284745000C4FA7 /* MyCSUFappAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCSUFappAppDelegate.h; sourceTree = "<group>"; };
-		4C41FD6714284745000C4FA7 /* MyCSUFappAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCSUFappAppDelegate.m; sourceTree = "<group>"; };
-		4C41FD6A14284745000C4FA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		4C41FD7714284745000C4FA7 /* MyCSUFappTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCSUFappTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C41FD7814284745000C4FA7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		4C41FD8114284745000C4FA7 /* MyCSUFappTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyCSUFappTests-Info.plist"; sourceTree = "<group>"; };
-		4C41FD8314284745000C4FA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4C41FD8514284745000C4FA7 /* MyCSUFappTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCSUFappTests.h; sourceTree = "<group>"; };
-		4C41FD8714284745000C4FA7 /* MyCSUFappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCSUFappTests.m; sourceTree = "<group>"; };
+		56E9F0EF14312692006DC402 /* MyCSUFapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCSUFapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56E9F0F314312692006DC402 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		56E9F0F514312693006DC402 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		56E9F0F714312693006DC402 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		56E9F0F914312693006DC402 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		56E9F0FD14312693006DC402 /* MyCSUFapp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyCSUFapp-Info.plist"; sourceTree = "<group>"; };
+		56E9F0FF14312693006DC402 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		56E9F10114312693006DC402 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		56E9F10314312693006DC402 /* MyCSUFapp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyCSUFapp-Prefix.pch"; sourceTree = "<group>"; };
+		56E9F10414312693006DC402 /* MyCSUFappAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCSUFappAppDelegate.h; sourceTree = "<group>"; };
+		56E9F10514312693006DC402 /* MyCSUFappAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCSUFappAppDelegate.m; sourceTree = "<group>"; };
+		56E9F10814312693006DC402 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		56E9F10B14312693006DC402 /* MyCSUFapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCSUFapp.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4C41FD5014284745000C4FA7 /* Frameworks */ = {
+		56E9F0EC14312692006DC402 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C41FD5814284745000C4FA7 /* UIKit.framework in Frameworks */,
-				4C41FD5A14284745000C4FA7 /* Foundation.framework in Frameworks */,
-				4C41FD5C14284745000C4FA7 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4C41FD7314284745000C4FA7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C41FD7914284745000C4FA7 /* SenTestingKit.framework in Frameworks */,
-				4C41FD7A14284745000C4FA7 /* UIKit.framework in Frameworks */,
-				4C41FD7B14284745000C4FA7 /* Foundation.framework in Frameworks */,
-				4C41FD7C14284745000C4FA7 /* CoreGraphics.framework in Frameworks */,
+				56E9F0F414312693006DC402 /* UIKit.framework in Frameworks */,
+				56E9F0F614312693006DC402 /* Foundation.framework in Frameworks */,
+				56E9F0F814312693006DC402 /* CoreGraphics.framework in Frameworks */,
+				56E9F0FA14312693006DC402 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C41FD4814284745000C4FA7 = {
+		56E9F0E414312692006DC402 = {
 			isa = PBXGroup;
 			children = (
-				4C41FD5D14284745000C4FA7 /* MyCSUFapp */,
-				4C41FD7F14284745000C4FA7 /* MyCSUFappTests */,
-				4C41FD5614284745000C4FA7 /* Frameworks */,
-				4C41FD5414284745000C4FA7 /* Products */,
+				56E9F0FB14312693006DC402 /* MyCSUFapp */,
+				56E9F0F214312692006DC402 /* Frameworks */,
+				56E9F0F014312692006DC402 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4C41FD5414284745000C4FA7 /* Products */ = {
+		56E9F0F014312692006DC402 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C41FD5314284745000C4FA7 /* MyCSUFapp.app */,
-				4C41FD7714284745000C4FA7 /* MyCSUFappTests.octest */,
+				56E9F0EF14312692006DC402 /* MyCSUFapp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4C41FD5614284745000C4FA7 /* Frameworks */ = {
+		56E9F0F214312692006DC402 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4C41FD5714284745000C4FA7 /* UIKit.framework */,
-				4C41FD5914284745000C4FA7 /* Foundation.framework */,
-				4C41FD5B14284745000C4FA7 /* CoreGraphics.framework */,
-				4C41FD7814284745000C4FA7 /* SenTestingKit.framework */,
+				56E9F0F314312692006DC402 /* UIKit.framework */,
+				56E9F0F514312693006DC402 /* Foundation.framework */,
+				56E9F0F714312693006DC402 /* CoreGraphics.framework */,
+				56E9F0F914312693006DC402 /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4C41FD5D14284745000C4FA7 /* MyCSUFapp */ = {
+		56E9F0FB14312693006DC402 /* MyCSUFapp */ = {
 			isa = PBXGroup;
 			children = (
-				4C41FD6614284745000C4FA7 /* MyCSUFappAppDelegate.h */,
-				4C41FD6714284745000C4FA7 /* MyCSUFappAppDelegate.m */,
-				4C41FD6914284745000C4FA7 /* MainWindow.xib */,
-				4C41FD5E14284745000C4FA7 /* Supporting Files */,
+				56E9F10414312693006DC402 /* MyCSUFappAppDelegate.h */,
+				56E9F10514312693006DC402 /* MyCSUFappAppDelegate.m */,
+				56E9F10714312693006DC402 /* MainWindow.xib */,
+				56E9F10A14312693006DC402 /* MyCSUFapp.xcdatamodeld */,
+				56E9F0FC14312693006DC402 /* Supporting Files */,
 			);
 			path = MyCSUFapp;
 			sourceTree = "<group>";
 		};
-		4C41FD5E14284745000C4FA7 /* Supporting Files */ = {
+		56E9F0FC14312693006DC402 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4C41FD5F14284745000C4FA7 /* MyCSUFapp-Info.plist */,
-				4C41FD6014284745000C4FA7 /* InfoPlist.strings */,
-				4C41FD6314284745000C4FA7 /* main.m */,
-				4C41FD6514284745000C4FA7 /* MyCSUFapp-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4C41FD7F14284745000C4FA7 /* MyCSUFappTests */ = {
-			isa = PBXGroup;
-			children = (
-				4C41FD8514284745000C4FA7 /* MyCSUFappTests.h */,
-				4C41FD8714284745000C4FA7 /* MyCSUFappTests.m */,
-				4C41FD8014284745000C4FA7 /* Supporting Files */,
-			);
-			path = MyCSUFappTests;
-			sourceTree = "<group>";
-		};
-		4C41FD8014284745000C4FA7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4C41FD8114284745000C4FA7 /* MyCSUFappTests-Info.plist */,
-				4C41FD8214284745000C4FA7 /* InfoPlist.strings */,
+				56E9F0FD14312693006DC402 /* MyCSUFapp-Info.plist */,
+				56E9F0FE14312693006DC402 /* InfoPlist.strings */,
+				56E9F10114312693006DC402 /* main.m */,
+				56E9F10314312693006DC402 /* MyCSUFapp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,13 +103,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C41FD5214284745000C4FA7 /* MyCSUFapp */ = {
+		56E9F0EE14312692006DC402 /* MyCSUFapp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C41FD8B14284745000C4FA7 /* Build configuration list for PBXNativeTarget "MyCSUFapp" */;
+			buildConfigurationList = 56E9F10F14312693006DC402 /* Build configuration list for PBXNativeTarget "MyCSUFapp" */;
 			buildPhases = (
-				4C41FD4F14284745000C4FA7 /* Sources */,
-				4C41FD5014284745000C4FA7 /* Frameworks */,
-				4C41FD5114284745000C4FA7 /* Resources */,
+				56E9F0EB14312692006DC402 /* Sources */,
+				56E9F0EC14312692006DC402 /* Frameworks */,
+				56E9F0ED14312692006DC402 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -166,148 +117,77 @@
 			);
 			name = MyCSUFapp;
 			productName = MyCSUFapp;
-			productReference = 4C41FD5314284745000C4FA7 /* MyCSUFapp.app */;
+			productReference = 56E9F0EF14312692006DC402 /* MyCSUFapp.app */;
 			productType = "com.apple.product-type.application";
-		};
-		4C41FD7614284745000C4FA7 /* MyCSUFappTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4C41FD8E14284745000C4FA7 /* Build configuration list for PBXNativeTarget "MyCSUFappTests" */;
-			buildPhases = (
-				4C41FD7214284745000C4FA7 /* Sources */,
-				4C41FD7314284745000C4FA7 /* Frameworks */,
-				4C41FD7414284745000C4FA7 /* Resources */,
-				4C41FD7514284745000C4FA7 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4C41FD7E14284745000C4FA7 /* PBXTargetDependency */,
-			);
-			name = MyCSUFappTests;
-			productName = MyCSUFappTests;
-			productReference = 4C41FD7714284745000C4FA7 /* MyCSUFappTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4C41FD4A14284745000C4FA7 /* Project object */ = {
+		56E9F0E614312692006DC402 /* Project object */ = {
 			isa = PBXProject;
-			attributes = {
-				ORGANIZATIONNAME = "Apple Inc.";
-			};
-			buildConfigurationList = 4C41FD4D14284745000C4FA7 /* Build configuration list for PBXProject "MyCSUFapp" */;
+			buildConfigurationList = 56E9F0E914312692006DC402 /* Build configuration list for PBXProject "MyCSUFapp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 4C41FD4814284745000C4FA7;
-			productRefGroup = 4C41FD5414284745000C4FA7 /* Products */;
+			mainGroup = 56E9F0E414312692006DC402;
+			productRefGroup = 56E9F0F014312692006DC402 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C41FD5214284745000C4FA7 /* MyCSUFapp */,
-				4C41FD7614284745000C4FA7 /* MyCSUFappTests */,
+				56E9F0EE14312692006DC402 /* MyCSUFapp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4C41FD5114284745000C4FA7 /* Resources */ = {
+		56E9F0ED14312692006DC402 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C41FD6214284745000C4FA7 /* InfoPlist.strings in Resources */,
-				4C41FD6B14284745000C4FA7 /* MainWindow.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4C41FD7414284745000C4FA7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C41FD8414284745000C4FA7 /* InfoPlist.strings in Resources */,
-				4C41FD8614284745000C4FA7 /* MyCSUFappTests.h in Resources */,
+				56E9F10014312693006DC402 /* InfoPlist.strings in Resources */,
+				56E9F10914312693006DC402 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4C41FD7514284745000C4FA7 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		4C41FD4F14284745000C4FA7 /* Sources */ = {
+		56E9F0EB14312692006DC402 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C41FD6414284745000C4FA7 /* main.m in Sources */,
-				4C41FD6814284745000C4FA7 /* MyCSUFappAppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4C41FD7214284745000C4FA7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C41FD8814284745000C4FA7 /* MyCSUFappTests.m in Sources */,
+				56E9F10214312693006DC402 /* main.m in Sources */,
+				56E9F10614312693006DC402 /* MyCSUFappAppDelegate.m in Sources */,
+				56E9F10C14312693006DC402 /* MyCSUFapp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		4C41FD7E14284745000C4FA7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4C41FD5214284745000C4FA7 /* MyCSUFapp */;
-			targetProxy = 4C41FD7D14284745000C4FA7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		4C41FD6014284745000C4FA7 /* InfoPlist.strings */ = {
+		56E9F0FE14312693006DC402 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4C41FD6114284745000C4FA7 /* en */,
+				56E9F0FF14312693006DC402 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		4C41FD6914284745000C4FA7 /* MainWindow.xib */ = {
+		56E9F10714312693006DC402 /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4C41FD6A14284745000C4FA7 /* en */,
+				56E9F10814312693006DC402 /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		4C41FD8214284745000C4FA7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C41FD8314284745000C4FA7 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4C41FD8914284745000C4FA7 /* Debug */ = {
+		56E9F10D14312693006DC402 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -331,7 +211,7 @@
 			};
 			name = Debug;
 		};
-		4C41FD8A14284745000C4FA7 /* Release */ = {
+		56E9F10E14312693006DC402 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -350,7 +230,7 @@
 			};
 			name = Release;
 		};
-		4C41FD8C14284745000C4FA7 /* Debug */ = {
+		56E9F11014312693006DC402 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -361,7 +241,7 @@
 			};
 			name = Debug;
 		};
-		4C41FD8D14284745000C4FA7 /* Release */ = {
+		56E9F11114312693006DC402 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -369,74 +249,43 @@
 				INFOPLIST_FILE = "MyCSUFapp/MyCSUFapp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		4C41FD8F14284745000C4FA7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyCSUFapp.app/MyCSUFapp";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MyCSUFapp/MyCSUFapp-Prefix.pch";
-				INFOPLIST_FILE = "MyCSUFappTests/MyCSUFappTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		4C41FD9014284745000C4FA7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyCSUFapp.app/MyCSUFapp";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MyCSUFapp/MyCSUFapp-Prefix.pch";
-				INFOPLIST_FILE = "MyCSUFappTests/MyCSUFappTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C41FD4D14284745000C4FA7 /* Build configuration list for PBXProject "MyCSUFapp" */ = {
+		56E9F0E914312692006DC402 /* Build configuration list for PBXProject "MyCSUFapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C41FD8914284745000C4FA7 /* Debug */,
-				4C41FD8A14284745000C4FA7 /* Release */,
+				56E9F10D14312693006DC402 /* Debug */,
+				56E9F10E14312693006DC402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C41FD8B14284745000C4FA7 /* Build configuration list for PBXNativeTarget "MyCSUFapp" */ = {
+		56E9F10F14312693006DC402 /* Build configuration list for PBXNativeTarget "MyCSUFapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C41FD8C14284745000C4FA7 /* Debug */,
-				4C41FD8D14284745000C4FA7 /* Release */,
+				56E9F11014312693006DC402 /* Debug */,
+				56E9F11114312693006DC402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4C41FD8E14284745000C4FA7 /* Build configuration list for PBXNativeTarget "MyCSUFappTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4C41FD8F14284745000C4FA7 /* Debug */,
-				4C41FD9014284745000C4FA7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		56E9F10A14312693006DC402 /* MyCSUFapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				56E9F10B14312693006DC402 /* MyCSUFapp.xcdatamodel */,
+			);
+			currentVersion = 56E9F10B14312693006DC402 /* MyCSUFapp.xcdatamodel */;
+			path = MyCSUFapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 4C41FD4A14284745000C4FA7 /* Project object */;
+	rootObject = 56E9F0E614312692006DC402 /* Project object */;
 }

@@ -2,14 +2,21 @@
 //  MyCSUFappAppDelegate.h
 //  MyCSUFapp
 //
-//  Created by Bert Aguilar on 9/19/11.
-//  Copyright 2011 Apple Inc. All rights reserved.
+//  Created by Ismael Martinez on 9/26/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
-// Making an update
+
 #import <UIKit/UIKit.h>
 
 @interface MyCSUFappAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+
+@property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
+@property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+- (void)saveContext;
+- (NSURL *)applicationDocumentsDirectory;
 
 @end
