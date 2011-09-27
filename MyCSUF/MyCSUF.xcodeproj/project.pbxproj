@@ -16,6 +16,12 @@
 		565B004914313EAE005FAEB7 /* MyCSUFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B004814313EAE005FAEB7 /* MyCSUFAppDelegate.m */; };
 		565B004C14313EAE005FAEB7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565B004A14313EAE005FAEB7 /* MainWindow.xib */; };
 		565B004F14313EAE005FAEB7 /* MyCSUF.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 565B004D14313EAE005FAEB7 /* MyCSUF.xcdatamodeld */; };
+		565B00581431437F005FAEB7 /* TodoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B00561431437F005FAEB7 /* TodoListViewController.m */; };
+		565B00591431437F005FAEB7 /* TodoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565B00571431437F005FAEB7 /* TodoListViewController.xib */; };
+		565B005C14314AF1005FAEB7 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B005B14314AF1005FAEB7 /* Task.m */; };
+		565B005F14314AF1005FAEB7 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B005E14314AF1005FAEB7 /* Category.m */; };
+		565B006314314B23005FAEB7 /* NewTodoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B006114314B23005FAEB7 /* NewTodoItemViewController.m */; };
+		565B006414314B23005FAEB7 /* NewTodoItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565B006214314B23005FAEB7 /* NewTodoItemViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,17 @@
 		565B004814313EAE005FAEB7 /* MyCSUFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCSUFAppDelegate.m; sourceTree = "<group>"; };
 		565B004B14313EAE005FAEB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		565B004E14313EAE005FAEB7 /* MyCSUF.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCSUF.xcdatamodel; sourceTree = "<group>"; };
+		565B00551431437F005FAEB7 /* TodoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoListViewController.h; sourceTree = "<group>"; };
+		565B00561431437F005FAEB7 /* TodoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoListViewController.m; sourceTree = "<group>"; };
+		565B00571431437F005FAEB7 /* TodoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodoListViewController.xib; sourceTree = "<group>"; };
+		565B005A14314AF1005FAEB7 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		565B005B14314AF1005FAEB7 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		565B005D14314AF1005FAEB7 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		565B005E14314AF1005FAEB7 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		565B006014314B23005FAEB7 /* NewTodoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTodoItemViewController.h; sourceTree = "<group>"; };
+		565B006114314B23005FAEB7 /* NewTodoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTodoItemViewController.m; sourceTree = "<group>"; };
+		565B006214314B23005FAEB7 /* NewTodoItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewTodoItemViewController.xib; sourceTree = "<group>"; };
+		565B006514314CDA005FAEB7 /* Configurations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configurations.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +99,19 @@
 			children = (
 				565B004714313EAE005FAEB7 /* MyCSUFAppDelegate.h */,
 				565B004814313EAE005FAEB7 /* MyCSUFAppDelegate.m */,
+				565B00551431437F005FAEB7 /* TodoListViewController.h */,
+				565B00561431437F005FAEB7 /* TodoListViewController.m */,
+				565B006014314B23005FAEB7 /* NewTodoItemViewController.h */,
+				565B006114314B23005FAEB7 /* NewTodoItemViewController.m */,
+				565B006514314CDA005FAEB7 /* Configurations.h */,
+				565B006214314B23005FAEB7 /* NewTodoItemViewController.xib */,
+				565B00571431437F005FAEB7 /* TodoListViewController.xib */,
 				565B004A14313EAE005FAEB7 /* MainWindow.xib */,
 				565B004D14313EAE005FAEB7 /* MyCSUF.xcdatamodeld */,
+				565B005D14314AF1005FAEB7 /* Category.h */,
+				565B005E14314AF1005FAEB7 /* Category.m */,
+				565B005A14314AF1005FAEB7 /* Task.h */,
+				565B005B14314AF1005FAEB7 /* Task.m */,
 				565B003F14313EAE005FAEB7 /* Supporting Files */,
 			);
 			path = MyCSUF;
@@ -149,6 +177,8 @@
 			files = (
 				565B004314313EAE005FAEB7 /* InfoPlist.strings in Resources */,
 				565B004C14313EAE005FAEB7 /* MainWindow.xib in Resources */,
+				565B00591431437F005FAEB7 /* TodoListViewController.xib in Resources */,
+				565B006414314B23005FAEB7 /* NewTodoItemViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +192,10 @@
 				565B004514313EAE005FAEB7 /* main.m in Sources */,
 				565B004914313EAE005FAEB7 /* MyCSUFAppDelegate.m in Sources */,
 				565B004F14313EAE005FAEB7 /* MyCSUF.xcdatamodeld in Sources */,
+				565B00581431437F005FAEB7 /* TodoListViewController.m in Sources */,
+				565B005C14314AF1005FAEB7 /* Task.m in Sources */,
+				565B005F14314AF1005FAEB7 /* Category.m in Sources */,
+				565B006314314B23005FAEB7 /* NewTodoItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

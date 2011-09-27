@@ -7,6 +7,7 @@
 //
 
 #import "MyCSUFAppDelegate.h"
+#import "TodoListViewController.h"
 
 @implementation MyCSUFAppDelegate
 
@@ -18,6 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    TodoListViewController *todoListViewController = [[TodoListViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
+    UINavigationController *navCon = [[UINavigationController alloc] init];
+    [navCon pushViewController:todoListViewController animated:NO];
+    [todoListViewController release];
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = [NSArray arrayWithObjects:navCon, nil];
+    [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
