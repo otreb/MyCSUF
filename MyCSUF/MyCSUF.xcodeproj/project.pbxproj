@@ -22,6 +22,12 @@
 		565B005F14314AF1005FAEB7 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B005E14314AF1005FAEB7 /* Category.m */; };
 		565B006314314B23005FAEB7 /* NewTodoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B006114314B23005FAEB7 /* NewTodoItemViewController.m */; };
 		565B006414314B23005FAEB7 /* NewTodoItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565B006214314B23005FAEB7 /* NewTodoItemViewController.xib */; };
+		566FB11C14322672001F7892 /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB11A14322672001F7892 /* TitleViewController.m */; };
+		566FB11D14322672001F7892 /* TitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB11B14322672001F7892 /* TitleViewController.xib */; };
+		566FB12214322BDB001F7892 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB12014322BDB001F7892 /* DatePickerViewController.m */; };
+		566FB12314322BDB001F7892 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB12114322BDB001F7892 /* DatePickerViewController.xib */; };
+		566FB127143264B8001F7892 /* RepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB125143264B8001F7892 /* RepeatViewController.m */; };
+		566FB128143264B8001F7892 /* RepeatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB126143264B8001F7892 /* RepeatViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +55,16 @@
 		565B006114314B23005FAEB7 /* NewTodoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTodoItemViewController.m; sourceTree = "<group>"; };
 		565B006214314B23005FAEB7 /* NewTodoItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewTodoItemViewController.xib; sourceTree = "<group>"; };
 		565B006514314CDA005FAEB7 /* Configurations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configurations.h; sourceTree = "<group>"; };
+		566FB11914322672001F7892 /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+		566FB11A14322672001F7892 /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
+		566FB11B14322672001F7892 /* TitleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleViewController.xib; sourceTree = "<group>"; };
+		566FB11E143228CC001F7892 /* DelegeMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegeMethods.h; sourceTree = "<group>"; };
+		566FB11F14322BDB001F7892 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
+		566FB12014322BDB001F7892 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
+		566FB12114322BDB001F7892 /* DatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		566FB124143264B8001F7892 /* RepeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatViewController.h; sourceTree = "<group>"; };
+		566FB125143264B8001F7892 /* RepeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatViewController.m; sourceTree = "<group>"; };
+		566FB126143264B8001F7892 /* RepeatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepeatViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				565B003E14313EAE005FAEB7 /* MyCSUF */,
+				566FB1171432262D001F7892 /* Resources */,
 				565B003514313EAE005FAEB7 /* Frameworks */,
 				565B003314313EAE005FAEB7 /* Products */,
 			);
@@ -103,11 +120,15 @@
 				565B00561431437F005FAEB7 /* TodoListViewController.m */,
 				565B006014314B23005FAEB7 /* NewTodoItemViewController.h */,
 				565B006114314B23005FAEB7 /* NewTodoItemViewController.m */,
+				566FB11914322672001F7892 /* TitleViewController.h */,
+				566FB11A14322672001F7892 /* TitleViewController.m */,
+				566FB11F14322BDB001F7892 /* DatePickerViewController.h */,
+				566FB12014322BDB001F7892 /* DatePickerViewController.m */,
+				566FB124143264B8001F7892 /* RepeatViewController.h */,
+				566FB125143264B8001F7892 /* RepeatViewController.m */,
 				565B006514314CDA005FAEB7 /* Configurations.h */,
-				565B006214314B23005FAEB7 /* NewTodoItemViewController.xib */,
-				565B00571431437F005FAEB7 /* TodoListViewController.xib */,
+				566FB11E143228CC001F7892 /* DelegeMethods.h */,
 				565B004A14313EAE005FAEB7 /* MainWindow.xib */,
-				565B004D14313EAE005FAEB7 /* MyCSUF.xcdatamodeld */,
 				565B005D14314AF1005FAEB7 /* Category.h */,
 				565B005E14314AF1005FAEB7 /* Category.m */,
 				565B005A14314AF1005FAEB7 /* Task.h */,
@@ -126,6 +147,20 @@
 				565B004614313EAE005FAEB7 /* MyCSUF-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		566FB1171432262D001F7892 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				565B004D14313EAE005FAEB7 /* MyCSUF.xcdatamodeld */,
+				565B00571431437F005FAEB7 /* TodoListViewController.xib */,
+				565B006214314B23005FAEB7 /* NewTodoItemViewController.xib */,
+				566FB11B14322672001F7892 /* TitleViewController.xib */,
+				566FB12114322BDB001F7892 /* DatePickerViewController.xib */,
+				566FB126143264B8001F7892 /* RepeatViewController.xib */,
+			);
+			name = Resources;
+			path = MyCSUF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +214,9 @@
 				565B004C14313EAE005FAEB7 /* MainWindow.xib in Resources */,
 				565B00591431437F005FAEB7 /* TodoListViewController.xib in Resources */,
 				565B006414314B23005FAEB7 /* NewTodoItemViewController.xib in Resources */,
+				566FB11D14322672001F7892 /* TitleViewController.xib in Resources */,
+				566FB12314322BDB001F7892 /* DatePickerViewController.xib in Resources */,
+				566FB128143264B8001F7892 /* RepeatViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +234,9 @@
 				565B005C14314AF1005FAEB7 /* Task.m in Sources */,
 				565B005F14314AF1005FAEB7 /* Category.m in Sources */,
 				565B006314314B23005FAEB7 /* NewTodoItemViewController.m in Sources */,
+				566FB11C14322672001F7892 /* TitleViewController.m in Sources */,
+				566FB12214322BDB001F7892 /* DatePickerViewController.m in Sources */,
+				566FB127143264B8001F7892 /* RepeatViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +346,7 @@
 				565B005414313EAE005FAEB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

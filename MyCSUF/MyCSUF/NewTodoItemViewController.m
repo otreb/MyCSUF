@@ -8,6 +8,9 @@
 
 #import "NewTodoItemViewController.h"
 #import "Configurations.h"
+#import "TitleViewController.h"
+#import "DatePickerViewController.h"
+#import "RepeatViewController.h"
 
 @implementation NewTodoItemViewController
 
@@ -20,6 +23,16 @@
         managedObjectContext = context;
     }
     return self;
+}
+
+- (void)closeView
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)doneButtonPressed
+{
+    [self closeView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,7 +49,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonPressed)] autorelease];
+    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(closeView)] autorelease];
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPressed)] autorelease];
     if (!editing) {
         self.navigationItem.rightBarButtonItem.enabled = NO;
@@ -77,8 +90,75 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
+    switch (indexPath.section) {
+        case 0:
+            cell.textLabel.text = @"Title";
+            break;
+        case 1:
+            cell.textLabel.text = @"Date";
+            break;
+        case 2:
+            cell.textLabel.text = @"Repeat";
+            break;
+        case 3:
+            cell.textLabel.text = @"Alert";
+            break;
+        case 4:
+            cell.textLabel.text = @"Category";
+            break;
+        case 5:
+            cell.textLabel.text = @"Notes";
+            break;
+        default:
+            break;
+    }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.section) {
+        case 0:
+            if (1)
+            {
+                TitleViewController *titleViewController = [[TitleViewController alloc] init];
+                titleViewController.delegate = self;
+                [self.navigationController pushViewController:titleViewController animated:YES];
+                [titleViewController release];
+             }
+            break;
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        default:
+            break;
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - New Todo Delegate
+- (void)updateTitleField:(NSString *)title
+{
+    NSLog(@"%@",title);
+}
+
+- (void)updateDateField:(NSDate *)date
+{
+    NSLog(@"%@",[NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterLongStyle timeStyle:NSDateFormatterLongStyle]);
+}
+
+- (void)updateReminderField:(NSString *)reminder
+{
+    NSLog(@"%@",reminder);
 }
 
 @end

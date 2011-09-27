@@ -23,7 +23,7 @@
 
 - (void)addButtonPressed
 {
-    NewTodoItemViewController *newTodoItemViewController = [[NewTodoItemViewController alloc] initWithManagedObjectContext:managedObjectContext];
+    NewTodoItemViewController *newTodoItemViewController = [[NewTodoItemViewController alloc] initWithMangedObjectContext:managedObjectContext];
     UINavigationController *navCon = [[UINavigationController alloc] init];
     [navCon pushViewController:newTodoItemViewController animated:YES];
     [newTodoItemViewController release];

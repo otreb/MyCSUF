@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DelegeMethods.h"
 
-@interface NewTodoItemViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+@interface NewTodoItemViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NewTodoDelegate> {
     NSManagedObjectContext *managedObjectContext;
     UITableView *table;
     BOOL editing;
