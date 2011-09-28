@@ -11,6 +11,7 @@
 
 @interface NewTodoItemViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NewTodoDelegate> {
     NSManagedObjectContext *managedObjectContext;
+    NSMutableDictionary *tableData;
     UITableView *table;
     BOOL editing;
 }

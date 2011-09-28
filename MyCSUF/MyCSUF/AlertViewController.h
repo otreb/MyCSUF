@@ -1,5 +1,5 @@
 //
-//  RepeatViewController.h
+//  AlertViewController.h
 //  MyCSUF
 //
 //  Created by Ismael Martinez on 9/27/11.
@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "DelegeMethods.h"
 
-@interface RepeatViewController : UITableViewController {
+@interface AlertViewController : UITableViewController {
     id<NewTodoDelegate>delegate;
-    NSMutableArray *selectedIndex;
-    NSMutableArray *days;
+    NSArray *eventAlerts;
+    int index;
 }
 
 @property (assign) id<NewTodoDelegate>delegate;

@@ -25,6 +25,7 @@
     [todoListViewController release];
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     tabBarController.viewControllers = [NSArray arrayWithObjects:navCon, nil];
+    [navCon release];
     [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
     return YES;

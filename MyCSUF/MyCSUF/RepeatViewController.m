@@ -21,6 +21,50 @@
     return self;
 }
 
+- (void)closeView
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)doneButtonPressed
+{
+    NSString *stringOfDays = [[[NSString alloc] init] autorelease];
+    
+    for (int i=0; i< 7; i++) {
+        if ([selectedIndex containsObject:[NSNumber numberWithInt:i]]) {
+            switch (i) {
+                case 0:
+                    stringOfDays = [stringOfDays stringByAppendingString:@"Mon "];
+                    break;
+                case 1:
+                    stringOfDays = [stringOfDays stringByAppendingString:@"Tues "];
+                    break;
+                case 2:
+                    stringOfDays = [stringOfDays stringByAppendingString:@"Wed "];
+                    break;
+                case 3:
+                    stringOfDays = [stringOfDays stringByAppendingString:@"Thurs "];
+                    break;
+                case 4:
+                    stringOfDays = [stringOfDays stringByAppendingString:@"Fri "];
+                    break;
+                case 5:
+                    stringOfDays = [stringOfDays stringByAppendingString:@"Sat "];
+                    break;
+                case 6:
+                    stringOfDays = [stringOfDays stringByAppendingString:@"Sun"];
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+    [self.delegate updateRepeatField:stringOfDays];
+    [days release];
+    [selectedIndex release];
+    [self closeView];
+}
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -40,6 +84,16 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
+                                               initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
+                                               target:self
+                                               action:@selector(doneButtonPressed)] autorelease];
+    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc]
+                                              initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                              target:self
+                                              action:@selector(closeView)] autorelease];
+    if (selectedIndex == nil) selectedIndex = [[NSMutableArray alloc] init];
+    if (days == nil) days = [[NSMutableArray alloc] init];
 }
 
 - (void)viewDidUnload
@@ -48,26 +102,6 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
     self.delegate = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -80,12 +114,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 7;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -121,8 +155,8 @@
         default:
             break;
     }
-    
-    // Configure the cell...
+    if ([selectedIndex containsObject:indexPath]) cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    else cell.accessoryType = UITableViewCellAccessoryNone;
     
     return cell;
 }
@@ -131,7 +165,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.delegate updateReminderField:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+    if ([selectedIndex containsObject:[NSNumber numberWithInt:indexPath.row]])
+    {
+        [selectedIndex removeObject:[NSNumber numberWithInt:indexPath.row]];
+        [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryNone];
+    }
+    else 
+    {
+        [selectedIndex addObject:[NSNumber numberWithInt:indexPath.row]];
+        [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryCheckmark];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
