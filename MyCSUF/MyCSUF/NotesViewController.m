@@ -47,6 +47,7 @@
                                                target:self
                                                action:@selector(doneButtonPressed)] autorelease];
     self.navigationItem.title = @"Note";
+    [self.notes becomeFirstResponder];
 }
 
 - (void)viewDidUnload

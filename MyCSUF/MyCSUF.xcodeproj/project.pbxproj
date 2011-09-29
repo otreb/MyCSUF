@@ -140,7 +140,6 @@
 				566FB12A1432C799001F7892 /* AlertViewController.m */,
 				566FB12E1432D294001F7892 /* NotesViewController.h */,
 				566FB12F1432D294001F7892 /* NotesViewController.m */,
-				566FB1301432D294001F7892 /* NotesViewController.xib */,
 				565B006514314CDA005FAEB7 /* Configurations.h */,
 				566FB11E143228CC001F7892 /* DelegeMethods.h */,
 				565B004A14313EAE005FAEB7 /* MainWindow.xib */,
@@ -173,6 +172,7 @@
 				566FB11B14322672001F7892 /* TitleViewController.xib */,
 				566FB12114322BDB001F7892 /* DatePickerViewController.xib */,
 				566FB126143264B8001F7892 /* RepeatViewController.xib */,
+				566FB1301432D294001F7892 /* NotesViewController.xib */,
 				566FB12C1432CB48001F7892 /* AlertPList.plist */,
 			);
 			name = Resources;

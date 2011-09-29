@@ -95,6 +95,11 @@
     return kNumberOfSections;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return (indexPath.row==5) ? 100.0 : 50;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.table == nil) {
@@ -131,7 +136,12 @@
             break;
         case 5:
             cell.textLabel.text = @"Notes";
-            cell.detailTextLabel.text = [tableData objectForKey:@"notes"];
+            cell.textLabel.textColor = [UIColor grayColor];
+            if ([tableData objectForKey:@"notes"] != nil) {
+                cell.textLabel.text = [tableData objectForKey:@"notes"];
+                cell.textLabel.textColor = [UIColor blackColor];
+                cell.textLabel.numberOfLines = 3;
+            }
             break;
         default:
             break;

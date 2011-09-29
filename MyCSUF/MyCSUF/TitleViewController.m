@@ -47,6 +47,7 @@
                                               target:self
                                               action:@selector(closeView)] autorelease];
     self.navigationItem.title = @"Title";
+    [self.titleField becomeFirstResponder];
 }
 
 - (void)releaseOutlets
