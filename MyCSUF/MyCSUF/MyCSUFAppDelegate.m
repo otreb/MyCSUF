@@ -7,7 +7,7 @@
 //
 
 #import "MyCSUFAppDelegate.h"
-#import "TodoListViewController.h"
+#import "ListTableViewController.h"
 
 @implementation MyCSUFAppDelegate
 
@@ -19,10 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    TodoListViewController *todoListViewController = [[TodoListViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
+    ListTableViewController *listTableViewController = [[ListTableViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
     UINavigationController *navCon = [[UINavigationController alloc] init];
-    [navCon pushViewController:todoListViewController animated:NO];
-    [todoListViewController release];
+    [navCon pushViewController:listTableViewController animated:NO];
+    [listTableViewController release];
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     tabBarController.viewControllers = [NSArray arrayWithObjects:navCon, nil];
     [navCon release];
@@ -81,7 +81,7 @@
     /*
      Typically you should set up the Core Data stack here, usually by passing the managed object context to the first view controller.
      self.<#View controller#>.managedObjectContext = self.managedObjectContext;
-    */
+     */
 }
 
 - (void)saveContext

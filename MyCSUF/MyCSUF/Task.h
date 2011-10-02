@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-
+#import "Category.h"
 
 @interface Task : NSManagedObject {
 @private
@@ -18,5 +18,11 @@
 @property (nonatomic, retain) NSString * notes;
 @property (nonatomic, retain) NSNumber * priority;
 @property (nonatomic, retain) NSManagedObject *category;
+
++ (NSArray *)todoListForCategory:(Category *)category inManagedObjectContext:(NSManagedObjectContext *)context;
+
++ (Task *)addTodoItem:(NSDictionary *)items withCategory:(Category *)cat inMangedObjectContext:(NSManagedObjectContext *)context;
+
++ (void)saveData:(NSManagedObjectContext *)context;
 
 @end

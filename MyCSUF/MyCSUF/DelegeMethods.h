@@ -19,4 +19,10 @@
 
 @end
 
+@protocol ListDelegate
+
+- (void)listCreated;
+
+@end
+
 #endif

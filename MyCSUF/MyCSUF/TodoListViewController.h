@@ -7,14 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Category.h"
 
 @interface TodoListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     NSManagedObjectContext *managedObjectContext;
     UITableView *table;
+    Category *currentCategory;
+    NSArray *todoArray;
 }
 
 @property (retain) IBOutlet UITableView *table;
 
-- initWithManagedObjectContext:(NSManagedObjectContext *)context;
+- initWithToDo:(Category *)category withManagedObjectContext:(NSManagedObjectContext *)context;
 
 @end

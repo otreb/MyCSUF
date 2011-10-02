@@ -13,11 +13,14 @@
 #import "RepeatViewController.h"
 #import "AlertViewController.h"
 #import "NotesViewController.h"
+#import "Task.h"
+#import "PriorityTableCell.h"
 
 @implementation NewTodoItemViewController
 
 @synthesize table;
 @synthesize editing;
+@synthesize currentCategory;
 
 - initWithMangedObjectContext:(NSManagedObjectContext *)context
 {
@@ -34,7 +37,22 @@
 
 - (void)doneButtonPressed
 {
-    [self closeView];
+    if ([[tableData objectForKey:@"title"] length] > 0)
+    {
+        [Task addTodoItem:tableData withCategory:currentCategory inMangedObjectContext:managedObjectContext];
+        [self closeView];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"Error"
+                              message:@"Need to supply a Title"
+                              delegate:nil
+                              cancelButtonTitle:@"Ok"
+                              otherButtonTitles: nil];
+        [alert show];
+        [alert release];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,12 +80,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [tableData setValue:currentCategory.name forKey:@"category"];
     if ([[tableData allKeys] count] > 0) {
         if (!self.navigationItem.rightBarButtonItem.enabled) {
             self.navigationItem.rightBarButtonItem.enabled = YES;
         }
         [self.table reloadData];
     }
+    
 }
 
 - (void)viewDidUnload
@@ -97,7 +117,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return (indexPath.row==5) ? 100.0 : 50;
+    return (indexPath.section == 5) ? count+50 : 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -109,8 +129,13 @@
     static NSString *CellIdentifier = @"TodoListCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PriorityTableCell *customCell = nil;
     if (cell == nil) {
         if (indexPath.section == 2) cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        else if (indexPath.section ==6)
+        {
+            customCell = [[[PriorityTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+        }
         else
             cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
@@ -121,7 +146,7 @@
             break;
         case 1:
             cell.textLabel.text = @"Date";
-            cell.detailTextLabel.text = [tableData objectForKey:@"date"];
+            cell.detailTextLabel.text = stringDate;
             break;
         case 2:
             cell.textLabel.text = @"Repeat";
@@ -133,15 +158,33 @@
             break;
         case 4:
             cell.textLabel.text = @"Category";
+            cell.detailTextLabel.text = [tableData objectForKey:@"category"];
             break;
         case 5:
             cell.textLabel.text = @"Notes";
             cell.textLabel.textColor = [UIColor grayColor];
             if ([tableData objectForKey:@"notes"] != nil) {
+                if (!cellAdjusted)
+                {
+                    count = 0;
+                    int length = [[tableData objectForKey:@"notes"] length];
+                    while (length > 25) {
+                        count+=15;
+                        length -= 25;
+                    }
+                }
                 cell.textLabel.text = [tableData objectForKey:@"notes"];
                 cell.textLabel.textColor = [UIColor blackColor];
-                cell.textLabel.numberOfLines = 3;
+                cell.textLabel.numberOfLines = count;
+                if (!cellAdjusted) {
+                    cellAdjusted = YES;
+                    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:NO];
+                }
             }
+            break;
+        case 6:
+            customCell.textLabel.text = @"Priority";
+            return customCell;
             break;
         default:
             break;
@@ -161,7 +204,7 @@
                 titleViewController.delegate = self;
                 [self.navigationController pushViewController:titleViewController animated:YES];
                 [titleViewController release];
-             }
+            }
             break;
         case 1:
             if (1) {
@@ -191,6 +234,7 @@
             break;
         case 5:
             if (1) {
+                cellAdjusted = NO;
                 NotesViewController *noteViewController = [[NotesViewController alloc] init];
                 noteViewController.delegate = self;
                 [self.navigationController pushViewController:noteViewController animated:YES];
@@ -213,8 +257,10 @@
 - (void)updateDateField:(NSDate *)date
 {
     NSLog(@"%@",[NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterLongStyle timeStyle:NSDateFormatterLongStyle]);
-    NSString *stringFromDate = [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle];
-    [tableData setValue:stringFromDate forKey:@"date"];
+    [stringDate release];
+    stringDate = [[NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle] retain];
+    [tableData setValue:date forKey:@"date"];
+    
 }
 
 - (void)updateRepeatField:(NSString *)repeat

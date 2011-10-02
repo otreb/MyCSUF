@@ -8,15 +8,17 @@
 
 #import "TodoListViewController.h"
 #import "NewTodoItemViewController.h"
+#import "Task.h"
 
 @implementation TodoListViewController
 
 @synthesize table;
 
-- initWithManagedObjectContext:(NSManagedObjectContext *)context
+- initWithToDo:(Category *)category withManagedObjectContext:(NSManagedObjectContext *)context
 {
     if ((self = [super init])) {
         managedObjectContext = context;
+        currentCategory = category;
     }
     return self;
 }
@@ -24,6 +26,7 @@
 - (void)addButtonPressed
 {
     NewTodoItemViewController *newTodoItemViewController = [[NewTodoItemViewController alloc] initWithMangedObjectContext:managedObjectContext];
+    newTodoItemViewController.currentCategory = currentCategory;
     UINavigationController *navCon = [[UINavigationController alloc] init];
     [navCon pushViewController:newTodoItemViewController animated:YES];
     [newTodoItemViewController release];
@@ -46,8 +49,19 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPressed)] autorelease];
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] 
+                                               initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                               target:self
+                                               action:@selector(addButtonPressed)] autorelease];
     self.navigationItem.title = @"Todo";
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [todoArray release];
+    todoArray = [[Task todoListForCategory:currentCategory inManagedObjectContext:managedObjectContext] retain];
+    [self.table reloadData];
 }
 
 - (void)viewDidUnload
@@ -67,7 +81,7 @@
 #pragma mark - Table View Data Source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [todoArray count];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -83,6 +97,7 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
+    cell.textLabel.text = [[todoArray objectAtIndex:indexPath.row] title];
     
     return cell;
 }
