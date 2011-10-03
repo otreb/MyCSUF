@@ -18,18 +18,41 @@
 
 + (NSArray *)todoListForCategory:(Category *)category inManagedObjectContext:(NSManagedObjectContext *)context
 {
-    NSFetchRequest *requestor = [[[NSFetchRequest alloc] init] autorelease];
+    NSMutableArray *temp = nil;
+    NSFetchRequest *requestor = [[NSFetchRequest alloc] init];
     requestor.entity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:context];
-    requestor.predicate = [NSPredicate predicateWithFormat:@"category = %@",category];
-    
-    return [context executeFetchRequest:requestor error:NULL];
+    requestor.predicate = [NSCompoundPredicate andPredicateWithSubpredicates:
+                           [NSArray arrayWithObjects:
+                            [NSPredicate predicateWithFormat:@"category = %@",category],
+                            [NSPredicate predicateWithFormat:@"priority = 2"],nil]]
+                           ;
+    requestor.sortDescriptors = [NSArray arrayWithObjects:
+                                 [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES], nil];
+    temp = [NSMutableArray arrayWithObject:[context executeFetchRequest:requestor error:NULL]];
+    requestor.predicate = [NSCompoundPredicate andPredicateWithSubpredicates:
+                           [NSArray arrayWithObjects:
+                            [NSPredicate predicateWithFormat:@"category = %@",category],
+                            [NSPredicate predicateWithFormat:@"priority = 1"],nil]]
+    ;
+    [temp addObject:[context executeFetchRequest:requestor error:NULL]];
+    requestor.predicate = [NSCompoundPredicate andPredicateWithSubpredicates:
+                           [NSArray arrayWithObjects:
+                            [NSPredicate predicateWithFormat:@"category = %@",category],
+                            [NSPredicate predicateWithFormat:@"priority = 0"],nil]]
+    ;
+    [temp addObject:[context executeFetchRequest:requestor error:NULL]];
+    [requestor release];
+    return temp;//[context executeFetchRequest:requestor error:NULL];
 }
 
 + (Task *)addTodoItem:(NSDictionary *)items withCategory:(Category *)cat inMangedObjectContext:(NSManagedObjectContext *)context
 {
     NSFetchRequest *requestor = [[[NSFetchRequest alloc] init] autorelease];
     requestor.entity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:context];
-    requestor.predicate = [NSPredicate predicateWithFormat:@"category = %@",cat];
+    requestor.predicate = [NSCompoundPredicate andPredicateWithSubpredicates:
+                           [NSArray arrayWithObjects:
+                            [NSPredicate predicateWithFormat:@"category = %@",cat],
+                            [NSPredicate predicateWithFormat:@"title = %@", [items objectForKey:@"title"]],nil]];
     
     NSError *error = nil;
     Task *todo = [[context executeFetchRequest:requestor error:&error] lastObject];

@@ -19,6 +19,7 @@
     int count;
     Category *currentCategory;
     NSString *stringDate;
+    NSInteger selectedSegment;
 }
 
 @property (retain) IBOutlet UITableView *table;

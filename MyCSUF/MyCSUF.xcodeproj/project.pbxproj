@@ -11,8 +11,6 @@
 		56080A9E1438F505005B5DDE /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56080A9C1438F505005B5DDE /* ListTableViewController.xib */; };
 		56080AA31438F549005B5DDE /* NewListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56080AA11438F549005B5DDE /* NewListViewController.m */; };
 		56080AA41438F549005B5DDE /* NewListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56080AA21438F549005B5DDE /* NewListViewController.xib */; };
-		56080AA81438F5A4005B5DDE /* PriorityTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56080AA61438F5A4005B5DDE /* PriorityTableCell.m */; };
-		56080AA91438F5A4005B5DDE /* PriorityTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56080AA71438F5A4005B5DDE /* PriorityTableCellView.xib */; };
 		565B003714313EAE005FAEB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003614313EAE005FAEB7 /* UIKit.framework */; };
 		565B003914313EAE005FAEB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003814313EAE005FAEB7 /* Foundation.framework */; };
 		565B003B14313EAE005FAEB7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003A14313EAE005FAEB7 /* CoreGraphics.framework */; };
@@ -47,9 +45,6 @@
 		56080AA01438F549005B5DDE /* NewListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewListViewController.h; sourceTree = "<group>"; };
 		56080AA11438F549005B5DDE /* NewListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewListViewController.m; sourceTree = "<group>"; };
 		56080AA21438F549005B5DDE /* NewListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewListViewController.xib; sourceTree = "<group>"; };
-		56080AA51438F5A4005B5DDE /* PriorityTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityTableCell.h; sourceTree = "<group>"; };
-		56080AA61438F5A4005B5DDE /* PriorityTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriorityTableCell.m; sourceTree = "<group>"; };
-		56080AA71438F5A4005B5DDE /* PriorityTableCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriorityTableCellView.xib; sourceTree = "<group>"; };
 		565B003214313EAE005FAEB7 /* MyCSUF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCSUF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		565B003614313EAE005FAEB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		565B003814313EAE005FAEB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -186,8 +181,6 @@
 				56080A9A1438F505005B5DDE /* ListTableViewController.h */,
 				56080A9B1438F505005B5DDE /* ListTableViewController.m */,
 				56080AAA1438F76E005B5DDE /*  New Todo View Controllers */,
-				56080AA51438F5A4005B5DDE /* PriorityTableCell.h */,
-				56080AA61438F5A4005B5DDE /* PriorityTableCell.m */,
 				565B006514314CDA005FAEB7 /* Configurations.h */,
 				566FB11E143228CC001F7892 /* DelegeMethods.h */,
 				56080AAC1438F7A9005B5DDE /* Model */,
@@ -219,7 +212,6 @@
 				566FB1301432D294001F7892 /* NotesViewController.xib */,
 				56080A9C1438F505005B5DDE /* ListTableViewController.xib */,
 				56080AA21438F549005B5DDE /* NewListViewController.xib */,
-				56080AA71438F5A4005B5DDE /* PriorityTableCellView.xib */,
 				565B004A14313EAE005FAEB7 /* MainWindow.xib */,
 				566FB12C1432CB48001F7892 /* AlertPList.plist */,
 			);
@@ -285,7 +277,6 @@
 				566FB1321432D295001F7892 /* NotesViewController.xib in Resources */,
 				56080A9E1438F505005B5DDE /* ListTableViewController.xib in Resources */,
 				56080AA41438F549005B5DDE /* NewListViewController.xib in Resources */,
-				56080AA91438F5A4005B5DDE /* PriorityTableCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +301,6 @@
 				566FB1311432D295001F7892 /* NotesViewController.m in Sources */,
 				56080A9D1438F505005B5DDE /* ListTableViewController.m in Sources */,
 				56080AA31438F549005B5DDE /* NewListViewController.m in Sources */,
-				56080AA81438F5A4005B5DDE /* PriorityTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +375,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCSUF/MyCSUF-Prefix.pch";
 				INFOPLIST_FILE = "MyCSUF/MyCSUF-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -396,6 +387,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCSUF/MyCSUF-Prefix.pch";
 				INFOPLIST_FILE = "MyCSUF/MyCSUF-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

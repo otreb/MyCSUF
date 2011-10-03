@@ -14,7 +14,6 @@
 #import "AlertViewController.h"
 #import "NotesViewController.h"
 #import "Task.h"
-#import "PriorityTableCell.h"
 
 @implementation NewTodoItemViewController
 
@@ -37,6 +36,7 @@
 
 - (void)doneButtonPressed
 {
+    [tableData setValue:[NSNumber numberWithInt:selectedSegment] forKey:@"priority"];
     if ([[tableData objectForKey:@"title"] length] > 0)
     {
         [Task addTodoItem:tableData withCategory:currentCategory inMangedObjectContext:managedObjectContext];
@@ -53,6 +53,10 @@
         [alert show];
         [alert release];
     }
+}
+- (void)prioritySegmentChanged:(UISegmentedControl *)segment
+{
+    selectedSegment = segment.selectedSegmentIndex;
 }
 
 - (void)didReceiveMemoryWarning
@@ -129,13 +133,8 @@
     static NSString *CellIdentifier = @"TodoListCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    PriorityTableCell *customCell = nil;
     if (cell == nil) {
-        if (indexPath.section == 2) cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
-        else if (indexPath.section ==6)
-        {
-            customCell = [[[PriorityTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
-        }
+        if (indexPath.section == 2) cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil] autorelease];
         else
             cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
@@ -183,13 +182,22 @@
             }
             break;
         case 6:
-            customCell.textLabel.text = @"Priority";
-            return customCell;
+            cell.textLabel.text = @"Priority";
+            UISegmentedControl *prioritySegment = [[[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Low",@"Medium",@"High", nil]] autorelease];
+            prioritySegment.selectedSegmentIndex = 0;
+            [prioritySegment addTarget:self action:@selector(prioritySegmentChanged:) forControlEvents:UIControlEventValueChanged];
+            CGPoint origin = CGPointMake(80, 5);
+            prioritySegment.frame = CGRectMake(origin.x, origin.y, 212.0, 44.0);
+            [cell.contentView addSubview:prioritySegment];
             break;
         default:
             break;
     }
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    if (indexPath.section == 6) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    else
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -258,7 +266,7 @@
 {
     NSLog(@"%@",[NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterLongStyle timeStyle:NSDateFormatterLongStyle]);
     [stringDate release];
-    stringDate = [[NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle] retain];
+    stringDate = [[NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle] retain];
     [tableData setValue:date forKey:@"date"];
     
 }

@@ -75,18 +75,52 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 #pragma mark - Table View Data Source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [todoArray count];
+    return [[todoArray objectAtIndex:section] count];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [todoArray count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    switch (section) {
+        case 0:
+            return @"High";
+            break;
+        case 1:
+            return @"Medium";
+            break;
+        case 2:
+            return @"Low";
+            break;
+        default:
+            break;
+    }
+    return @"";
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Task *deleteTask = [[todoArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    [todoArray release];
+    todoArray = nil;
+    [managedObjectContext deleteObject:deleteTask];
+    [managedObjectContext save:NULL];
+    todoArray = [[Task todoListForCategory:currentCategory inManagedObjectContext:managedObjectContext] retain];
+    [tableView reloadData];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,7 +131,7 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
-    cell.textLabel.text = [[todoArray objectAtIndex:indexPath.row] title];
+    cell.textLabel.text = [[[todoArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] title];
     
     return cell;
 }
