@@ -10,7 +10,6 @@
 #import "Configurations.h"
 #import "TitleViewController.h"
 #import "DatePickerViewController.h"
-#import "RepeatViewController.h"
 #import "AlertViewController.h"
 #import "NotesViewController.h"
 #import "Task.h"
@@ -29,6 +28,25 @@
     return self;
 }
 
+- initWithMangedObjectContext:(NSManagedObjectContext *)context withEditableTask:(Task *)task
+{
+    if ((self = [super init])) {
+        managedObjectContext = context;
+        currentTask = task;
+        currentCategory = (Category *)task.category;
+        tableData = [[NSMutableDictionary alloc] init];
+        [tableData setValue:task.title forKey:@"title"];
+        [tableData setValue:task.date forKey:@"date"];
+        [tableData setValue:task.alert forKey:@"alert"];
+        [tableData setValue:currentCategory.name forKey:@"category"];
+        [tableData setValue:task.notes forKey:@"notes"];
+        [tableData setValue:task.priority forKey:@"priority"];
+        [stringDate release];
+        stringDate = [[NSDateFormatter localizedStringFromDate:task.date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle] retain];
+    }
+    return self;
+}
+
 - (void)closeView
 {
     [self dismissModalViewControllerAnimated:YES];
@@ -39,7 +57,10 @@
     [tableData setValue:[NSNumber numberWithInt:selectedSegment] forKey:@"priority"];
     if ([[tableData objectForKey:@"title"] length] > 0)
     {
-        [Task addTodoItem:tableData withCategory:currentCategory inMangedObjectContext:managedObjectContext];
+        if (currentTask == nil)
+            [Task addTodoItem:tableData withCategory:currentCategory inMangedObjectContext:managedObjectContext];
+        else
+            [Task editTodoItem:currentTask withNewInformation:tableData inMangedObjectContext:managedObjectContext];
         [self closeView];
     }
     else
@@ -121,7 +142,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return (indexPath.section == 5) ? count+50 : 50;
+    return (indexPath.section == 4) ? count+50 : 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -129,14 +150,15 @@
     if (self.table == nil) {
         self.table = [tableView retain];
     }
+    if (prioritySegment == nil) {
+        prioritySegment = [[[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Low",@"Medium",@"High", nil]] autorelease];
+    }
     if (tableData == nil) tableData = [[NSMutableDictionary alloc] initWithCapacity:6];
     static NSString *CellIdentifier = @"TodoListCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        if (indexPath.section == 2) cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil] autorelease];
-        else
-            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
     switch (indexPath.section) {
         case 0:
@@ -148,18 +170,14 @@
             cell.detailTextLabel.text = stringDate;
             break;
         case 2:
-            cell.textLabel.text = @"Repeat";
-            cell.detailTextLabel.text = [tableData objectForKey:@"repeat"];
-            break;
-        case 3:
             cell.textLabel.text = @"Alert";
             cell.detailTextLabel.text = [tableData objectForKey:@"alert"];
             break;
-        case 4:
+        case 3:
             cell.textLabel.text = @"Category";
             cell.detailTextLabel.text = [tableData objectForKey:@"category"];
             break;
-        case 5:
+        case 4:
             cell.textLabel.text = @"Notes";
             cell.textLabel.textColor = [UIColor grayColor];
             if ([tableData objectForKey:@"notes"] != nil) {
@@ -180,20 +198,21 @@
                     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:NO];
                 }
             }
+            prioritySegment.hidden = YES;
             break;
-        case 6:
+        case 5:
             cell.textLabel.text = @"Priority";
-            UISegmentedControl *prioritySegment = [[[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Low",@"Medium",@"High", nil]] autorelease];
-            prioritySegment.selectedSegmentIndex = 0;
+            prioritySegment.selectedSegmentIndex = [[tableData objectForKey:@"priority"] boolValue]?[[tableData objectForKey:@"priority"] intValue]: 0;
             [prioritySegment addTarget:self action:@selector(prioritySegmentChanged:) forControlEvents:UIControlEventValueChanged];
             CGPoint origin = CGPointMake(80, 5);
             prioritySegment.frame = CGRectMake(origin.x, origin.y, 212.0, 44.0);
             [cell.contentView addSubview:prioritySegment];
+            prioritySegment.hidden = NO;
             break;
         default:
             break;
     }
-    if (indexPath.section == 6) {
+    if (indexPath.section == 5) {
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     else
@@ -224,23 +243,15 @@
             break;
         case 2:
             if (1) {
-                RepeatViewController *repeatViewController = [[RepeatViewController alloc] initWithStyle:UITableViewStyleGrouped];
-                repeatViewController.delegate = self;
-                [self.navigationController pushViewController:repeatViewController animated:YES];
-                [repeatViewController release];
-            }
-            break;
-        case 3:
-            if (1) {
                 AlertViewController *alertViewController = [[AlertViewController alloc] initWithNibName:@"RepeatViewController" bundle:nil];
                 alertViewController.delegate = self;
                 [self.navigationController pushViewController:alertViewController animated:YES];
                 [alertViewController release];
             }
             break;
-        case 4:
+        case 3:
             break;
-        case 5:
+        case 4:
             if (1) {
                 cellAdjusted = NO;
                 NotesViewController *noteViewController = [[NotesViewController alloc] init];
@@ -269,12 +280,6 @@
     stringDate = [[NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle] retain];
     [tableData setValue:date forKey:@"date"];
     
-}
-
-- (void)updateRepeatField:(NSString *)repeat
-{
-    NSLog(@"%@",repeat);
-    [tableData setValue:repeat forKey:@"repeat"];
 }
 
 - (void)updateAlertField:(NSString *)alert

@@ -89,22 +89,33 @@
     return [todoArray count];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 30)] autorelease];
+    UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake(10, 0, tableView.bounds.size.width - 10, 18)] autorelease];
     switch (section) {
         case 0:
-            return @"High";
+            label.text = @"High";
+            [label sizeToFit];
+            [headerView setBackgroundColor:[UIColor colorWithRed:150.0/255.0 green:5.0/255.0 blue:11.0/255.0 alpha:1.0]];
             break;
         case 1:
-            return @"Medium";
+            label.text = @"Medium";
+            [label sizeToFit];
+            [headerView setBackgroundColor:[UIColor colorWithRed:24.0/255.0 green:34.0/255.0 blue:190.0/255.0 alpha:1.0]];
             break;
         case 2:
-            return @"Low";
+            label.text = @"Low";
+            [label sizeToFit];
+            [headerView setBackgroundColor:[UIColor colorWithRed:202.0/255.0 green:84.0/255.0 blue:3.0/255.0 alpha:1.0]];
             break;
         default:
             break;
     }
-    return @"";
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor clearColor];
+    [headerView addSubview:label];
+    return headerView;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -132,8 +143,37 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
     cell.textLabel.text = [[[todoArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] title];
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    switch (indexPath.section) {
+        case 0:
+//            if (1) {
+//                UIImage *image = [UIImage imageNamed:@"priorityHigh.png"];
+//                UIImageView *imageView = [[[UIImageView alloc] initWithImage:image] autorelease];
+//                imageView.contentMode = UIViewContentModeScaleToFill;
+//                cell.backgroundView  = imageView;
+//            }
+            break;
+        case 1:
+            break;
+        case 2:
+            break;
+        default:
+            break;
+    }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NewTodoItemViewController *editTodoItem = [[NewTodoItemViewController alloc] initWithMangedObjectContext:managedObjectContext withEditableTask:[[todoArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]];
+    UINavigationController *navCon = [[UINavigationController alloc] init];
+    [navCon pushViewController:editTodoItem animated:YES];
+    [editTodoItem release];
+    [self presentModalViewController:navCon animated:YES];
+    [navCon release];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

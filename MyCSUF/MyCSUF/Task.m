@@ -15,6 +15,7 @@
 @dynamic notes;
 @dynamic priority;
 @dynamic category;
+@dynamic alert;
 
 + (NSArray *)todoListForCategory:(Category *)category inManagedObjectContext:(NSManagedObjectContext *)context
 {
@@ -59,13 +60,25 @@
     if (!todo && !error) {
         todo = [NSEntityDescription insertNewObjectForEntityForName:@"Task" inManagedObjectContext:context];
         todo.title = [items objectForKey:@"title"];
+        todo.date = [items objectForKey:@"date"];
+        todo.alert = [items objectForKey:@"alert"];
         todo.notes = [items objectForKey:@"notes"];
         todo.priority = [items objectForKey:@"priority"];
-        todo.date = [items objectForKey:@"date"];
         todo.category = cat;
         [self saveData:context];
     }
     return todo;
+}
+
++ (Task *)editTodoItem:(Task *)task withNewInformation:(NSDictionary *)items inMangedObjectContext:(NSManagedObjectContext *)context
+{
+    task.title = [items objectForKey:@"title"];
+    task.date = [items objectForKey:@"date"];
+    task.alert = [items objectForKey:@"alert"];
+    task.notes = [items objectForKey:@"notes"];
+    task.priority = [items objectForKey:@"priority"];
+    [self saveData:context];
+    return task;
 }
 
 + (void)saveData:(NSManagedObjectContext *)context

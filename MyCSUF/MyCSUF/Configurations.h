@@ -9,7 +9,7 @@
 #ifndef MyCSUF_Configurations_h
 #define MyCSUF_Configurations_h
 
-#define kNumberOfSections 7
+#define kNumberOfSections 6
 #define kNumberOfCells 1
 
 #endif
