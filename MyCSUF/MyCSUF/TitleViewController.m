@@ -13,6 +13,14 @@
 @synthesize titleField;
 @synthesize delegate;
 
+- initWithTitle:(NSString *)aTitle
+{
+    if ((self = [super init])) {
+        title = aTitle;
+    }
+    return self;
+}
+
 - (void)closeView
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -48,6 +56,12 @@
                                               action:@selector(closeView)] autorelease];
     self.navigationItem.title = @"Title";
     [self.titleField becomeFirstResponder];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.titleField.text = title;
 }
 
 - (void)releaseOutlets

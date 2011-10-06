@@ -24,6 +24,7 @@
     return self;
 }
 
+// Creates a new Category.
 - (void)createNewList
 {
     NewListViewController *newListViewController = [[NewListViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
@@ -36,6 +37,8 @@
     [navCon release];
 }
 
+
+// Puts the table view in edit Mode
 - (void)editButton
 {
     if ([self.tableView isEditing]) {
@@ -76,6 +79,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    // Checks if the table needs to be updated.
     if (newListCreate) {
         myList = [[Category myCurrentList:self.managedObjectContext] retain];
         [self.tableView reloadData];
@@ -97,7 +101,6 @@
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -113,6 +116,7 @@
     return YES;
 }
 
+// Will remove a Category that you have deleted and updates that array.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.managedObjectContext deleteObject:[myList objectAtIndex:indexPath.row]];
@@ -153,6 +157,7 @@
     }
     
     // Configure the cell...
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }

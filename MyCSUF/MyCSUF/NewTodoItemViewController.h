@@ -23,11 +23,14 @@
     NSString *stringDate;
     NSInteger selectedSegment;
     Task *currentTask;
+    UITableViewCell *cellFive;
 }
 
 @property (retain) IBOutlet UITableView *table;
 @property (assign) BOOL editing;
 @property (retain) Category *currentCategory;
+@property (retain) IBOutlet UITableViewCell *cellFive;
+@property (retain) IBOutlet UISegmentedControl *prioritySegment;
 
 - initWithMangedObjectContext:(NSManagedObjectContext *)context;
 - initWithMangedObjectContext:(NSManagedObjectContext *)context withEditableTask:(Task *)task;

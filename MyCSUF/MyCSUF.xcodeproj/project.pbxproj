@@ -36,6 +36,8 @@
 		566FB1321432D295001F7892 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB1301432D294001F7892 /* NotesViewController.xib */; };
 		56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F1B143A66B40090C3E5 /* priorityHigh.png */; };
 		56924F21143A813D0090C3E5 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F20143A813D0090C3E5 /* Background.png */; };
+		56FE5171143D1C6200C3E13A /* TodoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */; };
+		56FE5174143D1C7500C3E13A /* TodoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,9 @@
 		566FB1301432D294001F7892 /* NotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesViewController.xib; sourceTree = "<group>"; };
 		56924F1B143A66B40090C3E5 /* priorityHigh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = priorityHigh.png; sourceTree = "<group>"; };
 		56924F20143A813D0090C3E5 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		56FE516F143D1C6200C3E13A /* TodoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoListTableViewCell.h; sourceTree = "<group>"; };
+		56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoListTableViewCell.m; sourceTree = "<group>"; };
+		56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodoListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5604400E143D02BA00BB1275 /* CatrgoryViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				56080A9A1438F505005B5DDE /* ListTableViewController.h */,
+				56080A9B1438F505005B5DDE /* ListTableViewController.m */,
+				56080AA01438F549005B5DDE /* NewListViewController.h */,
+				56080AA11438F549005B5DDE /* NewListViewController.m */,
+			);
+			name = CatrgoryViewControllers;
+			sourceTree = "<group>";
+		};
 		56080AAA1438F76E005B5DDE /*  New Todo View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +139,9 @@
 			children = (
 				565B00551431437F005FAEB7 /* TodoListViewController.h */,
 				565B00561431437F005FAEB7 /* TodoListViewController.m */,
-				56080AA01438F549005B5DDE /* NewListViewController.h */,
-				56080AA11438F549005B5DDE /* NewListViewController.m */,
+				56FE516F143D1C6200C3E13A /* TodoListTableViewCell.h */,
+				56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */,
+				56080AAA1438F76E005B5DDE /*  New Todo View Controllers */,
 			);
 			name = "Todo List View Controllers";
 			sourceTree = "<group>";
@@ -174,10 +191,8 @@
 			children = (
 				565B004714313EAE005FAEB7 /* MyCSUFAppDelegate.h */,
 				565B004814313EAE005FAEB7 /* MyCSUFAppDelegate.m */,
-				56080A9A1438F505005B5DDE /* ListTableViewController.h */,
-				56080A9B1438F505005B5DDE /* ListTableViewController.m */,
+				5604400E143D02BA00BB1275 /* CatrgoryViewControllers */,
 				56080AAB1438F79F005B5DDE /* Todo List View Controllers */,
-				56080AAA1438F76E005B5DDE /*  New Todo View Controllers */,
 				565B006514314CDA005FAEB7 /* Configurations.h */,
 				566FB11E143228CC001F7892 /* DelegeMethods.h */,
 				56080AAC1438F7A9005B5DDE /* Model */,
@@ -210,6 +225,7 @@
 				566FB1301432D294001F7892 /* NotesViewController.xib */,
 				56080A9C1438F505005B5DDE /* ListTableViewController.xib */,
 				56080AA21438F549005B5DDE /* NewListViewController.xib */,
+				56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */,
 				565B004A14313EAE005FAEB7 /* MainWindow.xib */,
 				566FB12C1432CB48001F7892 /* AlertPList.plist */,
 			);
@@ -276,6 +292,7 @@
 				56080AA41438F549005B5DDE /* NewListViewController.xib in Resources */,
 				56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */,
 				56924F21143A813D0090C3E5 /* Background.png in Resources */,
+				56FE5174143D1C7500C3E13A /* TodoListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +316,7 @@
 				566FB1311432D295001F7892 /* NotesViewController.m in Sources */,
 				56080A9D1438F505005B5DDE /* ListTableViewController.m in Sources */,
 				56080AA31438F549005B5DDE /* NewListViewController.m in Sources */,
+				56FE5171143D1C6200C3E13A /* TodoListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

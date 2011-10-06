@@ -9,11 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "Category.h"
 
-@interface TodoListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+/*
+ Shows all your current Todos for the Category that was selected.
+*/
+
+@interface TodoListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate> {
     NSManagedObjectContext *managedObjectContext;
     UITableView *table;
     Category *currentCategory;
     NSArray *todoArray;
+    NSIndexPath *indexPathSelect;
 }
 
 @property (retain) IBOutlet UITableView *table;

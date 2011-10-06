@@ -43,7 +43,7 @@
     ;
     [temp addObject:[context executeFetchRequest:requestor error:NULL]];
     [requestor release];
-    return temp;//[context executeFetchRequest:requestor error:NULL];
+    return temp;
 }
 
 + (Task *)addTodoItem:(NSDictionary *)items withCategory:(Category *)cat inMangedObjectContext:(NSManagedObjectContext *)context

@@ -23,19 +23,22 @@
     return self;
 }
 
+
+// Will dismiss the modal the controller is currently in.
 - (void)closeView
 {
     [self dismissModalViewControllerAnimated:YES];
 }
 
+// Creates the Category once you are finished inputing your information.
 - (void)donePressed
 {
-    NSString *color = @"Black";
+    NSString *color = @"Black";  // This is the Default color.
     if (self.colorSegment.selectedSegmentIndex >=0) {
         color = [self.colorSegment titleForSegmentAtIndex:self.colorSegment.selectedSegmentIndex];
     }
     [Category createNewCategory:self.textField.text withColor:color withManagedObjectContext:managedObjectContext];
-    [self.listDelegate listCreated];
+    [self.listDelegate listCreated];    // Tells another controller that it has added a new Category.
     [self closeView];
 }
 

@@ -19,6 +19,8 @@
 @synthesize table;
 @synthesize editing;
 @synthesize currentCategory;
+@synthesize cellFive;
+@synthesize prioritySegment;
 
 - initWithMangedObjectContext:(NSManagedObjectContext *)context
 {
@@ -28,6 +30,7 @@
     return self;
 }
 
+// Will fill the view with all the todo information if a todo item was selected.
 - initWithMangedObjectContext:(NSManagedObjectContext *)context withEditableTask:(Task *)task
 {
     if ((self = [super init])) {
@@ -52,6 +55,33 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+// Schedules the notification if one was selected.
+- (void)scheduleNotificationReminder
+{
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    NSString *time = [tableData objectForKey:@"alert"];
+    int interval = 0;
+    if ([time isEqualToString:@"5 minutes before"]) interval = 5;
+    else if ([time isEqualToString:@"10 minutes before"]) interval = 10;
+    else if ([time isEqualToString:@"15 minutes before"]) interval = 15;
+    else if ([time isEqualToString:@"30 minutes before"]) interval = 30;
+    else if ([time isEqualToString:@"1 hour before"]) interval = 60;
+    else if ([time isEqualToString:@"2 hour before"]) interval = 2*60;
+    else if ([time isEqualToString:@"1 day before"]) interval = 60*24;
+    else if ([time isEqualToString:@"2 days before"]) interval = 2*60*24;
+    localNotification.fireDate = [NSDate dateWithTimeInterval:-60*interval sinceDate:[tableData objectForKey:@"date"]];
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    NSDateFormatter *format = [[[NSDateFormatter alloc] init] autorelease];
+    [format setDateFormat:@"EEE MMM dd 'at' hh:mm aaa"];
+    localNotification.alertBody = [NSString stringWithFormat:@"Appointment for %@ on %@",[tableData objectForKey:@"title"],[format stringFromDate:[tableData objectForKey:@"date"]]];
+    localNotification.alertAction = NSLocalizedString(@"View Details", nil);
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    localNotification.userInfo = [NSDictionary dictionaryWithObjectsAndKeys:[tableData objectForKey:@"title"], @"title",[tableData objectForKey:@"date"], @"date",nil];
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    [localNotification release];
+}
+
+// Will save all the data that was entered by the user.
 - (void)doneButtonPressed
 {
     [tableData setValue:[NSNumber numberWithInt:selectedSegment] forKey:@"priority"];
@@ -61,6 +91,8 @@
             [Task addTodoItem:tableData withCategory:currentCategory inMangedObjectContext:managedObjectContext];
         else
             [Task editTodoItem:currentTask withNewInformation:tableData inMangedObjectContext:managedObjectContext];
+        if ([tableData objectForKey:@"alert"] != nil && [tableData objectForKey:@"date"] !=nil)
+            [self scheduleNotificationReminder];
         [self closeView];
     }
     else
@@ -112,7 +144,13 @@
         }
         [self.table reloadData];
     }
-    
+}
+
+- (void)releaseOutlets
+{
+    self.table = nil;
+    self.cellFive = nil;
+    self.prioritySegment = nil;
 }
 
 - (void)viewDidUnload
@@ -120,7 +158,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    self.table = nil;
+    [self releaseOutlets];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -142,6 +180,19 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // Adjust cell number 4 so that the note can be displayed in a single cell and not overlap.
+    if (indexPath.section == 4) {
+        count = 0;
+        int length = [[tableData objectForKey:@"notes"] length];
+        while (length > 25) {
+            count+=15;
+            length -= 25;
+        }
+    }
+    // This is for the custom cell with the segment control as a subview.
+    else if (indexPath.section == 5) {
+        return 63;
+    }
     return (indexPath.section == 4) ? count+50 : 50;
 }
 
@@ -150,14 +201,19 @@
     if (self.table == nil) {
         self.table = [tableView retain];
     }
-    if (prioritySegment == nil) {
-        prioritySegment = [[[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Low",@"Medium",@"High", nil]] autorelease];
-    }
     if (tableData == nil) tableData = [[NSMutableDictionary alloc] initWithCapacity:6];
+    // Checks if section 5 is currently being configure.  Returns a custom cell.
+    if (indexPath.section ==5) {
+        self.prioritySegment.selectedSegmentIndex = [[tableData valueForKey:@"priority"] intValue];
+        [self.prioritySegment addTarget:self action:@selector(prioritySegmentChanged:) forControlEvents:UIControlEventValueChanged];
+        return cellFive;
+    }
+    
+    // Creates the same cell for the rest of the table view.
     static NSString *CellIdentifier = @"TodoListCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
+    if (cell == nil && indexPath.section !=5) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
     switch (indexPath.section) {
@@ -181,42 +237,15 @@
             cell.textLabel.text = @"Notes";
             cell.textLabel.textColor = [UIColor grayColor];
             if ([tableData objectForKey:@"notes"] != nil) {
-                if (!cellAdjusted)
-                {
-                    count = 0;
-                    int length = [[tableData objectForKey:@"notes"] length];
-                    while (length > 25) {
-                        count+=15;
-                        length -= 25;
-                    }
-                }
                 cell.textLabel.text = [tableData objectForKey:@"notes"];
                 cell.textLabel.textColor = [UIColor blackColor];
                 cell.textLabel.numberOfLines = count;
-                if (!cellAdjusted) {
-                    cellAdjusted = YES;
-                    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:NO];
-                }
             }
-            prioritySegment.hidden = YES;
-            break;
-        case 5:
-            cell.textLabel.text = @"Priority";
-            prioritySegment.selectedSegmentIndex = [[tableData objectForKey:@"priority"] boolValue]?[[tableData objectForKey:@"priority"] intValue]: 0;
-            [prioritySegment addTarget:self action:@selector(prioritySegmentChanged:) forControlEvents:UIControlEventValueChanged];
-            CGPoint origin = CGPointMake(80, 5);
-            prioritySegment.frame = CGRectMake(origin.x, origin.y, 212.0, 44.0);
-            [cell.contentView addSubview:prioritySegment];
-            prioritySegment.hidden = NO;
             break;
         default:
             break;
     }
-    if (indexPath.section == 5) {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    else
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -227,7 +256,13 @@
         case 0:
             if (1)
             {
-                TitleViewController *titleViewController = [[TitleViewController alloc] init];
+                TitleViewController *titleViewController;
+                if ([tableData objectForKey:@"title"] != nil) {
+                    titleViewController = [[TitleViewController alloc] initWithTitle:[tableData objectForKey:@"title"]];
+                }
+                else
+                    titleViewController = [[TitleViewController alloc] init];
+                
                 titleViewController.delegate = self;
                 [self.navigationController pushViewController:titleViewController animated:YES];
                 [titleViewController release];
@@ -254,7 +289,12 @@
         case 4:
             if (1) {
                 cellAdjusted = NO;
-                NotesViewController *noteViewController = [[NotesViewController alloc] init];
+                NotesViewController *noteViewController;
+                if (currentTask.notes != nil) {
+                    noteViewController = [[NotesViewController alloc] initWithText:currentTask.notes];
+                }
+                else
+                    noteViewController = [[NotesViewController alloc] init];
                 noteViewController.delegate = self;
                 [self.navigationController pushViewController:noteViewController animated:YES];
                 [noteViewController release];
@@ -269,13 +309,11 @@
 #pragma mark - New Todo Delegate
 - (void)updateTitleField:(NSString *)title
 {
-    NSLog(@"%@",title);
     [tableData setValue:title forKey:@"title"];
 }
 
 - (void)updateDateField:(NSDate *)date
 {
-    NSLog(@"%@",[NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterLongStyle timeStyle:NSDateFormatterLongStyle]);
     [stringDate release];
     stringDate = [[NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle] retain];
     [tableData setValue:date forKey:@"date"];
@@ -284,13 +322,11 @@
 
 - (void)updateAlertField:(NSString *)alert
 {
-    NSLog(@"%@",alert);
     [tableData setValue:alert forKey:@"alert"];
 }
 
 - (void)updateNotesField:(NSString *)notes
 {
-    NSLog(@"%@", notes);
     [tableData setValue:notes forKey:@"notes"];
 }
 
