@@ -12,9 +12,12 @@
 @interface NotesViewController : UIViewController {
     UITextView *notes;
     id<NewTodoDelegate>delegate;
+    NSString *currentNote;
 }
 
 @property (retain) IBOutlet UITextView *notes;
 @property (assign) id<NewTodoDelegate>delegate;
+
+- initWithText:(NSString *)note;
 
 @end

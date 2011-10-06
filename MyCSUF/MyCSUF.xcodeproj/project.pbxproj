@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56080A9D1438F505005B5DDE /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56080A9B1438F505005B5DDE /* ListTableViewController.m */; };
+		56080A9E1438F505005B5DDE /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56080A9C1438F505005B5DDE /* ListTableViewController.xib */; };
+		56080AA31438F549005B5DDE /* NewListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56080AA11438F549005B5DDE /* NewListViewController.m */; };
+		56080AA41438F549005B5DDE /* NewListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56080AA21438F549005B5DDE /* NewListViewController.xib */; };
 		565B003714313EAE005FAEB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003614313EAE005FAEB7 /* UIKit.framework */; };
 		565B003914313EAE005FAEB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003814313EAE005FAEB7 /* Foundation.framework */; };
 		565B003B14313EAE005FAEB7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003A14313EAE005FAEB7 /* CoreGraphics.framework */; };
@@ -26,15 +30,23 @@
 		566FB11D14322672001F7892 /* TitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB11B14322672001F7892 /* TitleViewController.xib */; };
 		566FB12214322BDB001F7892 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB12014322BDB001F7892 /* DatePickerViewController.m */; };
 		566FB12314322BDB001F7892 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB12114322BDB001F7892 /* DatePickerViewController.xib */; };
-		566FB127143264B8001F7892 /* RepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB125143264B8001F7892 /* RepeatViewController.m */; };
-		566FB128143264B8001F7892 /* RepeatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB126143264B8001F7892 /* RepeatViewController.xib */; };
 		566FB12B1432C799001F7892 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB12A1432C799001F7892 /* AlertViewController.m */; };
 		566FB12D1432CB48001F7892 /* AlertPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 566FB12C1432CB48001F7892 /* AlertPList.plist */; };
 		566FB1311432D295001F7892 /* NotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB12F1432D294001F7892 /* NotesViewController.m */; };
 		566FB1321432D295001F7892 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB1301432D294001F7892 /* NotesViewController.xib */; };
+		56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F1B143A66B40090C3E5 /* priorityHigh.png */; };
+		56924F21143A813D0090C3E5 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F20143A813D0090C3E5 /* Background.png */; };
+		56FE5171143D1C6200C3E13A /* TodoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */; };
+		56FE5174143D1C7500C3E13A /* TodoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56080A9A1438F505005B5DDE /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		56080A9B1438F505005B5DDE /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
+		56080A9C1438F505005B5DDE /* ListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = "<group>"; };
+		56080AA01438F549005B5DDE /* NewListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewListViewController.h; sourceTree = "<group>"; };
+		56080AA11438F549005B5DDE /* NewListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewListViewController.m; sourceTree = "<group>"; };
+		56080AA21438F549005B5DDE /* NewListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewListViewController.xib; sourceTree = "<group>"; };
 		565B003214313EAE005FAEB7 /* MyCSUF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCSUF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		565B003614313EAE005FAEB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		565B003814313EAE005FAEB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,15 +78,17 @@
 		566FB11F14322BDB001F7892 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
 		566FB12014322BDB001F7892 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
 		566FB12114322BDB001F7892 /* DatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
-		566FB124143264B8001F7892 /* RepeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatViewController.h; sourceTree = "<group>"; };
-		566FB125143264B8001F7892 /* RepeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatViewController.m; sourceTree = "<group>"; };
-		566FB126143264B8001F7892 /* RepeatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepeatViewController.xib; sourceTree = "<group>"; };
 		566FB1291432C799001F7892 /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
 		566FB12A1432C799001F7892 /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
 		566FB12C1432CB48001F7892 /* AlertPList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AlertPList.plist; sourceTree = "<group>"; };
 		566FB12E1432D294001F7892 /* NotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesViewController.h; sourceTree = "<group>"; };
 		566FB12F1432D294001F7892 /* NotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesViewController.m; sourceTree = "<group>"; };
 		566FB1301432D294001F7892 /* NotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesViewController.xib; sourceTree = "<group>"; };
+		56924F1B143A66B40090C3E5 /* priorityHigh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = priorityHigh.png; sourceTree = "<group>"; };
+		56924F20143A813D0090C3E5 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		56FE516F143D1C6200C3E13A /* TodoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoListTableViewCell.h; sourceTree = "<group>"; };
+		56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoListTableViewCell.m; sourceTree = "<group>"; };
+		56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodoListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +106,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5604400E143D02BA00BB1275 /* CatrgoryViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				56080A9A1438F505005B5DDE /* ListTableViewController.h */,
+				56080A9B1438F505005B5DDE /* ListTableViewController.m */,
+				56080AA01438F549005B5DDE /* NewListViewController.h */,
+				56080AA11438F549005B5DDE /* NewListViewController.m */,
+			);
+			name = CatrgoryViewControllers;
+			sourceTree = "<group>";
+		};
+		56080AAA1438F76E005B5DDE /*  New Todo View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				565B006014314B23005FAEB7 /* NewTodoItemViewController.h */,
+				565B006114314B23005FAEB7 /* NewTodoItemViewController.m */,
+				566FB11914322672001F7892 /* TitleViewController.h */,
+				566FB11A14322672001F7892 /* TitleViewController.m */,
+				566FB11F14322BDB001F7892 /* DatePickerViewController.h */,
+				566FB12014322BDB001F7892 /* DatePickerViewController.m */,
+				566FB1291432C799001F7892 /* AlertViewController.h */,
+				566FB12A1432C799001F7892 /* AlertViewController.m */,
+				566FB12E1432D294001F7892 /* NotesViewController.h */,
+				566FB12F1432D294001F7892 /* NotesViewController.m */,
+			);
+			name = " New Todo View Controllers";
+			sourceTree = "<group>";
+		};
+		56080AAB1438F79F005B5DDE /* Todo List View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				565B00551431437F005FAEB7 /* TodoListViewController.h */,
+				565B00561431437F005FAEB7 /* TodoListViewController.m */,
+				56FE516F143D1C6200C3E13A /* TodoListTableViewCell.h */,
+				56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */,
+				56080AAA1438F76E005B5DDE /*  New Todo View Controllers */,
+			);
+			name = "Todo List View Controllers";
+			sourceTree = "<group>";
+		};
+		56080AAC1438F7A9005B5DDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				565B005D14314AF1005FAEB7 /* Category.h */,
+				565B005E14314AF1005FAEB7 /* Category.m */,
+				565B005A14314AF1005FAEB7 /* Task.h */,
+				565B005B14314AF1005FAEB7 /* Task.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		565B002714313EAE005FAEB7 = {
 			isa = PBXGroup;
 			children = (
@@ -126,27 +191,11 @@
 			children = (
 				565B004714313EAE005FAEB7 /* MyCSUFAppDelegate.h */,
 				565B004814313EAE005FAEB7 /* MyCSUFAppDelegate.m */,
-				565B00551431437F005FAEB7 /* TodoListViewController.h */,
-				565B00561431437F005FAEB7 /* TodoListViewController.m */,
-				565B006014314B23005FAEB7 /* NewTodoItemViewController.h */,
-				565B006114314B23005FAEB7 /* NewTodoItemViewController.m */,
-				566FB11914322672001F7892 /* TitleViewController.h */,
-				566FB11A14322672001F7892 /* TitleViewController.m */,
-				566FB11F14322BDB001F7892 /* DatePickerViewController.h */,
-				566FB12014322BDB001F7892 /* DatePickerViewController.m */,
-				566FB124143264B8001F7892 /* RepeatViewController.h */,
-				566FB125143264B8001F7892 /* RepeatViewController.m */,
-				566FB1291432C799001F7892 /* AlertViewController.h */,
-				566FB12A1432C799001F7892 /* AlertViewController.m */,
-				566FB12E1432D294001F7892 /* NotesViewController.h */,
-				566FB12F1432D294001F7892 /* NotesViewController.m */,
+				5604400E143D02BA00BB1275 /* CatrgoryViewControllers */,
+				56080AAB1438F79F005B5DDE /* Todo List View Controllers */,
 				565B006514314CDA005FAEB7 /* Configurations.h */,
 				566FB11E143228CC001F7892 /* DelegeMethods.h */,
-				565B004A14313EAE005FAEB7 /* MainWindow.xib */,
-				565B005D14314AF1005FAEB7 /* Category.h */,
-				565B005E14314AF1005FAEB7 /* Category.m */,
-				565B005A14314AF1005FAEB7 /* Task.h */,
-				565B005B14314AF1005FAEB7 /* Task.m */,
+				56080AAC1438F7A9005B5DDE /* Model */,
 				565B003F14313EAE005FAEB7 /* Supporting Files */,
 			);
 			path = MyCSUF;
@@ -167,12 +216,17 @@
 			isa = PBXGroup;
 			children = (
 				565B004D14313EAE005FAEB7 /* MyCSUF.xcdatamodeld */,
+				56924F20143A813D0090C3E5 /* Background.png */,
+				56924F1B143A66B40090C3E5 /* priorityHigh.png */,
 				565B00571431437F005FAEB7 /* TodoListViewController.xib */,
 				565B006214314B23005FAEB7 /* NewTodoItemViewController.xib */,
 				566FB11B14322672001F7892 /* TitleViewController.xib */,
 				566FB12114322BDB001F7892 /* DatePickerViewController.xib */,
-				566FB126143264B8001F7892 /* RepeatViewController.xib */,
 				566FB1301432D294001F7892 /* NotesViewController.xib */,
+				56080A9C1438F505005B5DDE /* ListTableViewController.xib */,
+				56080AA21438F549005B5DDE /* NewListViewController.xib */,
+				56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */,
+				565B004A14313EAE005FAEB7 /* MainWindow.xib */,
 				566FB12C1432CB48001F7892 /* AlertPList.plist */,
 			);
 			name = Resources;
@@ -232,9 +286,13 @@
 				565B006414314B23005FAEB7 /* NewTodoItemViewController.xib in Resources */,
 				566FB11D14322672001F7892 /* TitleViewController.xib in Resources */,
 				566FB12314322BDB001F7892 /* DatePickerViewController.xib in Resources */,
-				566FB128143264B8001F7892 /* RepeatViewController.xib in Resources */,
 				566FB12D1432CB48001F7892 /* AlertPList.plist in Resources */,
 				566FB1321432D295001F7892 /* NotesViewController.xib in Resources */,
+				56080A9E1438F505005B5DDE /* ListTableViewController.xib in Resources */,
+				56080AA41438F549005B5DDE /* NewListViewController.xib in Resources */,
+				56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */,
+				56924F21143A813D0090C3E5 /* Background.png in Resources */,
+				56FE5174143D1C7500C3E13A /* TodoListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,9 +312,11 @@
 				565B006314314B23005FAEB7 /* NewTodoItemViewController.m in Sources */,
 				566FB11C14322672001F7892 /* TitleViewController.m in Sources */,
 				566FB12214322BDB001F7892 /* DatePickerViewController.m in Sources */,
-				566FB127143264B8001F7892 /* RepeatViewController.m in Sources */,
 				566FB12B1432C799001F7892 /* AlertViewController.m in Sources */,
 				566FB1311432D295001F7892 /* NotesViewController.m in Sources */,
+				56080A9D1438F505005B5DDE /* ListTableViewController.m in Sources */,
+				56080AA31438F549005B5DDE /* NewListViewController.m in Sources */,
+				56FE5171143D1C6200C3E13A /* TodoListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +391,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCSUF/MyCSUF-Prefix.pch";
 				INFOPLIST_FILE = "MyCSUF/MyCSUF-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -342,6 +403,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCSUF/MyCSUF-Prefix.pch";
 				INFOPLIST_FILE = "MyCSUF/MyCSUF-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

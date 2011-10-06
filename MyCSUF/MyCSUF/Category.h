@@ -16,6 +16,12 @@
 }
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *task;
+@property (nonatomic, retain) NSString * fontColor;
+
++ (NSArray *)myCurrentList:(NSManagedObjectContext *)context;
++ (Category *)createNewCategory:(NSString *)categoryName withColor:(NSString *)colorType withManagedObjectContext:(NSManagedObjectContext *)context;
++ (void)saveData:(NSManagedObjectContext *)context;
+
 @end
 
 @interface Category (CoreDataGeneratedAccessors)

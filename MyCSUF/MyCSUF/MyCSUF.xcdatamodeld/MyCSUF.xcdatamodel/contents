@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="562" systemVersion="11B26" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Category" representedClassName="Category">
+        <attribute name="fontColor" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="task" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="category" inverseEntity="Task"/>
     </entity>
@@ -8,6 +9,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Task" representedClassName="Task">
+        <attribute name="alert" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="priority" optional="YES" attributeType="Integer 16" defaultValueString="0"/>
@@ -15,8 +17,8 @@
         <relationship name="category" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="task" inverseEntity="Category"/>
     </entity>
     <elements>
-        <element name="Task" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="Category" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Category" positionX="160" positionY="192" width="128" height="90"/>
         <element name="Course" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="Task" positionX="160" positionY="192" width="128" height="135"/>
     </elements>
 </model>
