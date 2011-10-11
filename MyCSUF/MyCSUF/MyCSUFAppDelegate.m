@@ -8,6 +8,7 @@
 
 #import "MyCSUFAppDelegate.h"
 #import "ListTableViewController.h"
+#import "ClassScheduleViewController.h"
 
 @implementation MyCSUFAppDelegate
 
@@ -20,12 +21,25 @@
 {
     // Override point for customization after application launch.
     ListTableViewController *listTableViewController = [[ListTableViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
+
+    // initilizes ClassScheduileViewController
+    ClassScheduleViewController *classviewContoller = [[ClassScheduleViewController alloc] init];
+    
+    UINavigationController *tab1 = [[UINavigationController alloc] init];
+    [tab1 pushViewController: classviewContoller animated:NO];
+    
     UINavigationController *navCon = [[UINavigationController alloc] init];
     [navCon pushViewController:listTableViewController animated:NO];
+    
     [listTableViewController release];
+    [classviewContoller release];
+    
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = [NSArray arrayWithObjects:navCon, nil];
+    tabBarController.viewControllers = [NSArray arrayWithObjects:navCon,tab1, nil];
+    
     [navCon release];
+    [tab1 release];
+    
     [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
     return YES;

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C043E78143D50B100AB3B14 /* ClassScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C043E76143D50B100AB3B14 /* ClassScheduleViewController.m */; };
+		4C043E79143D50B100AB3B14 /* ClassScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C043E77143D50B100AB3B14 /* ClassScheduleViewController.xib */; };
+		4CD7D9FA1443B8CF003755E1 /* ClassScheduleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */; };
+		4CD7D9FB1443B8CF003755E1 /* ClassScheduleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */; };
+		4CD7DA021443C18F003755E1 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7DA011443C18F003755E1 /* Course.m */; };
 		56080A9D1438F505005B5DDE /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56080A9B1438F505005B5DDE /* ListTableViewController.m */; };
 		56080A9E1438F505005B5DDE /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56080A9C1438F505005B5DDE /* ListTableViewController.xib */; };
 		56080AA31438F549005B5DDE /* NewListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56080AA11438F549005B5DDE /* NewListViewController.m */; };
@@ -41,6 +46,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C043E75143D50B100AB3B14 /* ClassScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassScheduleViewController.h; sourceTree = "<group>"; };
+		4C043E76143D50B100AB3B14 /* ClassScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassScheduleViewController.m; sourceTree = "<group>"; };
+		4C043E77143D50B100AB3B14 /* ClassScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassScheduleViewController.xib; sourceTree = "<group>"; };
+		4CD7D9F71443B8CF003755E1 /* ClassScheduleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassScheduleViewCell.h; path = MyCSUF/ClassScheduleViewCell.h; sourceTree = "<group>"; };
+		4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassScheduleViewCell.m; path = MyCSUF/ClassScheduleViewCell.m; sourceTree = "<group>"; };
+		4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ClassScheduleViewCell.xib; path = MyCSUF/ClassScheduleViewCell.xib; sourceTree = "<group>"; };
+		4CD7DA001443C18F003755E1 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		4CD7DA011443C18F003755E1 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		56080A9A1438F505005B5DDE /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
 		56080A9B1438F505005B5DDE /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		56080A9C1438F505005B5DDE /* ListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = "<group>"; };
@@ -106,6 +119,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C043E7A143D50B600AB3B14 /* ClassScheduleviewController */ = {
+			isa = PBXGroup;
+			children = (
+				4C043E75143D50B100AB3B14 /* ClassScheduleViewController.h */,
+				4C043E76143D50B100AB3B14 /* ClassScheduleViewController.m */,
+				4C043E77143D50B100AB3B14 /* ClassScheduleViewController.xib */,
+				4CD7D9F71443B8CF003755E1 /* ClassScheduleViewCell.h */,
+				4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */,
+				4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */,
+			);
+			name = ClassScheduleviewController;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		5604400E143D02BA00BB1275 /* CatrgoryViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +176,8 @@
 		56080AAC1438F7A9005B5DDE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4CD7DA011443C18F003755E1 /* Course.m */,
+				4CD7DA001443C18F003755E1 /* Course.h */,
 				565B005D14314AF1005FAEB7 /* Category.h */,
 				565B005E14314AF1005FAEB7 /* Category.m */,
 				565B005A14314AF1005FAEB7 /* Task.h */,
@@ -191,6 +220,7 @@
 			children = (
 				565B004714313EAE005FAEB7 /* MyCSUFAppDelegate.h */,
 				565B004814313EAE005FAEB7 /* MyCSUFAppDelegate.m */,
+				4C043E7A143D50B600AB3B14 /* ClassScheduleviewController */,
 				5604400E143D02BA00BB1275 /* CatrgoryViewControllers */,
 				56080AAB1438F79F005B5DDE /* Todo List View Controllers */,
 				565B006514314CDA005FAEB7 /* Configurations.h */,
@@ -293,6 +323,8 @@
 				56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */,
 				56924F21143A813D0090C3E5 /* Background.png in Resources */,
 				56FE5174143D1C7500C3E13A /* TodoListTableViewCell.xib in Resources */,
+				4C043E79143D50B100AB3B14 /* ClassScheduleViewController.xib in Resources */,
+				4CD7D9FB1443B8CF003755E1 /* ClassScheduleViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +349,9 @@
 				56080A9D1438F505005B5DDE /* ListTableViewController.m in Sources */,
 				56080AA31438F549005B5DDE /* NewListViewController.m in Sources */,
 				56FE5171143D1C6200C3E13A /* TodoListTableViewCell.m in Sources */,
+				4C043E78143D50B100AB3B14 /* ClassScheduleViewController.m in Sources */,
+				4CD7D9FA1443B8CF003755E1 /* ClassScheduleViewCell.m in Sources */,
+				4CD7DA021443C18F003755E1 /* Course.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
