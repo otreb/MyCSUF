@@ -7,9 +7,10 @@
 //
 
 #import "ClassScheduleViewController.h"
+#import "ClassScheduleViewCell.h"
+#import "MapViewController.h"
 
 @implementation ClassScheduleViewController
-@synthesize courseData;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,13 +33,21 @@
 
 - (void)viewDidLoad
 {
-    NSArray *array = [[NSArray alloc]   initWithObjects:@"iPhone", @"iPod", @"iPad", nil];
-    self.courseData = array;
-    
-    [array release];
-    
     [super viewDidLoad];
+    
+    self.tableView.rowHeight=95;
+    self.tableView.allowsSelection=YES;
+    self.tableView.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
+    self.tableView.separatorColor=[UIColor colorWithRed:.90 green:.90 blue:.90 alpha:1];
+    self.view.backgroundColor=[UIColor colorWithRed:.80 green:.80 blue:.80 alpha:1];
 
+
+    courseName = [[NSArray alloc] initWithObjects:@"course1", @"course2", @"course3",nil];
+    courseNumber = [[NSArray alloc] initWithObjects:@"ECE 118",@"ECE 124", @"ECE 176", nil];
+    classTime = [[NSArray alloc] initWithObjects:@"11-12", @"2-3", @"5-6", nil];
+    room = [[NSArray alloc] initWithObjects:@"EE 120", @"EE 120", @"EE 120", nil];
+    teacher = [[NSArray alloc] initWithObjects:@"teacher1", @"teacher2", @"teacher3", nil];    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -89,20 +98,30 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.courseData count]; 
+    return [room count]; 
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"ClassScheduleViewCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    ClassScheduleViewCell *cell = (ClassScheduleViewCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ClassScheduleViewCell" owner:self options:nil];
+        
+        for (id currentObject in topLevelObjects){
+            if([currentObject isKindOfClass:[UITableViewCell class]]){
+                cell = (ClassScheduleViewCell *) currentObject;
+                break;
+            }
+        }
     }
-    
-    NSInteger row = [indexPath row];
-    cell.textLabel.text = [courseData objectAtIndex:row];
+    cell.courseName.text = [courseName objectAtIndex:indexPath.row];
+    cell.courseNumber.text = [courseNumber objectAtIndex:indexPath.row];
+    cell.classTime.text = [classTime objectAtIndex:indexPath.row];
+    cell.room.text = [room objectAtIndex:indexPath.row];
+    cell.teacher.text = [teacher objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -151,13 +170,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    
+     MapViewController *mapViewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
      // ...
      // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+     [self.navigationController pushViewController:mapViewController animated:YES];
+     [MapViewController release];
 }
 
 

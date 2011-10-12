@@ -22,14 +22,13 @@
     // Override point for customization after application launch.
     ListTableViewController *listTableViewController = [[ListTableViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
 
-    // initilizes ClassScheduileViewController
     ClassScheduleViewController *classviewContoller = [[ClassScheduleViewController alloc] init];
-    
-    UINavigationController *tab1 = [[UINavigationController alloc] init];
-    [tab1 pushViewController: classviewContoller animated:NO];
     
     UINavigationController *navCon = [[UINavigationController alloc] init];
     [navCon pushViewController:listTableViewController animated:NO];
+    
+    UINavigationController *tab1 = [[UINavigationController alloc] init];
+    [tab1 pushViewController: classviewContoller animated:NO];
     
     [listTableViewController release];
     [classviewContoller release];

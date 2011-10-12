@@ -12,6 +12,10 @@
 		4CD7D9FA1443B8CF003755E1 /* ClassScheduleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */; };
 		4CD7D9FB1443B8CF003755E1 /* ClassScheduleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */; };
 		4CD7DA021443C18F003755E1 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7DA011443C18F003755E1 /* Course.m */; };
+		4CE4EC151444D9BE001EF9B6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4EC131444D9BD001EF9B6 /* MapViewController.m */; };
+		4CE4EC161444D9BE001EF9B6 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE4EC141444D9BE001EF9B6 /* MapViewController.xib */; };
+		4CE4EC1A1444DA34001EF9B6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE4EC191444DA34001EF9B6 /* MapKit.framework */; };
+		4CE4EC1C1444DA40001EF9B6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE4EC1B1444DA40001EF9B6 /* CoreLocation.framework */; };
 		56080A9D1438F505005B5DDE /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56080A9B1438F505005B5DDE /* ListTableViewController.m */; };
 		56080A9E1438F505005B5DDE /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56080A9C1438F505005B5DDE /* ListTableViewController.xib */; };
 		56080AA31438F549005B5DDE /* NewListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56080AA11438F549005B5DDE /* NewListViewController.m */; };
@@ -54,6 +58,11 @@
 		4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ClassScheduleViewCell.xib; path = MyCSUF/ClassScheduleViewCell.xib; sourceTree = "<group>"; };
 		4CD7DA001443C18F003755E1 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		4CD7DA011443C18F003755E1 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		4CE4EC121444D9BD001EF9B6 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = MyCSUF/MapViewController.h; sourceTree = "<group>"; };
+		4CE4EC131444D9BD001EF9B6 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = MyCSUF/MapViewController.m; sourceTree = "<group>"; };
+		4CE4EC141444D9BE001EF9B6 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = MyCSUF/MapViewController.xib; sourceTree = "<group>"; };
+		4CE4EC191444DA34001EF9B6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4CE4EC1B1444DA40001EF9B6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		56080A9A1438F505005B5DDE /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
 		56080A9B1438F505005B5DDE /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		56080A9C1438F505005B5DDE /* ListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = "<group>"; };
@@ -109,6 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE4EC1C1444DA40001EF9B6 /* CoreLocation.framework in Frameworks */,
+				4CE4EC1A1444DA34001EF9B6 /* MapKit.framework in Frameworks */,
 				565B003714313EAE005FAEB7 /* UIKit.framework in Frameworks */,
 				565B003914313EAE005FAEB7 /* Foundation.framework in Frameworks */,
 				565B003B14313EAE005FAEB7 /* CoreGraphics.framework in Frameworks */,
@@ -128,9 +139,20 @@
 				4CD7D9F71443B8CF003755E1 /* ClassScheduleViewCell.h */,
 				4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */,
 				4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */,
+				4CE4EC171444D9C5001EF9B6 /* MapViewController */,
 			);
 			name = ClassScheduleviewController;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		4CE4EC171444D9C5001EF9B6 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4CE4EC121444D9BD001EF9B6 /* MapViewController.h */,
+				4CE4EC131444D9BD001EF9B6 /* MapViewController.m */,
+				4CE4EC141444D9BE001EF9B6 /* MapViewController.xib */,
+			);
+			name = MapViewController;
 			sourceTree = "<group>";
 		};
 		5604400E143D02BA00BB1275 /* CatrgoryViewControllers */ = {
@@ -207,6 +229,8 @@
 		565B003514313EAE005FAEB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CE4EC1B1444DA40001EF9B6 /* CoreLocation.framework */,
+				4CE4EC191444DA34001EF9B6 /* MapKit.framework */,
 				565B003614313EAE005FAEB7 /* UIKit.framework */,
 				565B003814313EAE005FAEB7 /* Foundation.framework */,
 				565B003A14313EAE005FAEB7 /* CoreGraphics.framework */,
@@ -288,6 +312,9 @@
 /* Begin PBXProject section */
 		565B002914313EAE005FAEB7 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 565B002C14313EAE005FAEB7 /* Build configuration list for PBXProject "MyCSUF" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -325,6 +352,7 @@
 				56FE5174143D1C7500C3E13A /* TodoListTableViewCell.xib in Resources */,
 				4C043E79143D50B100AB3B14 /* ClassScheduleViewController.xib in Resources */,
 				4CD7D9FB1443B8CF003755E1 /* ClassScheduleViewCell.xib in Resources */,
+				4CE4EC161444D9BE001EF9B6 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +380,7 @@
 				4C043E78143D50B100AB3B14 /* ClassScheduleViewController.m in Sources */,
 				4CD7D9FA1443B8CF003755E1 /* ClassScheduleViewCell.m in Sources */,
 				4CD7DA021443C18F003755E1 /* Course.m in Sources */,
+				4CE4EC151444D9BE001EF9B6 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +454,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCSUF/MyCSUF-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MyCSUF/MyCSUF-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,6 +467,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCSUF/MyCSUF-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MyCSUF/MyCSUF-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ClassScheduleViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
-    NSArray *courseData;
+    NSArray *courseName;
+    NSArray *courseNumber;
+    NSArray *classTime;
+    NSArray *room;
+    NSArray *teacher;
 }
-
-@property(nonatomic, retain) NSArray *courseData;
 
 @end

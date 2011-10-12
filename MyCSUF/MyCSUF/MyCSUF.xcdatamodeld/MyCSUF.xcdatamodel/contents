@@ -5,8 +5,12 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="task" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="category" inverseEntity="Task"/>
     </entity>
-    <entity name="Course">
-        <attribute name="name" optional="YES" attributeType="String"/>
+    <entity name="Course" representedClassName="Course">
+        <attribute name="courseName" optional="YES" attributeType="String"/>
+        <attribute name="courseNumber" optional="YES" attributeType="String"/>
+        <attribute name="courseTime" optional="YES" attributeType="String"/>
+        <attribute name="room" optional="YES" attributeType="String"/>
+        <attribute name="teacher" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Task" representedClassName="Task">
         <attribute name="alert" optional="YES" attributeType="String"/>
