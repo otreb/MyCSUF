@@ -278,7 +278,7 @@
             break;
         case 2:
             if (1) {
-                AlertViewController *alertViewController = [[AlertViewController alloc] initWithNibName:@"RepeatViewController" bundle:nil];
+                AlertViewController *alertViewController = [[AlertViewController alloc] initWithNibName:@"ListTableViewController" bundle:nil];
                 alertViewController.delegate = self;
                 [self.navigationController pushViewController:alertViewController animated:YES];
                 [alertViewController release];

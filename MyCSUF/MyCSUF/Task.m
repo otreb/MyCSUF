@@ -16,6 +16,8 @@
 @dynamic priority;
 @dynamic category;
 @dynamic alert;
+@dynamic complete;
+
 
 + (NSArray *)todoListForCategory:(Category *)category inManagedObjectContext:(NSManagedObjectContext *)context
 {
@@ -25,7 +27,8 @@
     requestor.predicate = [NSCompoundPredicate andPredicateWithSubpredicates:
                            [NSArray arrayWithObjects:
                             [NSPredicate predicateWithFormat:@"category = %@",category],
-                            [NSPredicate predicateWithFormat:@"priority = 2"],nil]]
+                            [NSPredicate predicateWithFormat:@"priority = 2"],
+                            [NSPredicate predicateWithFormat:@"complete = %@", [NSNumber numberWithBool:NO]],nil]]
                            ;
     requestor.sortDescriptors = [NSArray arrayWithObjects:
                                  [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES], nil];
@@ -33,13 +36,15 @@
     requestor.predicate = [NSCompoundPredicate andPredicateWithSubpredicates:
                            [NSArray arrayWithObjects:
                             [NSPredicate predicateWithFormat:@"category = %@",category],
-                            [NSPredicate predicateWithFormat:@"priority = 1"],nil]]
+                            [NSPredicate predicateWithFormat:@"priority = 1"],
+                            [NSPredicate predicateWithFormat:@"complete = %@", [NSNumber numberWithBool:NO]],nil]]
     ;
     [temp addObject:[context executeFetchRequest:requestor error:NULL]];
     requestor.predicate = [NSCompoundPredicate andPredicateWithSubpredicates:
                            [NSArray arrayWithObjects:
                             [NSPredicate predicateWithFormat:@"category = %@",category],
-                            [NSPredicate predicateWithFormat:@"priority = 0"],nil]]
+                            [NSPredicate predicateWithFormat:@"priority = 0"],
+                            [NSPredicate predicateWithFormat:@"complete = %@", [NSNumber numberWithBool:NO]],nil]]
     ;
     [temp addObject:[context executeFetchRequest:requestor error:NULL]];
     [requestor release];
@@ -65,6 +70,7 @@
         todo.notes = [items objectForKey:@"notes"];
         todo.priority = [items objectForKey:@"priority"];
         todo.category = cat;
+        todo.complete = [NSNumber numberWithBool:NO];
         [self saveData:context];
     }
     return todo;
@@ -77,8 +83,15 @@
     task.alert = [items objectForKey:@"alert"];
     task.notes = [items objectForKey:@"notes"];
     task.priority = [items objectForKey:@"priority"];
+    task.complete = [NSNumber numberWithBool:NO];
     [self saveData:context];
     return task;
+}
+
++ (void)markTaskAsComplete:(Task *)task inManagedObjectContext:(NSManagedObjectContext *)context
+{
+    task.complete = [NSNumber numberWithBool:YES];
+    [self saveData:context];
 }
 
 + (void)saveData:(NSManagedObjectContext *)context

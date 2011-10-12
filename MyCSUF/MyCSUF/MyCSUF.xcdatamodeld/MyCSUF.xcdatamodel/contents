@@ -10,6 +10,7 @@
     </entity>
     <entity name="Task" representedClassName="Task">
         <attribute name="alert" optional="YES" attributeType="String"/>
+        <attribute name="complete" optional="YES" attributeType="Boolean"/>
         <attribute name="date" optional="YES" attributeType="Date"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="priority" optional="YES" attributeType="Integer 16" defaultValueString="0"/>

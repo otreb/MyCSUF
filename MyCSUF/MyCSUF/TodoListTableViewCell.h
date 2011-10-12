@@ -10,12 +10,14 @@
 
 @interface TodoListTableViewCell : UITableViewCell {
     UILabel *title;
-    UILabel *date;
+    UILabel *dateMonth;
+    UILabel *dateTime;
     UILabel *notes;
 }
 
 @property (retain) IBOutlet UILabel *title;
-@property (retain) IBOutlet UILabel *date;
+@property (retain) IBOutlet UILabel *dateMonth;
+@property (retain) IBOutlet UILabel *dateTime;
 @property (retain) IBOutlet UILabel *notes;
 
 @end

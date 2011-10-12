@@ -19,12 +19,15 @@
 @property (nonatomic, retain) NSNumber * priority;
 @property (nonatomic, retain) NSManagedObject *category;
 @property (nonatomic, retain) NSString * alert;
+@property (nonatomic, retain) NSNumber * complete;
 
 + (NSArray *)todoListForCategory:(Category *)category inManagedObjectContext:(NSManagedObjectContext *)context;
 
 + (Task *)addTodoItem:(NSDictionary *)items withCategory:(Category *)cat inMangedObjectContext:(NSManagedObjectContext *)context;
 
 + (Task *)editTodoItem:(Task *)task withNewInformation:(NSDictionary *)items inMangedObjectContext:(NSManagedObjectContext *)context;
+
++ (void)markTaskAsComplete:(Task *)task inManagedObjectContext:(NSManagedObjectContext *)context;
 
 + (void)saveData:(NSManagedObjectContext *)context;
 

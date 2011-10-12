@@ -139,8 +139,7 @@
 			children = (
 				565B00551431437F005FAEB7 /* TodoListViewController.h */,
 				565B00561431437F005FAEB7 /* TodoListViewController.m */,
-				56FE516F143D1C6200C3E13A /* TodoListTableViewCell.h */,
-				56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */,
+				566E67711443C39A0092049F /* Custom Todo List Cell */,
 				56080AAA1438F76E005B5DDE /*  New Todo View Controllers */,
 			);
 			name = "Todo List View Controllers";
@@ -212,6 +211,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		566E67711443C39A0092049F /* Custom Todo List Cell */ = {
+			isa = PBXGroup;
+			children = (
+				56FE516F143D1C6200C3E13A /* TodoListTableViewCell.h */,
+				56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */,
+			);
+			name = "Custom Todo List Cell";
+			sourceTree = "<group>";
+		};
 		566FB1171432262D001F7892 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +266,9 @@
 /* Begin PBXProject section */
 		565B002914313EAE005FAEB7 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 565B002C14313EAE005FAEB7 /* Build configuration list for PBXProject "MyCSUF" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -361,7 +372,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -378,7 +389,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -390,6 +401,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCSUF/MyCSUF-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MyCSUF/MyCSUF-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,6 +414,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCSUF/MyCSUF-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MyCSUF/MyCSUF-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";

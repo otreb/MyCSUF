@@ -145,24 +145,25 @@
         }
     }
     cell.title.text = [[[todoArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] title];
-    cell.date.text = [NSDateFormatter localizedStringFromDate:[[[todoArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] date] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
+    cell.dateMonth.text = [NSDateFormatter localizedStringFromDate:[[[todoArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] date] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
+    cell.dateTime.text = [NSDateFormatter localizedStringFromDate:[[[todoArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] date] dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
     cell.notes.text = [[[todoArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] notes];
-    switch (indexPath.section) {
-        case 0:
-//            if (1) {
-//                UIImage *image = [UIImage imageNamed:@"priorityHigh.png"];
-//                UIImageView *imageView = [[[UIImageView alloc] initWithImage:image] autorelease];
-//                imageView.contentMode = UIViewContentModeScaleToFill;
-//                cell.backgroundView  = imageView;
-//            }
-            break;
-        case 1:
-            break;
-        case 2:
-            break;
-        default:
-            break;
-    }
+//    switch (indexPath.section) {
+//        case 0:
+////            if (1) {
+////                UIImage *image = [UIImage imageNamed:@"priorityHigh.png"];
+////                UIImageView *imageView = [[[UIImageView alloc] initWithImage:image] autorelease];
+////                imageView.contentMode = UIViewContentModeScaleToFill;
+////                cell.backgroundView  = imageView;
+////            }
+//            break;
+//        case 1:
+//            break;
+//        case 2:
+//            break;
+//        default:
+//            break;
+//    }
     
     return cell;
 }
@@ -185,7 +186,12 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {
-        
+        Task *task = [[todoArray objectAtIndex:indexPathSelect.section] objectAtIndex:indexPathSelect.row];
+        [Task markTaskAsComplete:task inManagedObjectContext:managedObjectContext];
+        [todoArray release];
+        todoArray = nil;
+        todoArray = [[Task todoListForCategory:currentCategory inManagedObjectContext:managedObjectContext] retain];
+        [self.table reloadData];
     }
     else if (buttonIndex == 1) {
         NewTodoItemViewController *editTodoItem = [[NewTodoItemViewController alloc] initWithMangedObjectContext:managedObjectContext withEditableTask:[[todoArray objectAtIndex:indexPathSelect.section] objectAtIndex:indexPathSelect.row]];

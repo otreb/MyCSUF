@@ -11,7 +11,8 @@
 @implementation TodoListTableViewCell
 
 @synthesize title;
-@synthesize date;
+@synthesize dateMonth;
+@synthesize dateTime;
 @synthesize notes;
 
 @end
