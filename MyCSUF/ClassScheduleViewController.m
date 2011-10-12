@@ -9,6 +9,7 @@
 #import "ClassScheduleViewController.h"
 #import "ClassScheduleViewCell.h"
 #import "MapViewController.h"
+#import "OptionsViewController.h"
 
 @implementation ClassScheduleViewController
 
@@ -29,6 +30,20 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+    //
+- (void)optionsButton
+{
+    OptionsViewController *optionsViewController = [[OptionsViewController alloc] init];
+    UINavigationController *oButton = [[UINavigationController alloc] init];
+    [oButton pushViewController:optionsViewController animated:YES];
+    [optionsViewController release];
+    oButton.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:oButton animated:YES];
+    [oButton release];
+    
+}
+
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -41,6 +56,8 @@
     self.tableView.separatorColor=[UIColor colorWithRed:.90 green:.90 blue:.90 alpha:1];
     self.view.backgroundColor=[UIColor colorWithRed:.80 green:.80 blue:.80 alpha:1];
 
+    // Puts button on top right corner to select a different semester
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(optionsButton)] autorelease];
 
     courseName = [[NSArray alloc] initWithObjects:@"course1", @"course2", @"course3",nil];
     courseNumber = [[NSArray alloc] initWithObjects:@"ECE 118",@"ECE 124", @"ECE 176", nil];

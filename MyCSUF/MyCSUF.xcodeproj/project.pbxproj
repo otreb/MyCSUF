@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4C043E78143D50B100AB3B14 /* ClassScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C043E76143D50B100AB3B14 /* ClassScheduleViewController.m */; };
 		4C043E79143D50B100AB3B14 /* ClassScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C043E77143D50B100AB3B14 /* ClassScheduleViewController.xib */; };
+		4C378C0414453178005801CC /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C378C0214453178005801CC /* OptionsViewController.m */; };
+		4C378C0514453178005801CC /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C378C0314453178005801CC /* OptionsViewController.xib */; };
 		4CD7D9FA1443B8CF003755E1 /* ClassScheduleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */; };
 		4CD7D9FB1443B8CF003755E1 /* ClassScheduleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */; };
 		4CD7DA021443C18F003755E1 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7DA011443C18F003755E1 /* Course.m */; };
@@ -53,6 +55,9 @@
 		4C043E75143D50B100AB3B14 /* ClassScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassScheduleViewController.h; sourceTree = "<group>"; };
 		4C043E76143D50B100AB3B14 /* ClassScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassScheduleViewController.m; sourceTree = "<group>"; };
 		4C043E77143D50B100AB3B14 /* ClassScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassScheduleViewController.xib; sourceTree = "<group>"; };
+		4C378C0114453178005801CC /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionsViewController.h; path = MyCSUF/OptionsViewController.h; sourceTree = "<group>"; };
+		4C378C0214453178005801CC /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionsViewController.m; path = MyCSUF/OptionsViewController.m; sourceTree = "<group>"; };
+		4C378C0314453178005801CC /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OptionsViewController.xib; path = MyCSUF/OptionsViewController.xib; sourceTree = "<group>"; };
 		4CD7D9F71443B8CF003755E1 /* ClassScheduleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassScheduleViewCell.h; path = MyCSUF/ClassScheduleViewCell.h; sourceTree = "<group>"; };
 		4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassScheduleViewCell.m; path = MyCSUF/ClassScheduleViewCell.m; sourceTree = "<group>"; };
 		4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ClassScheduleViewCell.xib; path = MyCSUF/ClassScheduleViewCell.xib; sourceTree = "<group>"; };
@@ -140,9 +145,20 @@
 				4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */,
 				4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */,
 				4CE4EC171444D9C5001EF9B6 /* MapViewController */,
+				4C378C071445317D005801CC /* OptionsViewController */,
 			);
 			name = ClassScheduleviewController;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		4C378C071445317D005801CC /* OptionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4C378C0114453178005801CC /* OptionsViewController.h */,
+				4C378C0214453178005801CC /* OptionsViewController.m */,
+				4C378C0314453178005801CC /* OptionsViewController.xib */,
+			);
+			name = OptionsViewController;
 			sourceTree = "<group>";
 		};
 		4CE4EC171444D9C5001EF9B6 /* MapViewController */ = {
@@ -353,6 +369,7 @@
 				4C043E79143D50B100AB3B14 /* ClassScheduleViewController.xib in Resources */,
 				4CD7D9FB1443B8CF003755E1 /* ClassScheduleViewCell.xib in Resources */,
 				4CE4EC161444D9BE001EF9B6 /* MapViewController.xib in Resources */,
+				4C378C0514453178005801CC /* OptionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +398,7 @@
 				4CD7D9FA1443B8CF003755E1 /* ClassScheduleViewCell.m in Sources */,
 				4CD7DA021443C18F003755E1 /* Course.m in Sources */,
 				4CE4EC151444D9BE001EF9B6 /* MapViewController.m in Sources */,
+				4C378C0414453178005801CC /* OptionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
