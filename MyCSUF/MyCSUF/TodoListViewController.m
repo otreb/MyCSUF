@@ -14,6 +14,8 @@
 @implementation TodoListViewController
 
 @synthesize table;
+@synthesize pageControl;
+@synthesize scrollView;
 
 - initWithToDo:(Category *)category withManagedObjectContext:(NSManagedObjectContext *)context
 {
@@ -72,6 +74,8 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
     self.table = nil;
+    self.scrollView = nil;
+    self.pageControl = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

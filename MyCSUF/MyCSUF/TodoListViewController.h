@@ -19,9 +19,13 @@
     Category *currentCategory;
     NSArray *todoArray;
     NSIndexPath *indexPathSelect;
+    UIPageControl *pageControl;
+    UIScrollView *scrollView;
 }
 
 @property (retain) IBOutlet UITableView *table;
+@property (retain) IBOutlet UIPageControl *pageControl;
+@property (retain) IBOutlet UIScrollView *scrollView;
 
 - initWithToDo:(Category *)category withManagedObjectContext:(NSManagedObjectContext *)context;
 
