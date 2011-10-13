@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C043E78143D50B100AB3B14 /* ClassScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C043E76143D50B100AB3B14 /* ClassScheduleViewController.m */; };
+		4C043E79143D50B100AB3B14 /* ClassScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C043E77143D50B100AB3B14 /* ClassScheduleViewController.xib */; };
+		4C378C0414453178005801CC /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C378C0214453178005801CC /* OptionsViewController.m */; };
+		4C378C0514453178005801CC /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C378C0314453178005801CC /* OptionsViewController.xib */; };
+		4CD7D9FA1443B8CF003755E1 /* ClassScheduleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */; };
+		4CD7D9FB1443B8CF003755E1 /* ClassScheduleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */; };
+		4CD7DA021443C18F003755E1 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7DA011443C18F003755E1 /* Course.m */; };
+		4CE4EC151444D9BE001EF9B6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4EC131444D9BD001EF9B6 /* MapViewController.m */; };
+		4CE4EC161444D9BE001EF9B6 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE4EC141444D9BE001EF9B6 /* MapViewController.xib */; };
+		4CE4EC1A1444DA34001EF9B6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE4EC191444DA34001EF9B6 /* MapKit.framework */; };
+		4CE4EC1C1444DA40001EF9B6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE4EC1B1444DA40001EF9B6 /* CoreLocation.framework */; };
+		56080A9D1438F505005B5DDE /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56080A9B1438F505005B5DDE /* ListTableViewController.m */; };
+		56080A9E1438F505005B5DDE /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56080A9C1438F505005B5DDE /* ListTableViewController.xib */; };
+		56080AA31438F549005B5DDE /* NewListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56080AA11438F549005B5DDE /* NewListViewController.m */; };
+		56080AA41438F549005B5DDE /* NewListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56080AA21438F549005B5DDE /* NewListViewController.xib */; };
 		565B003714313EAE005FAEB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003614313EAE005FAEB7 /* UIKit.framework */; };
 		565B003914313EAE005FAEB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003814313EAE005FAEB7 /* Foundation.framework */; };
 		565B003B14313EAE005FAEB7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003A14313EAE005FAEB7 /* CoreGraphics.framework */; };
@@ -26,15 +41,39 @@
 		566FB11D14322672001F7892 /* TitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB11B14322672001F7892 /* TitleViewController.xib */; };
 		566FB12214322BDB001F7892 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB12014322BDB001F7892 /* DatePickerViewController.m */; };
 		566FB12314322BDB001F7892 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB12114322BDB001F7892 /* DatePickerViewController.xib */; };
-		566FB127143264B8001F7892 /* RepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB125143264B8001F7892 /* RepeatViewController.m */; };
-		566FB128143264B8001F7892 /* RepeatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB126143264B8001F7892 /* RepeatViewController.xib */; };
 		566FB12B1432C799001F7892 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB12A1432C799001F7892 /* AlertViewController.m */; };
 		566FB12D1432CB48001F7892 /* AlertPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 566FB12C1432CB48001F7892 /* AlertPList.plist */; };
 		566FB1311432D295001F7892 /* NotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB12F1432D294001F7892 /* NotesViewController.m */; };
 		566FB1321432D295001F7892 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB1301432D294001F7892 /* NotesViewController.xib */; };
+		56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F1B143A66B40090C3E5 /* priorityHigh.png */; };
+		56924F21143A813D0090C3E5 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F20143A813D0090C3E5 /* Background.png */; };
+		56FE5171143D1C6200C3E13A /* TodoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */; };
+		56FE5174143D1C7500C3E13A /* TodoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C043E75143D50B100AB3B14 /* ClassScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassScheduleViewController.h; sourceTree = "<group>"; };
+		4C043E76143D50B100AB3B14 /* ClassScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassScheduleViewController.m; sourceTree = "<group>"; };
+		4C043E77143D50B100AB3B14 /* ClassScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassScheduleViewController.xib; sourceTree = "<group>"; };
+		4C378C0114453178005801CC /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionsViewController.h; path = MyCSUF/OptionsViewController.h; sourceTree = "<group>"; };
+		4C378C0214453178005801CC /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionsViewController.m; path = MyCSUF/OptionsViewController.m; sourceTree = "<group>"; };
+		4C378C0314453178005801CC /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OptionsViewController.xib; path = MyCSUF/OptionsViewController.xib; sourceTree = "<group>"; };
+		4CD7D9F71443B8CF003755E1 /* ClassScheduleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassScheduleViewCell.h; path = MyCSUF/ClassScheduleViewCell.h; sourceTree = "<group>"; };
+		4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassScheduleViewCell.m; path = MyCSUF/ClassScheduleViewCell.m; sourceTree = "<group>"; };
+		4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ClassScheduleViewCell.xib; path = MyCSUF/ClassScheduleViewCell.xib; sourceTree = "<group>"; };
+		4CD7DA001443C18F003755E1 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		4CD7DA011443C18F003755E1 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		4CE4EC121444D9BD001EF9B6 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = MyCSUF/MapViewController.h; sourceTree = "<group>"; };
+		4CE4EC131444D9BD001EF9B6 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = MyCSUF/MapViewController.m; sourceTree = "<group>"; };
+		4CE4EC141444D9BE001EF9B6 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = MyCSUF/MapViewController.xib; sourceTree = "<group>"; };
+		4CE4EC191444DA34001EF9B6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4CE4EC1B1444DA40001EF9B6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		56080A9A1438F505005B5DDE /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		56080A9B1438F505005B5DDE /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
+		56080A9C1438F505005B5DDE /* ListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = "<group>"; };
+		56080AA01438F549005B5DDE /* NewListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewListViewController.h; sourceTree = "<group>"; };
+		56080AA11438F549005B5DDE /* NewListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewListViewController.m; sourceTree = "<group>"; };
+		56080AA21438F549005B5DDE /* NewListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewListViewController.xib; sourceTree = "<group>"; };
 		565B003214313EAE005FAEB7 /* MyCSUF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCSUF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		565B003614313EAE005FAEB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		565B003814313EAE005FAEB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,15 +105,17 @@
 		566FB11F14322BDB001F7892 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
 		566FB12014322BDB001F7892 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
 		566FB12114322BDB001F7892 /* DatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
-		566FB124143264B8001F7892 /* RepeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatViewController.h; sourceTree = "<group>"; };
-		566FB125143264B8001F7892 /* RepeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatViewController.m; sourceTree = "<group>"; };
-		566FB126143264B8001F7892 /* RepeatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepeatViewController.xib; sourceTree = "<group>"; };
 		566FB1291432C799001F7892 /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
 		566FB12A1432C799001F7892 /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
 		566FB12C1432CB48001F7892 /* AlertPList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AlertPList.plist; sourceTree = "<group>"; };
 		566FB12E1432D294001F7892 /* NotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesViewController.h; sourceTree = "<group>"; };
 		566FB12F1432D294001F7892 /* NotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesViewController.m; sourceTree = "<group>"; };
 		566FB1301432D294001F7892 /* NotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesViewController.xib; sourceTree = "<group>"; };
+		56924F1B143A66B40090C3E5 /* priorityHigh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = priorityHigh.png; sourceTree = "<group>"; };
+		56924F20143A813D0090C3E5 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		56FE516F143D1C6200C3E13A /* TodoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoListTableViewCell.h; sourceTree = "<group>"; };
+		56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoListTableViewCell.m; sourceTree = "<group>"; };
+		56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodoListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +123,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE4EC1C1444DA40001EF9B6 /* CoreLocation.framework in Frameworks */,
+				4CE4EC1A1444DA34001EF9B6 /* MapKit.framework in Frameworks */,
 				565B003714313EAE005FAEB7 /* UIKit.framework in Frameworks */,
 				565B003914313EAE005FAEB7 /* Foundation.framework in Frameworks */,
 				565B003B14313EAE005FAEB7 /* CoreGraphics.framework in Frameworks */,
@@ -92,6 +135,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C043E7A143D50B600AB3B14 /* ClassScheduleviewController */ = {
+			isa = PBXGroup;
+			children = (
+				4C043E75143D50B100AB3B14 /* ClassScheduleViewController.h */,
+				4C043E76143D50B100AB3B14 /* ClassScheduleViewController.m */,
+				4C043E77143D50B100AB3B14 /* ClassScheduleViewController.xib */,
+				4CD7D9F71443B8CF003755E1 /* ClassScheduleViewCell.h */,
+				4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */,
+				4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */,
+				4CE4EC171444D9C5001EF9B6 /* MapViewController */,
+				4C378C071445317D005801CC /* OptionsViewController */,
+			);
+			name = ClassScheduleviewController;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4C378C071445317D005801CC /* OptionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4C378C0114453178005801CC /* OptionsViewController.h */,
+				4C378C0214453178005801CC /* OptionsViewController.m */,
+				4C378C0314453178005801CC /* OptionsViewController.xib */,
+			);
+			name = OptionsViewController;
+			sourceTree = "<group>";
+		};
+		4CE4EC171444D9C5001EF9B6 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4CE4EC121444D9BD001EF9B6 /* MapViewController.h */,
+				4CE4EC131444D9BD001EF9B6 /* MapViewController.m */,
+				4CE4EC141444D9BE001EF9B6 /* MapViewController.xib */,
+			);
+			name = MapViewController;
+			sourceTree = "<group>";
+		};
+		5604400E143D02BA00BB1275 /* CatrgoryViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				56080A9A1438F505005B5DDE /* ListTableViewController.h */,
+				56080A9B1438F505005B5DDE /* ListTableViewController.m */,
+				56080AA01438F549005B5DDE /* NewListViewController.h */,
+				56080AA11438F549005B5DDE /* NewListViewController.m */,
+			);
+			name = CatrgoryViewControllers;
+			sourceTree = "<group>";
+		};
+		56080AAA1438F76E005B5DDE /*  New Todo View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				565B006014314B23005FAEB7 /* NewTodoItemViewController.h */,
+				565B006114314B23005FAEB7 /* NewTodoItemViewController.m */,
+				566FB11914322672001F7892 /* TitleViewController.h */,
+				566FB11A14322672001F7892 /* TitleViewController.m */,
+				566FB11F14322BDB001F7892 /* DatePickerViewController.h */,
+				566FB12014322BDB001F7892 /* DatePickerViewController.m */,
+				566FB1291432C799001F7892 /* AlertViewController.h */,
+				566FB12A1432C799001F7892 /* AlertViewController.m */,
+				566FB12E1432D294001F7892 /* NotesViewController.h */,
+				566FB12F1432D294001F7892 /* NotesViewController.m */,
+			);
+			name = " New Todo View Controllers";
+			sourceTree = "<group>";
+		};
+		56080AAB1438F79F005B5DDE /* Todo List View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				565B00551431437F005FAEB7 /* TodoListViewController.h */,
+				565B00561431437F005FAEB7 /* TodoListViewController.m */,
+				566E67711443C39A0092049F /* Custom Todo List Cell */,
+				56080AAA1438F76E005B5DDE /*  New Todo View Controllers */,
+			);
+			name = "Todo List View Controllers";
+			sourceTree = "<group>";
+		};
+		56080AAC1438F7A9005B5DDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CD7DA011443C18F003755E1 /* Course.m */,
+				4CD7DA001443C18F003755E1 /* Course.h */,
+				565B005D14314AF1005FAEB7 /* Category.h */,
+				565B005E14314AF1005FAEB7 /* Category.m */,
+				565B005A14314AF1005FAEB7 /* Task.h */,
+				565B005B14314AF1005FAEB7 /* Task.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		565B002714313EAE005FAEB7 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +244,8 @@
 		565B003514313EAE005FAEB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CE4EC1B1444DA40001EF9B6 /* CoreLocation.framework */,
+				4CE4EC191444DA34001EF9B6 /* MapKit.framework */,
 				565B003614313EAE005FAEB7 /* UIKit.framework */,
 				565B003814313EAE005FAEB7 /* Foundation.framework */,
 				565B003A14313EAE005FAEB7 /* CoreGraphics.framework */,
@@ -126,27 +259,12 @@
 			children = (
 				565B004714313EAE005FAEB7 /* MyCSUFAppDelegate.h */,
 				565B004814313EAE005FAEB7 /* MyCSUFAppDelegate.m */,
-				565B00551431437F005FAEB7 /* TodoListViewController.h */,
-				565B00561431437F005FAEB7 /* TodoListViewController.m */,
-				565B006014314B23005FAEB7 /* NewTodoItemViewController.h */,
-				565B006114314B23005FAEB7 /* NewTodoItemViewController.m */,
-				566FB11914322672001F7892 /* TitleViewController.h */,
-				566FB11A14322672001F7892 /* TitleViewController.m */,
-				566FB11F14322BDB001F7892 /* DatePickerViewController.h */,
-				566FB12014322BDB001F7892 /* DatePickerViewController.m */,
-				566FB124143264B8001F7892 /* RepeatViewController.h */,
-				566FB125143264B8001F7892 /* RepeatViewController.m */,
-				566FB1291432C799001F7892 /* AlertViewController.h */,
-				566FB12A1432C799001F7892 /* AlertViewController.m */,
-				566FB12E1432D294001F7892 /* NotesViewController.h */,
-				566FB12F1432D294001F7892 /* NotesViewController.m */,
+				4C043E7A143D50B600AB3B14 /* ClassScheduleviewController */,
+				5604400E143D02BA00BB1275 /* CatrgoryViewControllers */,
+				56080AAB1438F79F005B5DDE /* Todo List View Controllers */,
 				565B006514314CDA005FAEB7 /* Configurations.h */,
 				566FB11E143228CC001F7892 /* DelegeMethods.h */,
-				565B004A14313EAE005FAEB7 /* MainWindow.xib */,
-				565B005D14314AF1005FAEB7 /* Category.h */,
-				565B005E14314AF1005FAEB7 /* Category.m */,
-				565B005A14314AF1005FAEB7 /* Task.h */,
-				565B005B14314AF1005FAEB7 /* Task.m */,
+				56080AAC1438F7A9005B5DDE /* Model */,
 				565B003F14313EAE005FAEB7 /* Supporting Files */,
 			);
 			path = MyCSUF;
@@ -163,16 +281,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		566E67711443C39A0092049F /* Custom Todo List Cell */ = {
+			isa = PBXGroup;
+			children = (
+				56FE516F143D1C6200C3E13A /* TodoListTableViewCell.h */,
+				56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */,
+			);
+			name = "Custom Todo List Cell";
+			sourceTree = "<group>";
+		};
 		566FB1171432262D001F7892 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				565B004D14313EAE005FAEB7 /* MyCSUF.xcdatamodeld */,
+				56924F20143A813D0090C3E5 /* Background.png */,
+				56924F1B143A66B40090C3E5 /* priorityHigh.png */,
 				565B00571431437F005FAEB7 /* TodoListViewController.xib */,
 				565B006214314B23005FAEB7 /* NewTodoItemViewController.xib */,
 				566FB11B14322672001F7892 /* TitleViewController.xib */,
 				566FB12114322BDB001F7892 /* DatePickerViewController.xib */,
-				566FB126143264B8001F7892 /* RepeatViewController.xib */,
 				566FB1301432D294001F7892 /* NotesViewController.xib */,
+				56080A9C1438F505005B5DDE /* ListTableViewController.xib */,
+				56080AA21438F549005B5DDE /* NewListViewController.xib */,
+				56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */,
+				565B004A14313EAE005FAEB7 /* MainWindow.xib */,
 				566FB12C1432CB48001F7892 /* AlertPList.plist */,
 			);
 			name = Resources;
@@ -204,6 +336,9 @@
 /* Begin PBXProject section */
 		565B002914313EAE005FAEB7 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 565B002C14313EAE005FAEB7 /* Build configuration list for PBXProject "MyCSUF" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -232,9 +367,17 @@
 				565B006414314B23005FAEB7 /* NewTodoItemViewController.xib in Resources */,
 				566FB11D14322672001F7892 /* TitleViewController.xib in Resources */,
 				566FB12314322BDB001F7892 /* DatePickerViewController.xib in Resources */,
-				566FB128143264B8001F7892 /* RepeatViewController.xib in Resources */,
 				566FB12D1432CB48001F7892 /* AlertPList.plist in Resources */,
 				566FB1321432D295001F7892 /* NotesViewController.xib in Resources */,
+				56080A9E1438F505005B5DDE /* ListTableViewController.xib in Resources */,
+				56080AA41438F549005B5DDE /* NewListViewController.xib in Resources */,
+				56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */,
+				56924F21143A813D0090C3E5 /* Background.png in Resources */,
+				56FE5174143D1C7500C3E13A /* TodoListTableViewCell.xib in Resources */,
+				4C043E79143D50B100AB3B14 /* ClassScheduleViewController.xib in Resources */,
+				4CD7D9FB1443B8CF003755E1 /* ClassScheduleViewCell.xib in Resources */,
+				4CE4EC161444D9BE001EF9B6 /* MapViewController.xib in Resources */,
+				4C378C0514453178005801CC /* OptionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,9 +397,16 @@
 				565B006314314B23005FAEB7 /* NewTodoItemViewController.m in Sources */,
 				566FB11C14322672001F7892 /* TitleViewController.m in Sources */,
 				566FB12214322BDB001F7892 /* DatePickerViewController.m in Sources */,
-				566FB127143264B8001F7892 /* RepeatViewController.m in Sources */,
 				566FB12B1432C799001F7892 /* AlertViewController.m in Sources */,
 				566FB1311432D295001F7892 /* NotesViewController.m in Sources */,
+				56080A9D1438F505005B5DDE /* ListTableViewController.m in Sources */,
+				56080AA31438F549005B5DDE /* NewListViewController.m in Sources */,
+				56FE5171143D1C6200C3E13A /* TodoListTableViewCell.m in Sources */,
+				4C043E78143D50B100AB3B14 /* ClassScheduleViewController.m in Sources */,
+				4CD7D9FA1443B8CF003755E1 /* ClassScheduleViewCell.m in Sources */,
+				4CD7DA021443C18F003755E1 /* Course.m in Sources */,
+				4CE4EC151444D9BE001EF9B6 /* MapViewController.m in Sources */,
+				4C378C0414453178005801CC /* OptionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +451,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -318,7 +468,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -330,7 +480,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCSUF/MyCSUF-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MyCSUF/MyCSUF-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -341,7 +493,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCSUF/MyCSUF-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MyCSUF/MyCSUF-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

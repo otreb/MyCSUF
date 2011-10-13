@@ -12,9 +12,12 @@
 @interface TitleViewController : UIViewController <UITextFieldDelegate> {
     UITextField *titleField;
     id<NewTodoDelegate>delegate;
+    NSString *title;
 }
 
 @property (retain) IBOutlet UITextField *titleField;
 @property (assign) id<NewTodoDelegate>delegate;
+
+- initWithTitle:(NSString *)title;
 
 @end

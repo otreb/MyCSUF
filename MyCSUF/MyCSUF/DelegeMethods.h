@@ -13,9 +13,14 @@
 
 - (void)updateTitleField:(NSString *)title;
 - (void)updateDateField:(NSDate *)date;
-- (void)updateRepeatField:(NSString *)repeat;
 - (void)updateAlertField:(NSString *)alert;
 - (void)updateNotesField:(NSString *)notes;
+
+@end
+
+@protocol ListDelegate
+
+- (void)listCreated;
 
 @end
 

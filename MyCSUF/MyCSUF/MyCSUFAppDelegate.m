@@ -7,7 +7,8 @@
 //
 
 #import "MyCSUFAppDelegate.h"
-#import "TodoListViewController.h"
+#import "ListTableViewController.h"
+#import "ClassScheduleViewController.h"
 
 @implementation MyCSUFAppDelegate
 
@@ -19,13 +20,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    TodoListViewController *todoListViewController = [[TodoListViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
+    ListTableViewController *listTableViewController = [[ListTableViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
+
+    ClassScheduleViewController *classviewContoller = [[ClassScheduleViewController alloc] init];
+    
     UINavigationController *navCon = [[UINavigationController alloc] init];
-    [navCon pushViewController:todoListViewController animated:NO];
-    [todoListViewController release];
+    [navCon pushViewController:listTableViewController animated:NO];
+    
+    UINavigationController *tab1 = [[UINavigationController alloc] init];
+    [tab1 pushViewController: classviewContoller animated:NO];
+    
+    [listTableViewController release];
+    [classviewContoller release];
+    
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = [NSArray arrayWithObjects:navCon, nil];
+    tabBarController.viewControllers = [NSArray arrayWithObjects:navCon,tab1, nil];
+    
     [navCon release];
+    [tab1 release];
+    
     [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
     return YES;
@@ -81,7 +94,7 @@
     /*
      Typically you should set up the Core Data stack here, usually by passing the managed object context to the first view controller.
      self.<#View controller#>.managedObjectContext = self.managedObjectContext;
-    */
+     */
 }
 
 - (void)saveContext

@@ -13,6 +13,15 @@
 @synthesize notes;
 @synthesize delegate;
 
+- initWithText:(NSString *)note
+{
+    if ((self = [super init])) {
+//        self.notes = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, <#CGFloat width#>, <#CGFloat height#>)];
+        currentNote = note;
+    }
+    return self;
+}
+
 - (void)closeView
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -48,6 +57,14 @@
                                                action:@selector(doneButtonPressed)] autorelease];
     self.navigationItem.title = @"Note";
     [self.notes becomeFirstResponder];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (currentNote != nil) {
+        self.notes.text = currentNote;
+    }
 }
 
 - (void)viewDidUnload

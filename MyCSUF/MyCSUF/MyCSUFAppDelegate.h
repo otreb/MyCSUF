@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyCSUFAppDelegate : NSObject <UIApplicationDelegate>
+@interface MyCSUFAppDelegate : NSObject <UIApplicationDelegate> {
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
+}
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
