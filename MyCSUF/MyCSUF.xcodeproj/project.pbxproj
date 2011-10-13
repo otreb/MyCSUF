@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C043E78143D50B100AB3B14 /* ClassScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C043E76143D50B100AB3B14 /* ClassScheduleViewController.m */; };
-		4C043E79143D50B100AB3B14 /* ClassScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C043E77143D50B100AB3B14 /* ClassScheduleViewController.xib */; };
+		4C08F3DE144666D3000699CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C08F3DC144666D3000699CD /* LoginViewController.m */; };
+		4C08F3DF144666D3000699CD /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C08F3DD144666D3000699CD /* LoginViewController.xib */; };
+		4C08F3E8144666FE000699CD /* ClassScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C08F3E6144666FE000699CD /* ClassScheduleViewController.m */; };
+		4C08F3E9144666FE000699CD /* ClassScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C08F3E7144666FE000699CD /* ClassScheduleViewController.xib */; };
 		4C378C0414453178005801CC /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C378C0214453178005801CC /* OptionsViewController.m */; };
 		4C378C0514453178005801CC /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C378C0314453178005801CC /* OptionsViewController.xib */; };
 		4CD7D9FA1443B8CF003755E1 /* ClassScheduleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */; };
@@ -52,9 +54,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C043E75143D50B100AB3B14 /* ClassScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassScheduleViewController.h; sourceTree = "<group>"; };
-		4C043E76143D50B100AB3B14 /* ClassScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassScheduleViewController.m; sourceTree = "<group>"; };
-		4C043E77143D50B100AB3B14 /* ClassScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassScheduleViewController.xib; sourceTree = "<group>"; };
+		4C08F3DB144666D3000699CD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = MyCSUF/LoginViewController.h; sourceTree = "<group>"; };
+		4C08F3DC144666D3000699CD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = MyCSUF/LoginViewController.m; sourceTree = "<group>"; };
+		4C08F3DD144666D3000699CD /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = MyCSUF/LoginViewController.xib; sourceTree = "<group>"; };
+		4C08F3E5144666FE000699CD /* ClassScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassScheduleViewController.h; path = MyCSUF/ClassScheduleViewController.h; sourceTree = "<group>"; };
+		4C08F3E6144666FE000699CD /* ClassScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassScheduleViewController.m; path = MyCSUF/ClassScheduleViewController.m; sourceTree = "<group>"; };
+		4C08F3E7144666FE000699CD /* ClassScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ClassScheduleViewController.xib; path = MyCSUF/ClassScheduleViewController.xib; sourceTree = "<group>"; };
 		4C378C0114453178005801CC /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionsViewController.h; path = MyCSUF/OptionsViewController.h; sourceTree = "<group>"; };
 		4C378C0214453178005801CC /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionsViewController.m; path = MyCSUF/OptionsViewController.m; sourceTree = "<group>"; };
 		4C378C0314453178005801CC /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OptionsViewController.xib; path = MyCSUF/OptionsViewController.xib; sourceTree = "<group>"; };
@@ -138,9 +143,9 @@
 		4C043E7A143D50B600AB3B14 /* ClassScheduleviewController */ = {
 			isa = PBXGroup;
 			children = (
-				4C043E75143D50B100AB3B14 /* ClassScheduleViewController.h */,
-				4C043E76143D50B100AB3B14 /* ClassScheduleViewController.m */,
-				4C043E77143D50B100AB3B14 /* ClassScheduleViewController.xib */,
+				4C08F3E5144666FE000699CD /* ClassScheduleViewController.h */,
+				4C08F3E6144666FE000699CD /* ClassScheduleViewController.m */,
+				4C08F3E7144666FE000699CD /* ClassScheduleViewController.xib */,
 				4CD7D9F71443B8CF003755E1 /* ClassScheduleViewCell.h */,
 				4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */,
 				4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */,
@@ -226,6 +231,9 @@
 		565B002714313EAE005FAEB7 = {
 			isa = PBXGroup;
 			children = (
+				4C08F3DB144666D3000699CD /* LoginViewController.h */,
+				4C08F3DC144666D3000699CD /* LoginViewController.m */,
+				4C08F3DD144666D3000699CD /* LoginViewController.xib */,
 				565B003E14313EAE005FAEB7 /* MyCSUF */,
 				566FB1171432262D001F7892 /* Resources */,
 				565B003514313EAE005FAEB7 /* Frameworks */,
@@ -374,10 +382,11 @@
 				56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */,
 				56924F21143A813D0090C3E5 /* Background.png in Resources */,
 				56FE5174143D1C7500C3E13A /* TodoListTableViewCell.xib in Resources */,
-				4C043E79143D50B100AB3B14 /* ClassScheduleViewController.xib in Resources */,
 				4CD7D9FB1443B8CF003755E1 /* ClassScheduleViewCell.xib in Resources */,
 				4CE4EC161444D9BE001EF9B6 /* MapViewController.xib in Resources */,
 				4C378C0514453178005801CC /* OptionsViewController.xib in Resources */,
+				4C08F3DF144666D3000699CD /* LoginViewController.xib in Resources */,
+				4C08F3E9144666FE000699CD /* ClassScheduleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,11 +411,12 @@
 				56080A9D1438F505005B5DDE /* ListTableViewController.m in Sources */,
 				56080AA31438F549005B5DDE /* NewListViewController.m in Sources */,
 				56FE5171143D1C6200C3E13A /* TodoListTableViewCell.m in Sources */,
-				4C043E78143D50B100AB3B14 /* ClassScheduleViewController.m in Sources */,
 				4CD7D9FA1443B8CF003755E1 /* ClassScheduleViewCell.m in Sources */,
 				4CD7DA021443C18F003755E1 /* Course.m in Sources */,
 				4CE4EC151444D9BE001EF9B6 /* MapViewController.m in Sources */,
 				4C378C0414453178005801CC /* OptionsViewController.m in Sources */,
+				4C08F3DE144666D3000699CD /* LoginViewController.m in Sources */,
+				4C08F3E8144666FE000699CD /* ClassScheduleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
