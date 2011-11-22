@@ -13,6 +13,7 @@
 		4C08F3E9144666FE000699CD /* ClassScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C08F3E7144666FE000699CD /* ClassScheduleViewController.xib */; };
 		4C378C0414453178005801CC /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C378C0214453178005801CC /* OptionsViewController.m */; };
 		4C378C0514453178005801CC /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C378C0314453178005801CC /* OptionsViewController.xib */; };
+		4CCF2D6B144CEFD700048882 /* GPSLocations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CCF2D6A144CEFD700048882 /* GPSLocations.plist */; };
 		4CD7D9FA1443B8CF003755E1 /* ClassScheduleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */; };
 		4CD7D9FB1443B8CF003755E1 /* ClassScheduleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */; };
 		4CD7DA021443C18F003755E1 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7DA011443C18F003755E1 /* Course.m */; };
@@ -63,6 +64,7 @@
 		4C378C0114453178005801CC /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionsViewController.h; path = MyCSUF/OptionsViewController.h; sourceTree = "<group>"; };
 		4C378C0214453178005801CC /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionsViewController.m; path = MyCSUF/OptionsViewController.m; sourceTree = "<group>"; };
 		4C378C0314453178005801CC /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OptionsViewController.xib; path = MyCSUF/OptionsViewController.xib; sourceTree = "<group>"; };
+		4CCF2D6A144CEFD700048882 /* GPSLocations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GPSLocations.plist; sourceTree = "<group>"; };
 		4CD7D9F71443B8CF003755E1 /* ClassScheduleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassScheduleViewCell.h; path = MyCSUF/ClassScheduleViewCell.h; sourceTree = "<group>"; };
 		4CD7D9F81443B8CF003755E1 /* ClassScheduleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassScheduleViewCell.m; path = MyCSUF/ClassScheduleViewCell.m; sourceTree = "<group>"; };
 		4CD7D9F91443B8CF003755E1 /* ClassScheduleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ClassScheduleViewCell.xib; path = MyCSUF/ClassScheduleViewCell.xib; sourceTree = "<group>"; };
@@ -218,8 +220,8 @@
 		56080AAC1438F7A9005B5DDE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4CD7DA011443C18F003755E1 /* Course.m */,
 				4CD7DA001443C18F003755E1 /* Course.h */,
+				4CD7DA011443C18F003755E1 /* Course.m */,
 				565B005D14314AF1005FAEB7 /* Category.h */,
 				565B005E14314AF1005FAEB7 /* Category.m */,
 				565B005A14314AF1005FAEB7 /* Task.h */,
@@ -314,6 +316,7 @@
 				56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */,
 				565B004A14313EAE005FAEB7 /* MainWindow.xib */,
 				566FB12C1432CB48001F7892 /* AlertPList.plist */,
+				4CCF2D6A144CEFD700048882 /* GPSLocations.plist */,
 			);
 			name = Resources;
 			path = MyCSUF;
@@ -387,6 +390,7 @@
 				4C378C0514453178005801CC /* OptionsViewController.xib in Resources */,
 				4C08F3DF144666D3000699CD /* LoginViewController.xib in Resources */,
 				4C08F3E9144666FE000699CD /* ClassScheduleViewController.xib in Resources */,
+				4CCF2D6B144CEFD700048882 /* GPSLocations.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

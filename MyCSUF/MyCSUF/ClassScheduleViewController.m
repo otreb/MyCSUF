@@ -54,11 +54,14 @@
     self.tableView.allowsSelection=YES;
     self.tableView.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor=[UIColor colorWithRed:.90 green:.90 blue:.90 alpha:1];
-    self.view.backgroundColor=[UIColor colorWithRed:.80 green:.80 blue:.80 alpha:1];
+    self.view.backgroundColor=[UIColor colorWithRed:250 green:247 blue:247 alpha:1];
 
     // Puts button on top right corner to select a different semester
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(optionsButton)] autorelease];
-
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector
+        (optionsButton)] autorelease];
+    
+// this is where the core data info will be loaded
+    
     courseName = [[NSArray alloc] initWithObjects:@"course1", @"course2", @"course3",nil];
     courseNumber = [[NSArray alloc] initWithObjects:@"ECE 118",@"ECE 124", @"ECE 176", nil];
     classTime = [[NSArray alloc] initWithObjects:@"11-12", @"2-3", @"5-6", nil];
@@ -143,45 +146,6 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -195,6 +159,20 @@
      [MapViewController release];
 }
 
+// allows for alternationg colors when viewing cells
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row%2==0) {
+        cell.backgroundColor=[UIColor colorWithRed:250 green:247 blue:247 alpha:1];
+    }
+    else
+        cell.backgroundColor=[UIColor colorWithRed:166 green:164 blue:164 alpha:1];
+}
 
-
+/* //refresh table with new data
+-(void)refreshScheduleDataWithArray:(NSArray *)semesterData
+{
+    self.currentSemesterClassArray=semesterData;
+    [self.tableView reloadData];
+}
+*/
 @end

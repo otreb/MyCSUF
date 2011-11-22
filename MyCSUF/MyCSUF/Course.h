@@ -18,5 +18,7 @@
 @property (nonatomic, retain) NSString * teacher;
 @property (nonatomic, retain) NSString * room;
 @property (nonatomic, retain) NSString * courseNumber;
+@property (nonatomic, retain) NSString * classDays;
+@property (nonatomic, retain) NSString * classComponent;
 
 @end

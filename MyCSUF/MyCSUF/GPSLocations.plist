@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>Locations</key>
+	<dict>
+		<key>Professional Human Services</key>
+		<string>36.812905,-119.749582</string>
+		<key>Engineering East</key>
+		<string>36.814434,-119.748353</string>
+		<key>Engineering West</key>
+		<string>36.814378,-119.749534</string>
+	</dict>
+</dict>
 </plist>

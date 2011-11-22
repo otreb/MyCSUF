@@ -10,9 +10,9 @@
 
 @implementation LoginViewController
 
-@synthesize usernameField;
-@synthesize passwordField;
-@synthesize loginButton;
+//@synthesize usernameField;
+//@synthesize passwordField;
+//@synthesize loginButton;
 //@synthesize loginIndicator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -58,5 +58,5 @@
 }
 
 
-}
+
 @end

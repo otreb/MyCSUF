@@ -12,9 +12,15 @@
 
 #define METERS_PER_MILE 1609.344
 
-@interface MapViewController : UIViewController <MKMapViewDelegate> {
+
+@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate> {
     MKMapView *_mapView;
+    CLLocationManager *locationManager;
+    
 }
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic, retain) CLLocationManager *locationManager;
+
+
 
 @end

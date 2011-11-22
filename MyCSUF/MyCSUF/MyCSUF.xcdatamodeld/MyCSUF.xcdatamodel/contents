@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="562" systemVersion="11C62" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C62" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Category" representedClassName="Category">
         <attribute name="fontColor" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="task" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="category" inverseEntity="Task"/>
     </entity>
     <entity name="Course" representedClassName="Course">
+        <attribute name="classComponent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="classDays" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="courseName" optional="YES" attributeType="String"/>
         <attribute name="courseNumber" optional="YES" attributeType="String"/>
         <attribute name="courseTime" optional="YES" attributeType="String"/>
@@ -22,8 +24,8 @@
         <relationship name="category" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="task" inverseEntity="Category"/>
     </entity>
     <elements>
-        <element name="Category" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="Course" positionX="160" positionY="192" width="128" height="60"/>
-        <element name="Task" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Category" positionX="169" positionY="135" width="128" height="90"/>
+        <element name="Course" positionX="169" positionY="288" width="137" height="120"/>
+        <element name="Task" positionX="-83" positionY="90" width="128" height="135"/>
     </elements>
 </model>

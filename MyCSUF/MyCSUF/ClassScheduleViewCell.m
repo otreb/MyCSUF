@@ -15,5 +15,7 @@
 @synthesize classTime;
 @synthesize room;
 @synthesize teacher;
+@synthesize classDays;
+@synthesize classComponent;
 
 @end

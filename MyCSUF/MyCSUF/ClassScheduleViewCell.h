@@ -14,6 +14,8 @@
     UILabel *teacher;
     UILabel *room;
     UILabel *classTime;
+    UILabel *classDays;
+    UILabel *classComponent;
 }
 
 @property (retain) IBOutlet UILabel *courseName;
@@ -21,5 +23,7 @@
 @property (retain) IBOutlet UILabel *teacher;
 @property (retain) IBOutlet UILabel *room;
 @property (retain) IBOutlet UILabel *classTime;
+@property (retain) IBOutlet UILabel *classDays;
+@property (retain) IBOutlet UILabel *classComponent;
 
 @end

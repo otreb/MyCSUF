@@ -15,5 +15,7 @@
 @dynamic teacher;
 @dynamic room;
 @dynamic courseNumber;
+@dynamic classDays;
+@dynamic classComponent;
 
 @end

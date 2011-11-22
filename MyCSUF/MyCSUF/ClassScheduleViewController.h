@@ -12,6 +12,8 @@
     NSArray *courseName;
     NSArray *courseNumber;
     NSArray *classTime;
+    NSArray *classDays;
+    NSArray *classComponent;
     NSArray *room;
     NSArray *teacher;
 }
