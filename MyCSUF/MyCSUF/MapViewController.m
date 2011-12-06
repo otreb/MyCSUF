@@ -15,12 +15,12 @@
 
 - (void)gotoLocation
 {
-    // start off by default in San Francisco
+    // start off by default middle of Fresno State
     MKCoordinateRegion newRegion;
-    newRegion.center.latitude = 36.81337;
-    newRegion.center.longitude = -119.74527;
-    newRegion.span.latitudeDelta = 0.112872;
-    newRegion.span.longitudeDelta = 0.109863;
+    newRegion.center.latitude = 36.812946;
+    newRegion.center.longitude = -119.746953;
+    newRegion.span.latitudeDelta = 0.012872;
+    newRegion.span.longitudeDelta = 0.009863;
     
     [self.mapView setRegion:newRegion animated:YES];
 }
@@ -36,25 +36,31 @@
 // Button Actions
 
 // Moves to the users current location on the map
-- (void) zoomIn: (id)sender
+- (IBAction)zoomIn:(id)sender
 {
+    [self gotoLocation];
     MKUserLocation *userLocation = mapView.userLocation;
     MKCoordinateRegion region = 
     MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 50, 50);
     [mapView setRegion:region animated:YES];
 }
 
-- (void) changeMapType: (id)sender
+- (IBAction)changeMapType:(id)sender
 {
+    [self gotoLocation];
     if(mapView.mapType == MKMapTypeStandard)
         mapView.mapType = MKMapTypeHybrid;
     else
         mapView.mapType = MKMapTypeStandard;
 }
 
-- (void) backButton
+- (void) backButton: (id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    ClassScheduleViewController *classScheduleViewController = [[ClassScheduleViewController alloc] initWithNibName:@"ClassScheduleViewController" bundle:nil];
+    // ...
+    // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:classScheduleViewController animated:YES];
+    [ClassScheduleViewController release];
 }
 
 
@@ -89,32 +95,7 @@
     [super viewDidLoad];
     
     _mapView.showsUserLocation = YES;
-    
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
-                                   initWithtitle: @"Back"
-                                   style:UIBarButtonItemStylePlain
-                                   target: self
-                                   action: @selector(backButton:)];
-    
-    
-    UIBarButtonItem *zoomButton = [[UIBarButtonItem alloc] 
-                                   initWithTitle: @"Zoom"
-                                   style:UIBarButtonItemStylePlain
-                                   target: self
-                                   action:@selector(zoomIn:)];
-    
-    self.navigationItem.rightBarButtonItem = zoomButton;
-    [zoomButton release];
-    
-    UIBarButtonItem *typeButton = [[UIBarButtonItem alloc]
-                                   initWithTitle: @"Type"
-                                   style:UIBarButtonItemStylePlain
-                                   target: self
-                                   action:@selector(changeMapType:)];
-    
-    self.navigationItem.leftBarButtonItem = typeButton;
-    [typeButton release];
-    
+
 // centers view on users location    
 //    mapView.delegate = self;
 

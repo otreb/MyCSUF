@@ -21,6 +21,7 @@
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
-
+- (IBAction)zoomIn:(id)sender;
+- (IBAction)changeMapType:(id)sender;
 
 @end
