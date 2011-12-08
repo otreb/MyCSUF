@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C08F3DE144666D3000699CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C08F3DC144666D3000699CD /* LoginViewController.m */; };
-		4C08F3DF144666D3000699CD /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C08F3DD144666D3000699CD /* LoginViewController.xib */; };
 		4C08F3E8144666FE000699CD /* ClassScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C08F3E6144666FE000699CD /* ClassScheduleViewController.m */; };
 		4C08F3E9144666FE000699CD /* ClassScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C08F3E7144666FE000699CD /* ClassScheduleViewController.xib */; };
 		4C378C0414453178005801CC /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C378C0214453178005801CC /* OptionsViewController.m */; };
@@ -58,12 +56,13 @@
 		56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F1B143A66B40090C3E5 /* priorityHigh.png */; };
 		56924F21143A813D0090C3E5 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F20143A813D0090C3E5 /* Background.png */; };
 		56FE5171143D1C6200C3E13A /* TodoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */; };
+		80211B4B14905AC800D4A408 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80211B4714905AC800D4A408 /* MainController.m */; };
+		80211B4C14905AC800D4A408 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80211B4914905AC800D4A408 /* ViewController.m */; };
+		80211B4F14905AE100D4A408 /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80211B4E14905AE100D4A408 /* MainController.xib */; };
+		80211B5114905B0800D4A408 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80211B5014905B0800D4A408 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C08F3DB144666D3000699CD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = MyCSUF/LoginViewController.h; sourceTree = "<group>"; };
-		4C08F3DC144666D3000699CD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = MyCSUF/LoginViewController.m; sourceTree = "<group>"; };
-		4C08F3DD144666D3000699CD /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = MyCSUF/LoginViewController.xib; sourceTree = "<group>"; };
 		4C08F3E5144666FE000699CD /* ClassScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassScheduleViewController.h; path = MyCSUF/ClassScheduleViewController.h; sourceTree = "<group>"; };
 		4C08F3E6144666FE000699CD /* ClassScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassScheduleViewController.m; path = MyCSUF/ClassScheduleViewController.m; sourceTree = "<group>"; };
 		4C08F3E7144666FE000699CD /* ClassScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ClassScheduleViewController.xib; path = MyCSUF/ClassScheduleViewController.xib; sourceTree = "<group>"; };
@@ -138,6 +137,12 @@
 		56924F20143A813D0090C3E5 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		56FE516F143D1C6200C3E13A /* TodoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoListTableViewCell.h; sourceTree = "<group>"; };
 		56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoListTableViewCell.m; sourceTree = "<group>"; };
+		80211B4714905AC800D4A408 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		80211B4814905AC800D4A408 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		80211B4914905AC800D4A408 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		80211B4A14905AC800D4A408 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		80211B4E14905AE100D4A408 /* MainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
+		80211B5014905B0800D4A408 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,9 +266,6 @@
 		565B002714313EAE005FAEB7 = {
 			isa = PBXGroup;
 			children = (
-				4C08F3DB144666D3000699CD /* LoginViewController.h */,
-				4C08F3DC144666D3000699CD /* LoginViewController.m */,
-				4C08F3DD144666D3000699CD /* LoginViewController.xib */,
 				565B003E14313EAE005FAEB7 /* MyCSUF */,
 				566FB1171432262D001F7892 /* Resources */,
 				565B003514313EAE005FAEB7 /* Frameworks */,
@@ -295,6 +297,12 @@
 		565B003E14313EAE005FAEB7 /* MyCSUF */ = {
 			isa = PBXGroup;
 			children = (
+				80211B4714905AC800D4A408 /* MainController.m */,
+				80211B4E14905AE100D4A408 /* MainController.xib */,
+				80211B5014905B0800D4A408 /* ViewController.xib */,
+				80211B4A14905AC800D4A408 /* MainController.h */,
+				80211B4814905AC800D4A408 /* ViewController.h */,
+				80211B4914905AC800D4A408 /* ViewController.m */,
 				565B004714313EAE005FAEB7 /* MyCSUFAppDelegate.h */,
 				565B004814313EAE005FAEB7 /* MyCSUFAppDelegate.m */,
 				4C043E7A143D50B600AB3B14 /* ClassScheduleviewController */,
@@ -417,7 +425,6 @@
 				4CD7D9FB1443B8CF003755E1 /* ClassScheduleViewCell.xib in Resources */,
 				4CE4EC161444D9BE001EF9B6 /* MapViewController.xib in Resources */,
 				4C378C0514453178005801CC /* OptionsViewController.xib in Resources */,
-				4C08F3DF144666D3000699CD /* LoginViewController.xib in Resources */,
 				4C08F3E9144666FE000699CD /* ClassScheduleViewController.xib in Resources */,
 				4CCF2D6B144CEFD700048882 /* GPSLocations.plist in Resources */,
 				56338FD3149041E000CED1FE /* EventsTableCell.xib in Resources */,
@@ -426,6 +433,8 @@
 				56338FDC1490455C00CED1FE /* TodoListViewController.xib in Resources */,
 				56338FDE149045A000CED1FE /* NewListViewController.xib in Resources */,
 				56338FE0149045C200CED1FE /* TodoListTableViewCell.xib in Resources */,
+				80211B4F14905AE100D4A408 /* MainController.xib in Resources */,
+				80211B5114905B0800D4A408 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,11 +463,12 @@
 				4CD7DA021443C18F003755E1 /* Course.m in Sources */,
 				4CE4EC151444D9BE001EF9B6 /* MapViewController.m in Sources */,
 				4C378C0414453178005801CC /* OptionsViewController.m in Sources */,
-				4C08F3DE144666D3000699CD /* LoginViewController.m in Sources */,
 				4C08F3E8144666FE000699CD /* ClassScheduleViewController.m in Sources */,
 				56338FD2149041E000CED1FE /* EventsTableCell.m in Sources */,
 				56338FD4149041E000CED1FE /* EventsTableViewController.m in Sources */,
 				56338FD6149041E000CED1FE /* EventViewController.m in Sources */,
+				80211B4B14905AC800D4A408 /* MainController.m in Sources */,
+				80211B4C14905AC800D4A408 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
