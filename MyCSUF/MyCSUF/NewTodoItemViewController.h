@@ -18,6 +18,7 @@
     UISegmentedControl *prioritySegment;
     BOOL editing;
     BOOL cellAdjusted;
+    BOOL event;
     int count;
     Category *currentCategory;
     NSString *stringDate;
@@ -34,5 +35,6 @@
 
 - initWithMangedObjectContext:(NSManagedObjectContext *)context;
 - initWithMangedObjectContext:(NSManagedObjectContext *)context withEditableTask:(Task *)task;
+- initWithMangedObjectContext:(NSManagedObjectContext *)context withEvent:(NSMutableDictionary *)dictionary;
 
 @end

@@ -11,21 +11,24 @@
 
 /*
  Shows all your current Todos for the Category that was selected.
-*/
+ */
 
-@interface TodoListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate> {
+@interface TodoListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, UIScrollViewDelegate> {
     NSManagedObjectContext *managedObjectContext;
-    UITableView *table;
+    UITableView *listTable;
+    UITableView *completeTable;
     Category *currentCategory;
     NSArray *todoArray;
+    NSArray *completedArray;
     NSIndexPath *indexPathSelect;
     UIPageControl *pageControl;
-    UIScrollView *scrollView;
+    UIScrollView *tableScrollView;
 }
 
-@property (retain) IBOutlet UITableView *table;
+@property (retain) IBOutlet UITableView *listTable;
+@property (retain) IBOutlet UITableView *completeTable;
 @property (retain) IBOutlet UIPageControl *pageControl;
-@property (retain) IBOutlet UIScrollView *scrollView;
+@property (retain) IBOutlet UIScrollView *tableScrollView;
 
 - initWithToDo:(Category *)category withManagedObjectContext:(NSManagedObjectContext *)context;
 

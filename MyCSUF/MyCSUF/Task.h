@@ -27,7 +27,11 @@
 
 + (Task *)editTodoItem:(Task *)task withNewInformation:(NSDictionary *)items inMangedObjectContext:(NSManagedObjectContext *)context;
 
++ (NSArray *)completedTaskForCategory:(Category *)category inManagedObjectContext:(NSManagedObjectContext *)context;
+
 + (void)markTaskAsComplete:(Task *)task inManagedObjectContext:(NSManagedObjectContext *)context;
+
++ (void)markTaskAsNotComplete:(Task *)task inManagedObjectContext:(NSManagedObjectContext *)context;
 
 + (void)saveData:(NSManagedObjectContext *)context;
 

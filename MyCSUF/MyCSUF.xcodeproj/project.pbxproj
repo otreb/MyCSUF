@@ -24,7 +24,15 @@
 		56080A9D1438F505005B5DDE /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56080A9B1438F505005B5DDE /* ListTableViewController.m */; };
 		56080A9E1438F505005B5DDE /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56080A9C1438F505005B5DDE /* ListTableViewController.xib */; };
 		56080AA31438F549005B5DDE /* NewListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56080AA11438F549005B5DDE /* NewListViewController.m */; };
-		56080AA41438F549005B5DDE /* NewListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56080AA21438F549005B5DDE /* NewListViewController.xib */; };
+		56338FD2149041E000CED1FE /* EventsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56338FC7149041E000CED1FE /* EventsTableCell.m */; };
+		56338FD3149041E000CED1FE /* EventsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56338FC8149041E000CED1FE /* EventsTableCell.xib */; };
+		56338FD4149041E000CED1FE /* EventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56338FCA149041E000CED1FE /* EventsTableViewController.m */; };
+		56338FD5149041E000CED1FE /* EventsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56338FCB149041E000CED1FE /* EventsTableViewController.xib */; };
+		56338FD6149041E000CED1FE /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56338FCD149041E000CED1FE /* EventViewController.m */; };
+		56338FD7149041E000CED1FE /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56338FCE149041E000CED1FE /* EventViewController.xib */; };
+		56338FDC1490455C00CED1FE /* TodoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56338FDB1490455C00CED1FE /* TodoListViewController.xib */; };
+		56338FDE149045A000CED1FE /* NewListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56338FDD149045A000CED1FE /* NewListViewController.xib */; };
+		56338FE0149045C200CED1FE /* TodoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56338FDF149045C200CED1FE /* TodoListTableViewCell.xib */; };
 		565B003714313EAE005FAEB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003614313EAE005FAEB7 /* UIKit.framework */; };
 		565B003914313EAE005FAEB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003814313EAE005FAEB7 /* Foundation.framework */; };
 		565B003B14313EAE005FAEB7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565B003A14313EAE005FAEB7 /* CoreGraphics.framework */; };
@@ -35,7 +43,6 @@
 		565B004C14313EAE005FAEB7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565B004A14313EAE005FAEB7 /* MainWindow.xib */; };
 		565B004F14313EAE005FAEB7 /* MyCSUF.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 565B004D14313EAE005FAEB7 /* MyCSUF.xcdatamodeld */; };
 		565B00581431437F005FAEB7 /* TodoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B00561431437F005FAEB7 /* TodoListViewController.m */; };
-		565B00591431437F005FAEB7 /* TodoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565B00571431437F005FAEB7 /* TodoListViewController.xib */; };
 		565B005C14314AF1005FAEB7 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B005B14314AF1005FAEB7 /* Task.m */; };
 		565B005F14314AF1005FAEB7 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B005E14314AF1005FAEB7 /* Category.m */; };
 		565B006314314B23005FAEB7 /* NewTodoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565B006114314B23005FAEB7 /* NewTodoItemViewController.m */; };
@@ -51,7 +58,6 @@
 		56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F1B143A66B40090C3E5 /* priorityHigh.png */; };
 		56924F21143A813D0090C3E5 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F20143A813D0090C3E5 /* Background.png */; };
 		56FE5171143D1C6200C3E13A /* TodoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */; };
-		56FE5174143D1C7500C3E13A /* TodoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,7 +86,18 @@
 		56080A9C1438F505005B5DDE /* ListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = "<group>"; };
 		56080AA01438F549005B5DDE /* NewListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewListViewController.h; sourceTree = "<group>"; };
 		56080AA11438F549005B5DDE /* NewListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewListViewController.m; sourceTree = "<group>"; };
-		56080AA21438F549005B5DDE /* NewListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewListViewController.xib; sourceTree = "<group>"; };
+		56338FC6149041E000CED1FE /* EventsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableCell.h; sourceTree = "<group>"; };
+		56338FC7149041E000CED1FE /* EventsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableCell.m; sourceTree = "<group>"; };
+		56338FC8149041E000CED1FE /* EventsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsTableCell.xib; sourceTree = "<group>"; };
+		56338FC9149041E000CED1FE /* EventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsTableViewController.h; sourceTree = "<group>"; };
+		56338FCA149041E000CED1FE /* EventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsTableViewController.m; sourceTree = "<group>"; };
+		56338FCB149041E000CED1FE /* EventsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsTableViewController.xib; sourceTree = "<group>"; };
+		56338FCC149041E000CED1FE /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		56338FCD149041E000CED1FE /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		56338FCE149041E000CED1FE /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
+		56338FDB1490455C00CED1FE /* TodoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodoListViewController.xib; sourceTree = "<group>"; };
+		56338FDD149045A000CED1FE /* NewListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewListViewController.xib; sourceTree = "<group>"; };
+		56338FDF149045C200CED1FE /* TodoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodoListTableViewCell.xib; sourceTree = "<group>"; };
 		565B003214313EAE005FAEB7 /* MyCSUF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCSUF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		565B003614313EAE005FAEB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		565B003814313EAE005FAEB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,7 +113,6 @@
 		565B004E14313EAE005FAEB7 /* MyCSUF.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCSUF.xcdatamodel; sourceTree = "<group>"; };
 		565B00551431437F005FAEB7 /* TodoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoListViewController.h; sourceTree = "<group>"; };
 		565B00561431437F005FAEB7 /* TodoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoListViewController.m; sourceTree = "<group>"; };
-		565B00571431437F005FAEB7 /* TodoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodoListViewController.xib; sourceTree = "<group>"; };
 		565B005A14314AF1005FAEB7 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		565B005B14314AF1005FAEB7 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		565B005D14314AF1005FAEB7 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
@@ -122,7 +138,6 @@
 		56924F20143A813D0090C3E5 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		56FE516F143D1C6200C3E13A /* TodoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoListTableViewCell.h; sourceTree = "<group>"; };
 		56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoListTableViewCell.m; sourceTree = "<group>"; };
-		56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodoListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +245,19 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		56338FE5149052BB00CED1FE /* Event View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				56338FC6149041E000CED1FE /* EventsTableCell.h */,
+				56338FC7149041E000CED1FE /* EventsTableCell.m */,
+				56338FC9149041E000CED1FE /* EventsTableViewController.h */,
+				56338FCA149041E000CED1FE /* EventsTableViewController.m */,
+				56338FCC149041E000CED1FE /* EventViewController.h */,
+				56338FCD149041E000CED1FE /* EventViewController.m */,
+			);
+			name = "Event View Controllers";
+			sourceTree = "<group>";
+		};
 		565B002714313EAE005FAEB7 = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +300,7 @@
 				4C043E7A143D50B600AB3B14 /* ClassScheduleviewController */,
 				5604400E143D02BA00BB1275 /* CatrgoryViewControllers */,
 				56080AAB1438F79F005B5DDE /* Todo List View Controllers */,
+				56338FE5149052BB00CED1FE /* Event View Controllers */,
 				565B006514314CDA005FAEB7 /* Configurations.h */,
 				566FB11E143228CC001F7892 /* DelegeMethods.h */,
 				56080AAC1438F7A9005B5DDE /* Model */,
@@ -306,15 +335,18 @@
 				565B004D14313EAE005FAEB7 /* MyCSUF.xcdatamodeld */,
 				56924F20143A813D0090C3E5 /* Background.png */,
 				56924F1B143A66B40090C3E5 /* priorityHigh.png */,
-				565B00571431437F005FAEB7 /* TodoListViewController.xib */,
+				56338FDB1490455C00CED1FE /* TodoListViewController.xib */,
 				565B006214314B23005FAEB7 /* NewTodoItemViewController.xib */,
 				566FB11B14322672001F7892 /* TitleViewController.xib */,
 				566FB12114322BDB001F7892 /* DatePickerViewController.xib */,
 				566FB1301432D294001F7892 /* NotesViewController.xib */,
 				56080A9C1438F505005B5DDE /* ListTableViewController.xib */,
-				56080AA21438F549005B5DDE /* NewListViewController.xib */,
-				56FE5173143D1C7500C3E13A /* TodoListTableViewCell.xib */,
+				56338FDD149045A000CED1FE /* NewListViewController.xib */,
+				56338FDF149045C200CED1FE /* TodoListTableViewCell.xib */,
 				565B004A14313EAE005FAEB7 /* MainWindow.xib */,
+				56338FC8149041E000CED1FE /* EventsTableCell.xib */,
+				56338FCB149041E000CED1FE /* EventsTableViewController.xib */,
+				56338FCE149041E000CED1FE /* EventViewController.xib */,
 				566FB12C1432CB48001F7892 /* AlertPList.plist */,
 				4CCF2D6A144CEFD700048882 /* GPSLocations.plist */,
 			);
@@ -374,23 +406,26 @@
 			files = (
 				565B004314313EAE005FAEB7 /* InfoPlist.strings in Resources */,
 				565B004C14313EAE005FAEB7 /* MainWindow.xib in Resources */,
-				565B00591431437F005FAEB7 /* TodoListViewController.xib in Resources */,
 				565B006414314B23005FAEB7 /* NewTodoItemViewController.xib in Resources */,
 				566FB11D14322672001F7892 /* TitleViewController.xib in Resources */,
 				566FB12314322BDB001F7892 /* DatePickerViewController.xib in Resources */,
 				566FB12D1432CB48001F7892 /* AlertPList.plist in Resources */,
 				566FB1321432D295001F7892 /* NotesViewController.xib in Resources */,
 				56080A9E1438F505005B5DDE /* ListTableViewController.xib in Resources */,
-				56080AA41438F549005B5DDE /* NewListViewController.xib in Resources */,
 				56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */,
 				56924F21143A813D0090C3E5 /* Background.png in Resources */,
-				56FE5174143D1C7500C3E13A /* TodoListTableViewCell.xib in Resources */,
 				4CD7D9FB1443B8CF003755E1 /* ClassScheduleViewCell.xib in Resources */,
 				4CE4EC161444D9BE001EF9B6 /* MapViewController.xib in Resources */,
 				4C378C0514453178005801CC /* OptionsViewController.xib in Resources */,
 				4C08F3DF144666D3000699CD /* LoginViewController.xib in Resources */,
 				4C08F3E9144666FE000699CD /* ClassScheduleViewController.xib in Resources */,
 				4CCF2D6B144CEFD700048882 /* GPSLocations.plist in Resources */,
+				56338FD3149041E000CED1FE /* EventsTableCell.xib in Resources */,
+				56338FD5149041E000CED1FE /* EventsTableViewController.xib in Resources */,
+				56338FD7149041E000CED1FE /* EventViewController.xib in Resources */,
+				56338FDC1490455C00CED1FE /* TodoListViewController.xib in Resources */,
+				56338FDE149045A000CED1FE /* NewListViewController.xib in Resources */,
+				56338FE0149045C200CED1FE /* TodoListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +456,9 @@
 				4C378C0414453178005801CC /* OptionsViewController.m in Sources */,
 				4C08F3DE144666D3000699CD /* LoginViewController.m in Sources */,
 				4C08F3E8144666FE000699CD /* ClassScheduleViewController.m in Sources */,
+				56338FD2149041E000CED1FE /* EventsTableCell.m in Sources */,
+				56338FD4149041E000CED1FE /* EventsTableViewController.m in Sources */,
+				56338FD6149041E000CED1FE /* EventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

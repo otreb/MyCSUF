@@ -16,7 +16,7 @@
 - initWithText:(NSString *)note
 {
     if ((self = [super init])) {
-//        self.notes = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, <#CGFloat width#>, <#CGFloat height#>)];
+        //        self.notes = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, <#CGFloat width#>, <#CGFloat height#>)];
         currentNote = note;
     }
     return self;

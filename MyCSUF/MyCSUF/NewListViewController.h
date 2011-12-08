@@ -9,7 +9,7 @@
 /*
  This Controller will create a new Category.  It just consist of a text field
  and a segment control.
-*/
+ */
 
 #import <UIKit/UIKit.h>
 #import "DelegeMethods.h"
