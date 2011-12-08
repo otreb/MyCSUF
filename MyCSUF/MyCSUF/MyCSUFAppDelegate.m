@@ -9,6 +9,7 @@
 #import "MyCSUFAppDelegate.h"
 #import "ListTableViewController.h"
 #import "ClassScheduleViewController.h"
+#import "EventsTableViewController.h"
 
 @implementation MyCSUFAppDelegate
 
@@ -21,7 +22,7 @@
 {
     // Override point for customization after application launch.
     ListTableViewController *listTableViewController = [[ListTableViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
-
+    
     ClassScheduleViewController *classviewContoller = [[ClassScheduleViewController alloc] init];
     
     UINavigationController *navCon = [[UINavigationController alloc] init];
@@ -33,11 +34,24 @@
     [listTableViewController release];
     [classviewContoller release];
     
+//    HelpTableViewController *helpTableViewController = [[HelpTableViewController alloc] init];
+    
+    UINavigationController *eventNavCon = [[UINavigationController alloc] init];
+    EventsTableViewController *eventsViewController = [[EventsTableViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
+    [eventNavCon pushViewController:eventsViewController animated:NO];
+    [eventsViewController release];
+    
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = [NSArray arrayWithObjects:navCon,tab1, nil];
+    tabBarController.viewControllers = [NSArray arrayWithObjects:navCon,tab1, eventNavCon/*, helpTableViewController*/, nil];
+    [[tabBarController.viewControllers objectAtIndex:0] setTitle:@"To-do"];
+    [[tabBarController.viewControllers objectAtIndex:1] setTitle:@"Courses"];
+    [[tabBarController.viewControllers objectAtIndex:2] setTitle:@"Campus Events"];
+//    [[tabBarController.viewControllers objectAtIndex:3] setTitle:@"Emergency"];
     
     [navCon release];
     [tab1 release];
+    [eventNavCon release];
+//    [helpTableViewController release];
     
     [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];

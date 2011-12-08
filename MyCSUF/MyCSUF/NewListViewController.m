@@ -71,6 +71,7 @@
                                               target:self
                                               action:@selector(closeView)] autorelease];
     self.navigationItem.title = @"New Todo List";
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     [self.textField becomeFirstResponder];
 }
 

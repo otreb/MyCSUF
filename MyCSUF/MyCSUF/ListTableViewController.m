@@ -14,11 +14,22 @@
 @implementation ListTableViewController
 
 @synthesize managedObjectContext;
+@synthesize delegate;
 
 - initWithManagedObjectContext:(NSManagedObjectContext *)context
 {
     if ((self = [super init])) {
         self.managedObjectContext = context;
+        newListCreate = YES;
+    }
+    return self;
+}
+
+- initWithManagedObjectContext:(NSManagedObjectContext *)context creatingEvent:(BOOL)Event
+{
+    if ((self = [super init])) {
+        self.managedObjectContext = context;
+        event = Event;
         newListCreate = YES;
     }
     return self;
@@ -48,7 +59,7 @@
     }
     else
         [UIView animateWithDuration:0.3 animations:^{
-        self.tableView.editing = YES;
+            self.tableView.editing = YES;
         }];
 }
 
@@ -65,10 +76,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc]
-                                              initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-                                              target:self
-                                              action:@selector(editButton)] autorelease];
+    if (!event)
+    {
+        self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc]
+                                                  initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                                  target:self
+                                                  action:@selector(editButton)] autorelease];
+    }
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
                                                initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                target:self
@@ -158,6 +172,9 @@
     
     // Configure the cell...
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    if (event) {
+        cell.accessoryType= UITableViewCellAccessoryNone;
+    }
     
     return cell;
 }
@@ -166,9 +183,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TodoListViewController *todoListViewController = [[TodoListViewController alloc] initWithToDo:[myList objectAtIndex:indexPath.row] withManagedObjectContext:self.managedObjectContext];
-    [self.navigationController pushViewController:todoListViewController animated:YES];
-    [todoListViewController release];
+    if (!event)
+    {
+        TodoListViewController *todoListViewController = [[TodoListViewController alloc] initWithToDo:[myList objectAtIndex:indexPath.row] withManagedObjectContext:self.managedObjectContext];
+        [self.navigationController pushViewController:todoListViewController animated:YES];
+        [todoListViewController release];
+    }
+    else
+    {
+        [self.delegate updateCategoryField:[myList objectAtIndex:indexPath.row]];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark - List Delegate

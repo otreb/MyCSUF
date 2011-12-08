@@ -29,7 +29,7 @@
                             [NSPredicate predicateWithFormat:@"category = %@",category],
                             [NSPredicate predicateWithFormat:@"priority = 2"],
                             [NSPredicate predicateWithFormat:@"complete = %@", [NSNumber numberWithBool:NO]],nil]]
-                           ;
+    ;
     requestor.sortDescriptors = [NSArray arrayWithObjects:
                                  [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES], nil];
     temp = [NSMutableArray arrayWithObject:[context executeFetchRequest:requestor error:NULL]];
@@ -88,9 +88,29 @@
     return task;
 }
 
++ (NSArray *)completedTaskForCategory:(Category *)category inManagedObjectContext:(NSManagedObjectContext *)context
+{
+    NSFetchRequest *requestor = [[[NSFetchRequest alloc] init] autorelease];
+    requestor.entity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext:context];
+    requestor.predicate = [NSCompoundPredicate andPredicateWithSubpredicates:
+                           [NSArray arrayWithObjects:
+                            [NSPredicate predicateWithFormat:@"category = %@",category],
+                            [NSPredicate predicateWithFormat:@"complete = %@", [NSNumber numberWithBool:YES]],nil]]
+    ;
+    requestor.sortDescriptors = [NSArray arrayWithObjects:
+                                 [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES], nil];
+    return [context executeFetchRequest:requestor error:NULL];
+}
+
 + (void)markTaskAsComplete:(Task *)task inManagedObjectContext:(NSManagedObjectContext *)context
 {
     task.complete = [NSNumber numberWithBool:YES];
+    [self saveData:context];
+}
+
++ (void)markTaskAsNotComplete:(Task *)task inManagedObjectContext:(NSManagedObjectContext *)context
+{
+    task.complete = [NSNumber numberWithBool:NO];
     [self saveData:context];
 }
 

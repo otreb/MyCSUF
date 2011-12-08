@@ -13,6 +13,7 @@
 #import "AlertViewController.h"
 #import "NotesViewController.h"
 #import "Task.h"
+#import "ListTableViewController.h"
 
 @implementation NewTodoItemViewController
 
@@ -46,6 +47,16 @@
         [tableData setValue:task.priority forKey:@"priority"];
         [stringDate release];
         stringDate = [[NSDateFormatter localizedStringFromDate:task.date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle] retain];
+    }
+    return self;
+}
+
+- initWithMangedObjectContext:(NSManagedObjectContext *)context withEvent:(NSMutableDictionary *)dictionary
+{
+    if ((self = [super init])) {
+        managedObjectContext = context;
+        tableData = dictionary;
+        event = YES;
     }
     return self;
 }
@@ -87,13 +98,26 @@
     [tableData setValue:[NSNumber numberWithInt:selectedSegment] forKey:@"priority"];
     if ([[tableData objectForKey:@"title"] length] > 0)
     {
-        if (currentTask == nil)
-            [Task addTodoItem:tableData withCategory:currentCategory inMangedObjectContext:managedObjectContext];
-        else
-            [Task editTodoItem:currentTask withNewInformation:tableData inMangedObjectContext:managedObjectContext];
-        if ([tableData objectForKey:@"alert"] != nil && [tableData objectForKey:@"date"] !=nil)
-            [self scheduleNotificationReminder];
-        [self closeView];
+        if (!currentCategory)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] 
+                                  initWithTitle:@"Error"
+                                  message:@"Please select a category for this todo"
+                                  delegate:nil
+                                  cancelButtonTitle:@"Ok"
+                                  otherButtonTitles: nil];
+            [alert show];
+            [alert release];
+        }
+        else {
+            if (currentTask == nil)
+                [Task addTodoItem:tableData withCategory:currentCategory inMangedObjectContext:managedObjectContext];
+            else
+                [Task editTodoItem:currentTask withNewInformation:tableData inMangedObjectContext:managedObjectContext];
+            if ([tableData objectForKey:@"alert"] != nil && [tableData objectForKey:@"date"] !=nil)
+                [self scheduleNotificationReminder];
+            [self closeView];
+        }
     }
     else
     {
@@ -285,6 +309,12 @@
             }
             break;
         case 3:
+            if (event) {
+                ListTableViewController *listTableView = [[ListTableViewController alloc] initWithManagedObjectContext:managedObjectContext creatingEvent:YES];
+                listTableView.delegate = self;
+                [self.navigationController pushViewController:listTableView animated:YES];
+                [listTableView release];
+            }
             break;
         case 4:
             if (1) {
@@ -328,6 +358,11 @@
 - (void)updateNotesField:(NSString *)notes
 {
     [tableData setValue:notes forKey:@"notes"];
+}
+
+- (void)updateCategoryField:(Category *)category;
+{
+    currentCategory = category;
 }
 
 @end
