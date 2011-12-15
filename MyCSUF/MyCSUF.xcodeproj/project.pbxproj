@@ -56,10 +56,11 @@
 		56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F1B143A66B40090C3E5 /* priorityHigh.png */; };
 		56924F21143A813D0090C3E5 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F20143A813D0090C3E5 /* Background.png */; };
 		56FE5171143D1C6200C3E13A /* TodoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */; };
-		80211B4B14905AC800D4A408 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80211B4714905AC800D4A408 /* MainController.m */; };
-		80211B4C14905AC800D4A408 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80211B4914905AC800D4A408 /* ViewController.m */; };
-		80211B4F14905AE100D4A408 /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80211B4E14905AE100D4A408 /* MainController.xib */; };
-		80211B5114905B0800D4A408 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80211B5014905B0800D4A408 /* ViewController.xib */; };
+		8066E69A149AB4BC0024D74E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8066E694149AB4BC0024D74E /* AppDelegate.m */; };
+		8066E69B149AB4BC0024D74E /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8066E696149AB4BC0024D74E /* MainController.m */; };
+		8066E69D149AB4BC0024D74E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8066E699149AB4BC0024D74E /* ViewController.m */; };
+		8066E69F149AB4FD0024D74E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8066E69E149AB4FD0024D74E /* ViewController.xib */; };
+		806F9EE6149AB5AD00A96CB3 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 806F9EE5149AB5AD00A96CB3 /* MainView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,12 +138,14 @@
 		56924F20143A813D0090C3E5 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		56FE516F143D1C6200C3E13A /* TodoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoListTableViewCell.h; sourceTree = "<group>"; };
 		56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoListTableViewCell.m; sourceTree = "<group>"; };
-		80211B4714905AC800D4A408 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
-		80211B4814905AC800D4A408 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		80211B4914905AC800D4A408 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		80211B4A14905AC800D4A408 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
-		80211B4E14905AE100D4A408 /* MainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
-		80211B5014905B0800D4A408 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		8066E693149AB4BC0024D74E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8066E694149AB4BC0024D74E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8066E695149AB4BC0024D74E /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		8066E696149AB4BC0024D74E /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		8066E698149AB4BC0024D74E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8066E699149AB4BC0024D74E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8066E69E149AB4FD0024D74E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		806F9EE5149AB5AD00A96CB3 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,12 +300,7 @@
 		565B003E14313EAE005FAEB7 /* MyCSUF */ = {
 			isa = PBXGroup;
 			children = (
-				80211B4714905AC800D4A408 /* MainController.m */,
-				80211B4E14905AE100D4A408 /* MainController.xib */,
-				80211B5014905B0800D4A408 /* ViewController.xib */,
-				80211B4A14905AC800D4A408 /* MainController.h */,
-				80211B4814905AC800D4A408 /* ViewController.h */,
-				80211B4914905AC800D4A408 /* ViewController.m */,
+				8066E691149AB3B80024D74E /* Login */,
 				565B004714313EAE005FAEB7 /* MyCSUFAppDelegate.h */,
 				565B004814313EAE005FAEB7 /* MyCSUFAppDelegate.m */,
 				4C043E7A143D50B600AB3B14 /* ClassScheduleviewController */,
@@ -360,6 +358,21 @@
 			);
 			name = Resources;
 			path = MyCSUF;
+			sourceTree = "<group>";
+		};
+		8066E691149AB3B80024D74E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8066E69E149AB4FD0024D74E /* ViewController.xib */,
+				8066E693149AB4BC0024D74E /* AppDelegate.h */,
+				8066E694149AB4BC0024D74E /* AppDelegate.m */,
+				8066E695149AB4BC0024D74E /* MainController.h */,
+				8066E696149AB4BC0024D74E /* MainController.m */,
+				8066E698149AB4BC0024D74E /* ViewController.h */,
+				8066E699149AB4BC0024D74E /* ViewController.m */,
+				806F9EE5149AB5AD00A96CB3 /* MainView.xib */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,8 +446,8 @@
 				56338FDC1490455C00CED1FE /* TodoListViewController.xib in Resources */,
 				56338FDE149045A000CED1FE /* NewListViewController.xib in Resources */,
 				56338FE0149045C200CED1FE /* TodoListTableViewCell.xib in Resources */,
-				80211B4F14905AE100D4A408 /* MainController.xib in Resources */,
-				80211B5114905B0800D4A408 /* ViewController.xib in Resources */,
+				8066E69F149AB4FD0024D74E /* ViewController.xib in Resources */,
+				806F9EE6149AB5AD00A96CB3 /* MainView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,8 +480,9 @@
 				56338FD2149041E000CED1FE /* EventsTableCell.m in Sources */,
 				56338FD4149041E000CED1FE /* EventsTableViewController.m in Sources */,
 				56338FD6149041E000CED1FE /* EventViewController.m in Sources */,
-				80211B4B14905AC800D4A408 /* MainController.m in Sources */,
-				80211B4C14905AC800D4A408 /* ViewController.m in Sources */,
+				8066E69A149AB4BC0024D74E /* AppDelegate.m in Sources */,
+				8066E69B149AB4BC0024D74E /* MainController.m in Sources */,
+				8066E69D149AB4BC0024D74E /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

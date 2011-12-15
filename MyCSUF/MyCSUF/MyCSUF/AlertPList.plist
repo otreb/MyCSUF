@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>alerts</key>
+	<array>
+		<string>5 minutes before</string>
+		<string>15 minutes before</string>
+		<string>30 minutes before</string>
+		<string>1 hour before</string>
+		<string>2 hours before</string>
+		<string>1 day before</string>
+		<string>2 days before</string>
+		<string>On date of event</string>
+	</array>
+</dict>
+</plist>
