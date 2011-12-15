@@ -130,16 +130,16 @@ if ([parsedData count]>0)
             [dicarray addObject:dictionary];
             [dictionary release];
         }
-        
+        /*
         NSTimer *theTimer=[NSTimer timerWithTimeInterval:3.0 target:self selector:@selector(timerFired:) userInfo:nil repeats:NO];
         [[NSRunLoop currentRunLoop] addTimer:theTimer forMode:[[NSRunLoop currentRunLoop] currentMode]];
         
         NSLog(@"Schedule succesfully downloaded!");
-
+*/
         
     }
     [matchesArray release];
-//    [self.ScheduleDelegate dictionaryschedule:dictionary];
+//    [self.ScheduleDelegate dictionaryschedule:dicarray];
 }
 
 -(void) connection:(NSURLConnection *) connection didReceiveResponse:(NSURLResponse *) response
