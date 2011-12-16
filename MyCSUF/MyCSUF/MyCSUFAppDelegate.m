@@ -10,6 +10,7 @@
 #import "ListTableViewController.h"
 #import "ClassScheduleViewController.h"
 #import "EventsTableViewController.h"
+#import "HelpViewController.h"
 
 @implementation MyCSUFAppDelegate
 
@@ -34,24 +35,28 @@
     [listTableViewController release];
     [classviewContoller release];
     
-//    HelpTableViewController *helpTableViewController = [[HelpTableViewController alloc] init];
+    UINavigationController *helpNavCon = [[UINavigationController alloc] init];
+    HelpViewController *helpViewController = [[HelpViewController alloc] init];
+    [helpNavCon pushViewController:helpViewController animated:YES];
+    [helpViewController release];
     
     UINavigationController *eventNavCon = [[UINavigationController alloc] init];
     EventsTableViewController *eventsViewController = [[EventsTableViewController alloc] initWithManagedObjectContext:self.managedObjectContext];
     [eventNavCon pushViewController:eventsViewController animated:NO];
     [eventsViewController release];
     
+    
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = [NSArray arrayWithObjects:navCon,tab1, eventNavCon/*, helpTableViewController*/, nil];
+    tabBarController.viewControllers = [NSArray arrayWithObjects:navCon,tab1, eventNavCon, helpNavCon, nil];
     [[tabBarController.viewControllers objectAtIndex:0] setTitle:@"To-do"];
     [[tabBarController.viewControllers objectAtIndex:1] setTitle:@"Courses"];
     [[tabBarController.viewControllers objectAtIndex:2] setTitle:@"Campus Events"];
-//    [[tabBarController.viewControllers objectAtIndex:3] setTitle:@"Emergency"];
+    [[tabBarController.viewControllers objectAtIndex:3] setTitle:@"Emergency"];
     
     [navCon release];
     [tab1 release];
     [eventNavCon release];
-//    [helpTableViewController release];
+    [helpNavCon release];
     
     [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];

@@ -55,6 +55,9 @@
 		566FB12D1432CB48001F7892 /* AlertPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 566FB12C1432CB48001F7892 /* AlertPList.plist */; };
 		566FB1311432D295001F7892 /* NotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FB12F1432D294001F7892 /* NotesViewController.m */; };
 		566FB1321432D295001F7892 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 566FB1301432D294001F7892 /* NotesViewController.xib */; };
+		568B9196149ACBF80043D8C0 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 568B9194149ACBF80043D8C0 /* HelpViewController.m */; };
+		568B9197149ACBF80043D8C0 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 568B9195149ACBF80043D8C0 /* HelpViewController.xib */; };
+		568B919A149ACE8F0043D8C0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568B9199149ACE8F0043D8C0 /* MessageUI.framework */; };
 		56924F1C143A66B40090C3E5 /* priorityHigh.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F1B143A66B40090C3E5 /* priorityHigh.png */; };
 		56924F21143A813D0090C3E5 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 56924F20143A813D0090C3E5 /* Background.png */; };
 		56FE5171143D1C6200C3E13A /* TodoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FE5170143D1C6200C3E13A /* TodoListTableViewCell.m */; };
@@ -134,6 +137,10 @@
 		566FB12E1432D294001F7892 /* NotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesViewController.h; sourceTree = "<group>"; };
 		566FB12F1432D294001F7892 /* NotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesViewController.m; sourceTree = "<group>"; };
 		566FB1301432D294001F7892 /* NotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesViewController.xib; sourceTree = "<group>"; };
+		568B9193149ACBF80043D8C0 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		568B9194149ACBF80043D8C0 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		568B9195149ACBF80043D8C0 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
+		568B9199149ACE8F0043D8C0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		56924F1B143A66B40090C3E5 /* priorityHigh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = priorityHigh.png; sourceTree = "<group>"; };
 		56924F20143A813D0090C3E5 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		56FE516F143D1C6200C3E13A /* TodoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoListTableViewCell.h; sourceTree = "<group>"; };
@@ -145,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568B919A149ACE8F0043D8C0 /* MessageUI.framework in Frameworks */,
 				4CE4EC1C1444DA40001EF9B6 /* CoreLocation.framework in Frameworks */,
 				4CE4EC1A1444DA34001EF9B6 /* MapKit.framework in Frameworks */,
 				565B003714313EAE005FAEB7 /* UIKit.framework in Frameworks */,
@@ -282,6 +290,7 @@
 		565B003514313EAE005FAEB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				568B9199149ACE8F0043D8C0 /* MessageUI.framework */,
 				4CE4EC1B1444DA40001EF9B6 /* CoreLocation.framework */,
 				4CE4EC191444DA34001EF9B6 /* MapKit.framework */,
 				565B003614313EAE005FAEB7 /* UIKit.framework */,
@@ -301,6 +310,8 @@
 				5604400E143D02BA00BB1275 /* CatrgoryViewControllers */,
 				56080AAB1438F79F005B5DDE /* Todo List View Controllers */,
 				56338FE5149052BB00CED1FE /* Event View Controllers */,
+				568B9193149ACBF80043D8C0 /* HelpViewController.h */,
+				568B9194149ACBF80043D8C0 /* HelpViewController.m */,
 				565B006514314CDA005FAEB7 /* Configurations.h */,
 				566FB11E143228CC001F7892 /* DelegeMethods.h */,
 				56080AAC1438F7A9005B5DDE /* Model */,
@@ -332,6 +343,7 @@
 		566FB1171432262D001F7892 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				568B9195149ACBF80043D8C0 /* HelpViewController.xib */,
 				565B004D14313EAE005FAEB7 /* MyCSUF.xcdatamodeld */,
 				56924F20143A813D0090C3E5 /* Background.png */,
 				56924F1B143A66B40090C3E5 /* priorityHigh.png */,
@@ -426,6 +438,7 @@
 				56338FDC1490455C00CED1FE /* TodoListViewController.xib in Resources */,
 				56338FDE149045A000CED1FE /* NewListViewController.xib in Resources */,
 				56338FE0149045C200CED1FE /* TodoListTableViewCell.xib in Resources */,
+				568B9197149ACBF80043D8C0 /* HelpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +472,7 @@
 				56338FD2149041E000CED1FE /* EventsTableCell.m in Sources */,
 				56338FD4149041E000CED1FE /* EventsTableViewController.m in Sources */,
 				56338FD6149041E000CED1FE /* EventViewController.m in Sources */,
+				568B9196149ACBF80043D8C0 /* HelpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
