@@ -7,8 +7,22 @@
 //
 
 #import "OptionsViewController.h"
+#import "ClassScheduleViewController.h"
 
 @implementation OptionsViewController
+
+// Will dismiss the modal the controller is currently in.
+- (void)closeView
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+// Creates the Category once you are finished inputing your information.
+- (void)donePressed
+{
+    
+    [self closeView];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +47,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
+                                               initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                               target:self
+                                               action:@selector(donePressed)] autorelease];
 }
 
 - (void)viewDidUnload

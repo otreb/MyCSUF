@@ -10,6 +10,8 @@
 #import "ClassScheduleViewCell.h"
 #import "MapViewController.h"
 #import "OptionsViewController.h"
+#import "MainController.h"
+#import "ViewController.h"
 
 @implementation ClassScheduleViewController
 
@@ -36,11 +38,22 @@
     OptionsViewController *optionsViewController = [[OptionsViewController alloc] init];
     UINavigationController *oButton = [[UINavigationController alloc] init];
     [oButton pushViewController:optionsViewController animated:YES];
-    [optionsViewController release];
+    [OptionsViewController release];
     oButton.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentModalViewController:oButton animated:YES];
     [oButton release];
     
+}
+
+- (void)loginButton
+{
+    ViewController *viewController = [[ViewController alloc] init];
+    UINavigationController *navCon = [[UINavigationController alloc] init];
+    [navCon pushViewController:viewController animated:YES];
+    [ViewController release];
+    navCon.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentModalViewController:navCon animated:YES];
+    [navCon release];
 }
 
 
@@ -57,8 +70,13 @@
     self.view.backgroundColor=[UIColor colorWithRed:250 green:247 blue:247 alpha:1];
 
     // Puts button on top right corner to select a different semester
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector
+    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector
         (optionsButton)] autorelease];
+    
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
+                                               initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                               target:self
+                                               action:@selector(loginButton)] autorelease];
     
 // this is where the core data info will be loaded
     

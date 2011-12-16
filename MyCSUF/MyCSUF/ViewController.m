@@ -18,6 +18,20 @@
 //@synthesize receivedData;
 //@synthesize term, termName, classNumber, classDescriptionA, scheduleNumber, section, component, instructor, meetingDays, time, room, start_end;
 
+
+// Will dismiss the modal the controller is currently in.
+- (void)closeView
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+// Creates the Category once you are finished inputing your information.
+- (void)donePressed
+{
+
+    [self closeView];
+}
+
 /*
  - (IBAction) login: (id) sender
  NSURL *url = [NSURL URLWithString:@"https://my.csufresno.edu/psp/mfs/?cmd=login&languageCd=ENG"];
@@ -77,6 +91,11 @@
     //    self.usernameField.frame = CGRectMake(111, 20, 90, 31);
     //    self.passwordField.frame = CGRectMake(111, 50, 90, 31);
     //    self.loginButton.frame = CGRectMake(111, 60, 50, 50);
+    
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
+                                               initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                               target:self
+                                               action:@selector(donePressed)] autorelease];
 }
 
 - (void)viewDidUnload

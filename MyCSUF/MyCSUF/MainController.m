@@ -14,6 +14,20 @@
 @synthesize table;
 @synthesize receivedData;
 //@synthesize dicarray;
+
+// Will dismiss the modal the controller is currently in.
+- (void)closeView
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+// Creates the Category once you are finished inputing your information.
+- (void)donePressed
+{
+    
+    [self closeView];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -78,6 +92,10 @@ if ([parsedData count]>0)
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
+                                               initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                               target:self
+                                               action:@selector(donePressed)] autorelease];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -130,13 +148,12 @@ if ([parsedData count]>0)
             [dicarray addObject:dictionary];
             [dictionary release];
         }
-        /*
+
         NSTimer *theTimer=[NSTimer timerWithTimeInterval:3.0 target:self selector:@selector(timerFired:) userInfo:nil repeats:NO];
         [[NSRunLoop currentRunLoop] addTimer:theTimer forMode:[[NSRunLoop currentRunLoop] currentMode]];
         
         NSLog(@"Schedule succesfully downloaded!");
-*/
-        
+
     }
     [matchesArray release];
 //    [self.ScheduleDelegate dictionaryschedule:dicarray];
